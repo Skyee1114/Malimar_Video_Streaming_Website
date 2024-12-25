@@ -1,0 +1,83 @@
+{
+  "resource": "Subscription Payments",
+  "http_method": "POST",
+  "route": "/subscription_payments?include=plan",
+  "description": "Create subscription payment and return plan",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "subscription_payments",
+      "description": "Subscription resource object"
+    },
+    {
+      "scope": "subscription_payments",
+      "name": "card",
+      "description": "Card data"
+    },
+    {
+      "scope": "subscription_payments",
+      "name": "billing_address",
+      "description": "Billing address, phone and email"
+    },
+    {
+      "scope": "subscription_payments",
+      "name": "invoice",
+      "description": "Invoice number (optional)"
+    },
+    {
+      "scope": "subscription_payments",
+      "name": "links",
+      "description": "Linked objects"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "subscription_payments",
+      "description": "Subscription object"
+    },
+    {
+      "scope": "subscription_payments",
+      "name": "links",
+      "description": "Embedded resources"
+    },
+    {
+      "scope": "subscription_payments",
+      "name": "amount",
+      "description": "Subscription payment amount"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/subscription_payments?include=plan",
+      "request_body": "{\"subscription_payments\":{\"card\":{\"cvv\":123,\"number\":\"4111111111111111\",\"expiry_month\":12,\"expiry_year\":3000},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"links\":{\"plan\":1,\"user\":1,\"device\":{\"serial_number\":null,\"type\":null}}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTAuNjczNzU1MiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyNjUud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyNjUud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MH0.XnKCKuhus91KnpWKI4pkb6vzvRcqtkieCja7ynN4mFT6FAJNxenFOD72WOYJjRn1jdGpHrfAvNmzo6vOZ61tLg",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "plan"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"subscription_payments\": {\n    \"amount\": \"33.00\",\n    \"links\": {\n      \"plan\": {\n        \"id\": 1,\n        \"name\": \"1 Month Membership\",\n        \"description\": null,\n        \"cost\": \"33.00\",\n        \"period_in_monthes\": 1,\n        \"includes_web_content\": true,\n        \"includes_roku_content\": false,\n        \"includes_hardware\": false\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b77cac6a095798d340fbba5b70cdefbd\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "ba0fa6c0-0414-4d7b-a4f3-1b4a7766a6fa",
+        "Content-Length": "238"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/subscription_payments?include=plan\" -d '{\"subscription_payments\":{\"card\":{\"cvv\":123,\"number\":\"4111111111111111\",\"expiry_month\":12,\"expiry_year\":3000},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"links\":{\"plan\":1,\"user\":1,\"device\":{\"serial_number\":null,\"type\":null}}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTAuNjczNzU1MiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyNjUud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyNjUud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MH0.XnKCKuhus91KnpWKI4pkb6vzvRcqtkieCja7ynN4mFT6FAJNxenFOD72WOYJjRn1jdGpHrfAvNmzo6vOZ61tLg\""
+    }
+  ]
+}

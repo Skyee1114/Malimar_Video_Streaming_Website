@@ -1,0 +1,49 @@
+@import 'collapsed'
+
+.sidebar
+  z-index: 1
+
+.sidebar__list
+  background-color: $contrast-color
+  @include reset-list
+
+.sidebar__list__item
+  border-bottom: 1px solid rgba(101, 94, 91, 0.3)
+
+.sidebar__data
+  padding: 0.95rem 1rem
+  height: 3.65rem
+  display: block
+
+.sidebar__data__icon
+  display: inline-block
+  vertical-align: top
+
+.sidebar__data__icon
+  display: none
+  font-size: 1.5em
+  color: $white
+
+.sidebar__data__text
+  display: inline-block
+  vertical-align: middle
+  white-space: normal
+  font-size: 0.85em
+  font-weight: 600
+  margin-left: 6px
+
+.sidebar__data__title
+  line-height: 1em
+  color: $white
+
+.sidebar__data__subtitle
+  color: $accent-color
+  font-size: 0.9em
+  line-height: 1em
+  margin-top: 0.3em
+
+.sidebar__data:hover,
+.sidebar__data--active
+  background-color: $primary-color
+  .sidebar__data__subtitle
+    color: $secondary-blue

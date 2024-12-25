@@ -1,0 +1,53 @@
+aside.left-off-canvas-menu
+  ul.off-canvas-list.menu-list
+    li
+      label Navigation
+    li
+      a href="/"
+        i.fa.fa-home
+        | Home
+    li
+      a href="/thai"
+        i.fa.fa-home
+        | Thailand
+    li
+      a href="/lao"
+        i.fa.fa-home
+        | Laos
+    li
+      a href="/khmer"
+        i.fa.fa-home
+        | Cambodia
+    li
+      a href="/hmong"
+        i.fa.fa-home
+        | Hmong
+    - if feature_active? :roku
+      li
+        a ui-sref="device.landing"
+          i.fa.fa-square
+          | Devices
+    - if feature_active? :subscription
+      li
+        a ui-sref="account.pricing"
+          i.fa.fa-usd
+          | Pricing
+    li
+      a ui-sref="watchlist"
+        i.fa.fa-folder
+        | Watchlist
+    li
+      a href="https://help.malimar.tv/" target="_blank"
+        i.fa.fa-life-ring
+        | Contact us
+    li
+      a href="https://help.malimar.tv/" target="_blank"
+        i.fa.fa-life-ring
+        | Help Center
+    li
+      label Categories
+    li.sidebar__list__item ng-repeat="resource in resources track by resource.id"
+      a.sidebar__data ng-href="{{ resource.href }}"
+        .sidebar__data__text
+          .sidebar__data__title ng-bind="resource.title"
+          .sidebar__data__subtitle ng-bind="resource.title_translated"

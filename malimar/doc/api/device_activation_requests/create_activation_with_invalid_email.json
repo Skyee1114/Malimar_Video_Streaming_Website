@@ -1,0 +1,132 @@
+{
+  "resource": "Device activation requests",
+  "http_method": "POST",
+  "route": "/device/activation_requests?include=device",
+  "description": "Create activation with invalid email",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "activation_requests",
+      "description": "Activation request object"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "first_name",
+      "description": "Person name"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "last_name",
+      "description": "Person name"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "email",
+      "description": "Contact email"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "phone",
+      "description": "Contact phone number"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "address",
+      "description": "Street address"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "city",
+      "description": "City"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "state",
+      "description": "State"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "zip",
+      "description": "Postal code"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "country",
+      "description": "Country code"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "referral",
+      "description": "Referal"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "service",
+      "description": "Service type"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "links",
+      "description": "Linked objects"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "errors",
+      "description": "Errors object"
+    },
+    {
+      "scope": "errors",
+      "name": "title",
+      "description": "Summary of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "detail",
+      "description": "Explanation of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "status",
+      "description": "The HTTP status code applicable to this problem"
+    },
+    {
+      "scope": "errors",
+      "name": "links",
+      "description": ""
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/device/activation_requests?include=device",
+      "request_body": "{\"activation_requests\":{\"first_name\":\"Patricia\",\"last_name\":\"Lehner\",\"email\":\"santo.raynor@kunde.biz\",\"phone\":\"(480) 299-5986 x264\",\"address\":\"6722 Rico Courts\",\"city\":\"Gerardhaven\",\"state\":\"Vermont\",\"zip\":\"73689\",\"country\":\"CA\",\"referral\":\"friend\",\"service\":\"trial\",\"links\":{\"device\":{\"id\":null,\"serial_number\":\"invalid!\",\"name\":\"Roku\",\"user_id\":null,\"created_at\":null,\"updated_at\":null,\"type\":\"Device::Roku\"}}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuODQyODczOCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyNC53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjI0Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzV9.kxi1dwYDd8rDzZTInqxfoddCR3A-uND2fRBwYKJBMMo85H57mcXGsFPjn_S2lIybixcR-oDg2OnpKm4hySu2Yg",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "device"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": {\n    \"status\": 422,\n    \"title\": \"Validation error\",\n    \"detail\": \"Serial number Only letters and numbers are allowed\",\n    \"links\": {\n      \"device_activation_request\": {\n      },\n      \"device\": {\n        \"serial_number\": [\n          \"Only letters and numbers are allowed\"\n        ]\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "13e2fc0d-8991-4c8c-9f72-7bcc6995252a",
+        "Content-Length": "223"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/device/activation_requests?include=device\" -d '{\"activation_requests\":{\"first_name\":\"Patricia\",\"last_name\":\"Lehner\",\"email\":\"santo.raynor@kunde.biz\",\"phone\":\"(480) 299-5986 x264\",\"address\":\"6722 Rico Courts\",\"city\":\"Gerardhaven\",\"state\":\"Vermont\",\"zip\":\"73689\",\"country\":\"CA\",\"referral\":\"friend\",\"service\":\"trial\",\"links\":{\"device\":{\"id\":null,\"serial_number\":\"invalid!\",\"name\":\"Roku\",\"user_id\":null,\"created_at\":null,\"updated_at\":null,\"type\":\"Device::Roku\"}}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuODQyODczOCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyNC53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjI0Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzV9.kxi1dwYDd8rDzZTInqxfoddCR3A-uND2fRBwYKJBMMo85H57mcXGsFPjn_S2lIybixcR-oDg2OnpKm4hySu2Yg\""
+    }
+  ]
+}

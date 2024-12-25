@@ -1,0 +1,81 @@
+{
+  "resource": "Permissions",
+  "http_method": "GET",
+  "route": "/permissions?user=:user_id&filter[active]=true",
+  "description": "Get a list of active user permissions",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "user_id",
+      "description": "User id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "permissions",
+      "description": "Permissions of the given user"
+    },
+    {
+      "scope": "permissions",
+      "name": "id",
+      "description": "Permission id"
+    },
+    {
+      "scope": "permissions",
+      "name": "name",
+      "description": "Permission display name"
+    },
+    {
+      "scope": "permissions",
+      "name": "allow",
+      "description": "Permission allowance type"
+    },
+    {
+      "scope": "permissions",
+      "name": "active",
+      "description": "Permission boolean active/expired status"
+    },
+    {
+      "scope": "permissions",
+      "name": "expires_at",
+      "description": "Permission expiration date"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/permissions?user=1&filter[active]=true",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMTU5MzI2NiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I5Ni53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3Rvcjk2Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzl9.piaOXX1OA7Rh-pSozwn0uXO6i27BKR8mGozl2iGLwGjfDI2aCmTfdhzjPKskO_Do6BPWhWrYhVPzDSJ_PL9RtA",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "user": "1",
+        "filter": {
+          "active": "true"
+        }
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"permissions\": [\n    {\n      \"id\": 1,\n      \"name\": \"Premium\",\n      \"allow\": \"premium\",\n      \"active\": true,\n      \"expires_at\": \"2020-07-07T22:07:59.161Z\"\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"12314404f3a9a823364f5631756b39d6\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "bfef7e09-05ce-4f71-b631-b0803b47d2ea",
+        "Content-Length": "115"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/permissions?user=1&filter[active]=true\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMTU5MzI2NiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I5Ni53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3Rvcjk2Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzl9.piaOXX1OA7Rh-pSozwn0uXO6i27BKR8mGozl2iGLwGjfDI2aCmTfdhzjPKskO_Do6BPWhWrYhVPzDSJ_PL9RtA\""
+    }
+  ]
+}

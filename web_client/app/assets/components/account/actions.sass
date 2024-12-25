@@ -1,0 +1,35 @@
+.account-actions
+  border-top: $gainsboro 1px solid
+
+.account-action
+  color: $account-font-color !important
+  display: block
+  height: 150px
+  border-bottom: $gainsboro 1px solid
+  padding-top: 50px
+  padding-left: 70px
+  padding-right: 70px
+  margin-right: 25px
+
+  &:before
+    content: inline("gray-right-arrow.png")
+    position: absolute
+    top: 55px
+    right: 50px
+
+  &__icon
+    position: absolute
+    top: 55px
+    left: 25px
+
+  &__label
+    font-size: 1.1rem
+    font-weight: 600
+
+  &__description
+    display: none
+
+@media #{$medium-up}
+  .account-action
+    &__description
+      display: block

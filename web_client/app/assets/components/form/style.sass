@@ -1,0 +1,104 @@
+@import 'display_field'
+@import 'choose_plan/style'
+@import 'choose_device/style'
+@import 'plan_total/style'
+@import 'seals/style'
+
+.form
+  label
+    @extend .display-field__label
+
+.form-field
+  &__important
+    background-color: $primary-color
+    padding: 20px
+    border-radius: $extra-radius
+    margin-bottom: $form-spacing
+
+    label
+      font-weight: 600
+      color: $white
+
+    .form-field__note
+      color: $white
+      margin-bottom: 0
+
+    &--transparent
+      background-color: transparent
+      padding-left: 0
+      padding-right: 0
+
+      label
+        color: $account-font-color
+
+  &__note
+    margin-top: $form-spacing
+    font-style: italic
+    margin-bottom: $form-spacing
+    &--first
+      margin-top: -$form-spacing
+
+.form-checkbox
+  @extend .clearfix
+  margin-bottom: $form-spacing
+
+  &__checkbox
+    @extend .left
+    input
+      margin: 0
+      margin-right: 5px
+
+.account
+  .tooltip
+    border: 1px solid $gainsboro
+
+.form-cvv
+  display: block
+  margin-top: 0 - $form-spacing
+  margin-bottom: $form-spacing
+
+  text-align: center
+  &__image
+    background-image: asset_url("cvv.gif")
+    width: 453px
+    height: 205px
+
+.ng-dirty.ng-invalid
+  border-color: $alert-color
+
+.fieldset
+  font-weight: 600
+  font-size: 1.5em
+  margin: 15px 0
+  color: $primary-color
+
+.upcased
+  text-transform: uppercase
+
+label.required:after
+  content: "*"
+
+select
+  border-radius: $global-radius
+
+.button.roku
+  background-color: $roku-color
+  &:hover
+    background-color: scale-color($roku-color, $lightness: $button-function-factor)
+
+.button.facebook
+  background-color: $facebook-color
+
+.button
+  &--active
+    background: $button-bg-hover
+
+  &--with_icon
+    span
+      margin-left: 5px
+
+.form-instruction
+  font-size: 0.9rem
+
+  &--important
+    font-weight: bold

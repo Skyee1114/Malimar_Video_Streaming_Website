@@ -1,0 +1,92 @@
+{
+  "resource": "Favorite Videos",
+  "http_method": "GET",
+  "route": "/favorite_videos?user=:user_id",
+  "description": "Get a list of favorite videos for a user",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "favorite_videos",
+      "description": "List of thumbnails"
+    },
+    {
+      "scope": "favorite_videos",
+      "name": "id",
+      "description": "Resource id"
+    },
+    {
+      "scope": "favorite_videos",
+      "name": "title",
+      "description": "Resource title"
+    },
+    {
+      "scope": "favorite_videos",
+      "name": "href",
+      "description": "Link to resource"
+    },
+    {
+      "scope": "favorite_videos",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    },
+    {
+      "scope": "favorite_videos",
+      "required": false,
+      "name": "synopsis",
+      "description": "Brief description"
+    },
+    {
+      "scope": "favorite_videos",
+      "name": "type",
+      "description": "Type of the resource"
+    },
+    {
+      "scope": "favorite_videos",
+      "name": "is_recently_updated",
+      "description": "Boolean. True when resource was updated"
+    },
+    {
+      "scope": "favorite_videos",
+      "required": false,
+      "name": "highlight",
+      "description": "Extra information"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/favorite_videos?user=1",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzYuMjE2OTI1LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjcxLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yNzEud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3Nn0.NeIRSg6eZgoA4oJoeY6dvYFvrz8BCWLy8_v9XL_EAl5saRpW5QQfa9GpJJQz9GrMdncasgUelvcfYhzusuBpQg",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "user": "1"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"favorite_videos\": [\n    {\n      \"id\": \"Video_1\",\n      \"title\": \"Ea similique optio deleniti.\",\n      \"cover_image\": {\n        \"sd\": \"http://schimmelstokes.co/kristeenF\",\n        \"hd\": \"http://crist.biz/geraldF.strosin\",\n        \"wide\": \"http://crist.biz/gerald-large.strosin\"\n      },\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/Video_1?grid=Container_1\",\n      \"type\": \"channel\",\n      \"synopsis\": \"Quidem pariatur tempore. Officia provident eum. Illum quis quaerat.\",\n      \"is_recently_updated\": false,\n      \"highlight\": null\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"0efa99997c088c5300c6d7e9507e9735\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "25d09ac4-28e3-41cf-ad67-05f02ea4ce5e",
+        "Content-Length": "456"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/favorite_videos?user=1\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzYuMjE2OTI1LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjcxLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yNzEud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3Nn0.NeIRSg6eZgoA4oJoeY6dvYFvrz8BCWLy8_v9XL_EAl5saRpW5QQfa9GpJJQz9GrMdncasgUelvcfYhzusuBpQg\""
+    }
+  ]
+}

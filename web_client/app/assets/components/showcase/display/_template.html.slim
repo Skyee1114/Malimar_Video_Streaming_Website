@@ -1,0 +1,19 @@
+.grid-scroller.grid-scroller--showcase ng-class="{'grid-scroller--loading': !elements_loaded}"
+  a.grid-scroller__control.grid-scroller__control--right ng-click="startAnimation(1)"
+  a.grid-scroller__control.grid-scroller__control--left ng-click="startAnimation(-1)"
+  .grid-scroller__container
+    .grid-scroller__element ng-repeat="chunk in elements"
+      a.thumbnail [
+        ng-repeat="thumbnail in chunk track by ::thumbnail.id"
+        ng-href="{{ ::thumbnail.href }}"
+      ]
+
+        img.thumbnail__image [ng-src="{{ ::thumbnail.cover_image.wide }}"
+                              alt="{{ ::thumbnail.title}}"]
+
+        .thumbnail-details
+          .thumbnail-details__title ng-bind="::thumbnail.title"
+          .thumbnail-details__synopsis ng-bind="::thumbnail.synopsis"
+
+        .thumbnail-highlights
+          .thumbnail-highlights__button ng-if="::thumbnail.is_recently_updated" New Episodes

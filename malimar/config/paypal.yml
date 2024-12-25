@@ -1,0 +1,11 @@
+test:
+  http_timeout: 30
+  mode: sandbox
+
+development:
+  http_timeout: 30
+  mode: sandbox
+
+production:
+  http_timeout: 30
+  mode: live

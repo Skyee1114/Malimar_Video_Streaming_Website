@@ -1,0 +1,143 @@
+- return "" unless feature_active? :roku
+div.roku-landing
+  .row.row--light.row--padding
+    .message Service is available world wide with an internet connection
+  
+  section.row.billboard
+    h1 Lao TV, Thai TV, Khmer TV, Hmong TV
+    h3 Watch new drama episodes, movies, and live television instantly.
+    ul
+      - if feature_active? :subscription
+        li
+          a.oval-button ui-sref="{{ is_user_a_guest ? 'account.pricing' : 'account.subscribe.form' }}"
+           | Payment
+          p Pay for your streaming device subscription
+      li
+        a.oval-button ui-sref="^.activation.form" Free trial
+        p Streaming device trial activation
+      li
+        a.oval-button ui-sref="^.add_channel.step1" Add App
+        p How to add #{ company_name } to your Roku
+  
+  section.row.malimar-roku
+    .small-12.large-7.columns.malimar-roku__tv = image_tag 'roku-home-tv.jpg'
+    .small-12.large-5.columns.malimar-roku__caption
+      h2 
+        | #{ company_name } TV on 
+        span.atention
+          | Roku and Fire TV
+      .row 
+        p #{ company_name } TV Network is the leading entertainment service for the Lao, Thai, Khmer and Hmong community. We take pride in bringing the best entertainment selections for Lao, Thai, and Khmer and Hmong families worldwide over the internet. Members can watch as much as they want, anytime, anywhere, on select compatible devices. With a membership to #{ company_name } TV, our members can access premium programming and live television channels anytime on streaming devices, smartphones and computers in HD (when available).  Purchase your streaming device today at your local electronic store near you today!  Contact us today to hear about our risk-free trial today!
+  
+  section.row.compatible
+    h3 
+      | #{ company_name } TV is compatible with any 
+      span.atention 
+        | Roku and Fire TV 
+      | products later than the first generation models. 
+    .row
+      p 
+        | Here are links to help you decide which device best fits your needs: 
+        a href="https://www.roku.com/products/compare" target="_blank" Roku
+        |  and 
+        a href="https://developer.amazon.com/docs/fire-tv/device-specifications.html" target="_blank" Fire TV
+    .row
+      a href="https://www.roku.com/products/compare" target="_blank"
+        ul.roku-products
+          li.roku-products--product1 Roku Express
+          li.roku-products--product2 Roku Streaming Stick
+          li.roku-products--product3 Roku Premiere
+          li.roku-products--product4 Roku Premiere Plus
+          li.roku-products--product5 Roku Ultra
+    .row
+      a href="https://developer.amazon.com/docs/fire-tv/device-specifications.html" target="_blank"
+        ul.fire-tv-products
+          li.fire-tv-products--product1 Fire TV Stick (Gen 1,2)
+          li.fire-tv-products--product2 Fire TV Stick 4K
+          li.fire-tv-products--product3 Fire TV Cube
+          li.fire-tv-products--product4 Fire TV (Gen 1,2)
+          li.fire-tv-products--product5 Fire TV (Gen 3)
+  
+  section.row.purchase
+    h4 Purchase your roku at
+    .row
+      ul
+       li.target 
+        a href="http://www.target.com/bp/roku" title="Target" target="_blank" Target
+       li.best
+        a href="http://www.bestbuy.com/site/searchpage.jsp?st=roku&_dyncharset=UTF-8&id=pcat17071&type=page&sc=Global&cp=1&nrp=15&sp=&qp=&list=n&iht=y&usc=All+Categories&ks=960&keys=keys" title="Best Buy" target="_blank" Best Buy
+       li.walmart
+        a href="http://www.walmart.com/search/search-ng.do?search_query=Roku&adid=22222222220202457900&wmlspartner=wmtlabs&wl0=e&wl1=g&wl2=c&wl3=32213112502&wl4=&veh=sem" title="Walmart" target="_blank" Walmart
+       li.frys
+        a href="http://www.frys.com/search?search_type=regular&sqxts=1&cat=&query_string=roku" title="Frys.com" target="_blank" Frys.com
+       li.sam
+        a href="http://www.samsclub.com/sams/search/searchResults.jsp?searchCategoryId=all&searchTerm=roku&fromHome=no&_requestid=101645" title="Sams Club" target="_blank" Sams Club
+       li.costco 
+        a href="http://www.costco.com/CatalogSearch?storeId=10301&catalogId=10701&langId=-1&refine=&keyword=roku" title="Costco" target="_blank" Costco
+       li.bjs 
+        a href="https://www.bjs.com/search/roku/q" title="Bjs" target="_blank" Bjs
+       li.amazon 
+        a href="http://www.amazon.com/s/ref=nb_sb_ss_c_0_4?url=search-alias%3Delectronics&field-keywords=roku&sprefix=roku%2Celectronics%2C588" title="Amazon" target="_blank"Amazon
+       li.newegg 
+        a href="http://www.newegg.com/Product/ProductList.aspx?Submit=ENE&DEPA=0&Order=BESTMATCH&Description=roku&N=-1&isNodeId=1" title="Newegg" target="_blank" Newegg
+  
+  section.row.instructions
+    h2 Minutes to setup. Seconds to stream. Simple to use.
+    ul
+      li.one Plug it in
+      li.two Connect to your Network
+      li.three Happy Streaming
+  
+  section.row.malimar-network
+    h4 #{ company_name } TV Network
+    h2 Premium channel line up
+    .row
+      .grid-content__thumbnails
+        a.thumbnail [ng-repeat="thumbnail in ::channels track by thumbnail.id"
+                     ng-href="{{:: thumbnail.href }}"]
+
+          img.thumbnail__image [ng-src="{{:: thumbnail.cover_image.hd }}"
+                                alt="{{:: thumbnail.title}}"]
+
+          .thumbnail-details
+            .thumbnail-details__title ng-bind="::thumbnail.title"
+            .thumbnail-details__synopsis ng-bind="::thumbnail.synopsis"
+  
+  section.row.new-dramas
+    h2 New Drama's updated daily
+    .row
+      .grid-content__thumbnails
+        a.thumbnail [ng-repeat="thumbnail in ::dramas track by thumbnail.id"
+                     ng-href="{{:: thumbnail.href }}"]
+
+          img.thumbnail__image [ng-src="{{:: thumbnail.cover_image.hd }}"
+                                alt="{{:: thumbnail.title}}"]
+
+          .thumbnail-details
+            .thumbnail-details__title ng-bind="::thumbnail.title"
+            .thumbnail-details__synopsis ng-bind="::thumbnail.synopsis"
+    p
+      a ui-sref='resource.dashboard' ...and more else.
+  
+  section.row.testimony
+    h4 #{ company_name } TV Network
+    h2 Happy clients
+    ul
+      li.__testimony--1
+        p.bubble What's up buddy! Well here's my scary picture of me. Lol Hi my name is Ricky and I'm from Minneapolis. I want to thank Judy and all of #{ company_name } for always being there and going the extra mile. You guys Rock!
+        .picture = image_tag 'testimony1.jpg'
+        .name Ricky
+        .origin Minneapolis, MN
+        .stars.stars--5 &nbsp;
+      li.__testimony--2
+        p.bubble My Family and I love #{ company_name } TV! We get to enjoy all the latest Dramas and News directly from our Homeland. No more going out to rent videos or looking up news online, we get it right on our TV! I recommend #{ company_name } TV To everyone and I’m sure you and your family will love it too!
+        .picture = image_tag 'testimony2.jpg'
+        .name Jennifer
+        .origin Lexington, KY
+        .stars.stars--4 &nbsp;
+      li.__testimony--3
+        p.bubble After a long day of hard work, I like to relax and watch #{ company_name } TV. There’s nothing like being able to enjoy my favorite News and Shows at any time I like. The Team at #{ company_name } TV is very friendly and helpful, activation is so easy they get you set up in minutes!
+        .picture = image_tag 'testimony3.jpg'
+        .name Sanoeun N.
+        .origin Modesto, CA
+        .stars.stars--5 &nbsp;

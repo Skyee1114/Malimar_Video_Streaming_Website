@@ -1,0 +1,50 @@
+$thumbnail-height--showcase: 225px
+$thumbnail-margin--showcase: 15px
+
+.grid-scroller--showcase
+  padding-bottom: 0
+
+  .thumbnail
+    margin-bottom: 15px
+    margin-right: 15px
+    display: block
+
+    .thumbnail-details__title
+      font-size: 1.3em
+
+    .thumbnail-details__synopsis
+      font-size: 1.1em
+
+    &:hover
+      .thumbnail-details
+        transition-delay: 0
+
+  .grid-scroller
+    &__container
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+      height: 480px + $grid-scroller-scrollbar-margin
+      padding-right: 0px
+
+    &__control
+      height: $thumbnail-height--showcase * 2 + $thumbnail-margin--showcase + 1px
+      &:before
+        top: $thumbnail-height--showcase + $thumbnail-margin--showcase / 2 - $grid-scroller-arrow-size / 2
+
+  .thumbnail__image
+    width: 400px
+    height: 225px
+
+.thumbnail-highlights
+  &__button
+    background-image: linear-gradient(to bottom, $accent-color 0%, $orange 100%)
+    padding: 0.4em 0.8em
+    border-radius: 2px
+    font-size: 0.85em
+    font-weight: 600
+    position: absolute
+    bottom: 1em
+    left: 1em
+    color: $white
+    text-shadow: 1px 1px 2px $black

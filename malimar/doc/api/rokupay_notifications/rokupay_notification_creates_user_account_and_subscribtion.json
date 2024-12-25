@@ -1,0 +1,126 @@
+{
+  "resource": "Rokupay notifications",
+  "http_method": "POST",
+  "route": "/callback/rokupay_notifications",
+  "description": "Rokupay notification creates user account and subscribtion",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "rokupay_notifications",
+      "description": "Notification request object"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "amount",
+      "description": "Amount paid"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "required": false,
+      "name": "description",
+      "description": "Transaction description"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "transaction_id",
+      "description": "Transaction id"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "authorization_code",
+      "description": "Authorization code"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "required": false,
+      "name": "response",
+      "description": "Transaction response"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "required": false,
+      "name": "invoice",
+      "description": "Invoice number"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "links",
+      "description": "Linked objects"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "rokupay_notifications",
+      "description": "Notification request object"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "plan",
+      "description": "Applied plan description"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/callback/rokupay_notifications",
+      "request_body": "{\"rokupay_notifications\":{\"amount\":\"33.00\",\"description\":\"1 Month\",\"transaction_id\":\"8UH417299T4422516\",\"authorization_code\":\"ABCD\",\"response\":\"Completed\",\"invoice\":\"ABCD123\",\"links\":{\"device\":{\"serial_number\":\"4114AC001000\",\"type\":\"Device::Roku\"},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"plan\":1,\"user\":{\"email\":\"tomas@example.com\"}}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE2NDI5NjExOTguMjY0NDcyMiwidXNlciI6eyJpZCI6MiwibG9naW4iOiJkb2N0b3IxLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yMS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNjQzMDQ3NTk4fQ.d2nogestQiNsXvihFZQQHNyhxC8AqmhVfopya6dQHvKPqGxxgD2zogSIlCDgyltMlzpKdtz4j08PQ6U9tA8FPQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"rokupay_notifications\":{\"plan\":\"1 Month Membership\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"5eb47da6ec9f2ff83569f0107affd81a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "511a190a-5542-4fdc-9084-f94cbe1d72f4",
+        "Content-Length": "55"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/callback/rokupay_notifications\" -d '{\"rokupay_notifications\":{\"amount\":\"33.00\",\"description\":\"1 Month\",\"transaction_id\":\"8UH417299T4422516\",\"authorization_code\":\"ABCD\",\"response\":\"Completed\",\"invoice\":\"ABCD123\",\"links\":{\"device\":{\"serial_number\":\"4114AC001000\",\"type\":\"Device::Roku\"},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"plan\":1,\"user\":{\"email\":\"tomas@example.com\"}}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE2NDI5NjExOTguMjY0NDcyMiwidXNlciI6eyJpZCI6MiwibG9naW4iOiJkb2N0b3IxLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yMS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNjQzMDQ3NTk4fQ.d2nogestQiNsXvihFZQQHNyhxC8AqmhVfopya6dQHvKPqGxxgD2zogSIlCDgyltMlzpKdtz4j08PQ6U9tA8FPQ\""
+    },
+    {
+      "request_method": "POST",
+      "request_path": "/callback/rokupay_notifications",
+      "request_body": "{\"rokupay_notifications\":{\"amount\":\"33.00\",\"description\":\"1 Month\",\"transaction_id\":\"8UH417299T4422516\",\"authorization_code\":\"ABCD\",\"response\":\"Completed\",\"invoice\":\"ABCD123\",\"links\":{\"device\":{\"serial_number\":\"4114AC001000\",\"type\":\"Device::Roku\"},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"plan\":1,\"user\":{\"email\":\"tomas@example.com\"}}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE2NDI5NjExOTguMjY0NDcyMiwidXNlciI6eyJpZCI6MiwibG9naW4iOiJkb2N0b3IxLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yMS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNjQzMDQ3NTk4fQ.d2nogestQiNsXvihFZQQHNyhxC8AqmhVfopya6dQHvKPqGxxgD2zogSIlCDgyltMlzpKdtz4j08PQ6U9tA8FPQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\"rokupay_notifications\":{\"plan\":\"1 Month Membership\"}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "ETag": "W/\"5eb47da6ec9f2ff83569f0107affd81a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "211df51a-e330-4066-8624-e4121303f0dc",
+        "Content-Length": "55"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/callback/rokupay_notifications\" -d '{\"rokupay_notifications\":{\"amount\":\"33.00\",\"description\":\"1 Month\",\"transaction_id\":\"8UH417299T4422516\",\"authorization_code\":\"ABCD\",\"response\":\"Completed\",\"invoice\":\"ABCD123\",\"links\":{\"device\":{\"serial_number\":\"4114AC001000\",\"type\":\"Device::Roku\"},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"plan\":1,\"user\":{\"email\":\"tomas@example.com\"}}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE2NDI5NjExOTguMjY0NDcyMiwidXNlciI6eyJpZCI6MiwibG9naW4iOiJkb2N0b3IxLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yMS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNjQzMDQ3NTk4fQ.d2nogestQiNsXvihFZQQHNyhxC8AqmhVfopya6dQHvKPqGxxgD2zogSIlCDgyltMlzpKdtz4j08PQ6U9tA8FPQ\""
+    }
+  ]
+}

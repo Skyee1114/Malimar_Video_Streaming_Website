@@ -1,0 +1,17 @@
+<% if feature_active? :roku %>
+angular.module('tv-dashboard').config ['$stateProvider', ($stateProvider) ->
+  $stateProvider
+    .state 'device', {
+      url: '/device'
+      abstract: true
+      template: '<ui-view />'
+    }
+
+    # backward compatibility
+    .state 'roku', {
+      url: '/roku'
+      abstract: true
+      template: '<ui-view />'
+    }
+]
+<% end %>

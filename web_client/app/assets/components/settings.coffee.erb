@@ -1,0 +1,20 @@
+app = angular.module('tv-dashboard')
+
+app.config [
+  '$locationProvider'
+  ($locationProvider) ->
+    $locationProvider.html5Mode true
+]
+
+app.config [
+  'paginationTemplateProvider'
+  (paginationTemplateProvider) ->
+    paginationTemplateProvider.setPath 'common/pagination.html'
+]
+
+app.constant 'PP_SUBMIT_URL',       <%= Rails.application.secrets.pp_submit_url.to_json %>
+app.constant 'PP_CALLBACK_URL',     <%= Rails.application.secrets.pp_callback_url.to_json %>
+app.constant 'PP_MERCHANT_ID',      <%= Rails.application.secrets.pp_merchant_id.to_json %>
+app.constant 'FACEBOOK_APP_ID',     <%= Rails.application.secrets.facebook_app_id.to_json %>
+app.constant 'TAWK_APP_ID',         <%= Rails.application.secrets.tawk_app_id.to_json %>
+app.constant 'GOOGLE_APP_ID',       <%= Rails.application.secrets.google_app_id.to_json %>

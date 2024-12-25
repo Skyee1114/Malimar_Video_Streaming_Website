@@ -1,0 +1,9 @@
+<% if feature_active? :registration %>
+angular.module('tv-dashboard').config ['$stateProvider', ($stateProvider) ->
+  $stateProvider
+    .state "session", {
+      abstract: true,
+      template: '<ui-view/>'
+    }
+]
+<% end %>

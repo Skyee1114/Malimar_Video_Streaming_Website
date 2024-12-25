@@ -1,0 +1,82 @@
+{
+  "resource": "Channels",
+  "http_method": "GET",
+  "route": "/channels/:id",
+  "description": "Get channel information",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Channel id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "channels",
+      "description": "Channel resource object"
+    },
+    {
+      "scope": "channels",
+      "name": "id",
+      "description": "Channel id"
+    },
+    {
+      "scope": "channels",
+      "name": "title",
+      "description": "Channel title"
+    },
+    {
+      "scope": "channels",
+      "name": "cover_image",
+      "description": "Cover images of the resource"
+    },
+    {
+      "scope": "channels",
+      "name": "background_image",
+      "description": "Huge background images of the resource"
+    },
+    {
+      "scope": "channels",
+      "name": "synopsis",
+      "description": "Synopsis"
+    },
+    {
+      "scope": "channels",
+      "name": "stream_url",
+      "description": "Url with token to play the channel"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/channels/tea_tv",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuNDU5NzMsInVzZXIiOnsiaWQiOjEsImxvZ2luIjoiZG9jdG9yMTIwLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yMTIwLndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzl9.sRsO89X9IrDN45kN8GI6QeVBKtR7olMPvuQTW5G7vMl5jOtW4Fz-ZSXFikmfmzU04E812LF_Zj6lIlKQOTC23w",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"channels\": {\n    \"id\": \"tea_tv\",\n    \"title\": \"TEA TV\",\n    \"synopsis\": \"USA Shopping Television 909 329 2727\",\n    \"cover_image\": {\n      \"sd\": \"https://i.malimarcdn.com/teatvlaoF.jpg\",\n      \"hd\": \"https://i.malimarcdn.com/teatvlaoHDF.jpg\",\n      \"wide\": \"https://i.malimarcdn.com/teatvlaoHD-large.jpg\"\n    },\n    \"stream_url\": \"https://livefta.malimarcdn.com/ftaedge00/teatv.sdp/playlist.m3u8?verify=1591578479_9Q%2BC3Q0En7wvRX%2FpWUwwC4S62pVEBpuRMGnuK2ds79Y%3D\",\n    \"background_image\": {\n      \"sd\": null,\n      \"hd\": null\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"45260079f5a36d2ab48636dc86a1f418\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "e3b8cfa1-a575-4908-9791-780cbe5627a5",
+        "Content-Length": "450"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/channels/tea_tv\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuNDU5NzMsInVzZXIiOnsiaWQiOjEsImxvZ2luIjoiZG9jdG9yMTIwLndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yMTIwLndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzl9.sRsO89X9IrDN45kN8GI6QeVBKtR7olMPvuQTW5G7vMl5jOtW4Fz-ZSXFikmfmzU04E812LF_Zj6lIlKQOTC23w\""
+    }
+  ]
+}

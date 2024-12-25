@@ -1,0 +1,13 @@
+angular.module('tv-dashboard').controller 'WatchlistCtrl', [
+  '$scope'
+  ($scope) ->
+    'use strict'
+
+    $scope.scroll_options =
+      template_url: 'watchlist/grid/scroller.html'
+
+    $scope.remove = (id) ->
+      controller.log("id from watchlist")
+
+    return
+]

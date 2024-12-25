@@ -1,0 +1,46 @@
+{
+  "resource": "Sessions",
+  "http_method": "POST",
+  "route": "/sessions",
+  "description": "Authentication error",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Basic ZG9jdG9yMzEwLndob0BleGFtcGxlLmNvbTpzZWNyZXQ=",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 401,
+      "response_status_text": "Unauthorized",
+      "response_body": "HTTP Basic: Access denied.\n",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "WWW-Authenticate": "xBasic realm=\"Application\"",
+        "Content-Type": "text/html; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "9ae3e525-c5eb-46bb-ba5f-42d3a1da83b0",
+        "Content-Length": "27"
+      },
+      "response_content_type": "text/html; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/sessions\" -d '' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-u doctor310.who@example.com:secret"
+    }
+  ]
+}

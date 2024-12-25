@@ -1,0 +1,10 @@
+div ng-if="isLandingPage()"
+  = render 'showcase'
+
+- if feature_active?(:registration)
+  = render 'layout/sign_up_banner'
+
+- if feature_active?(:subscription)
+  = render 'layout/user_info_banner'
+
+= render 'resource/dashboard/grid'

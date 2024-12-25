@@ -1,0 +1,50 @@
+.sign_in
+  - if feature_active? :registration
+    .row disable-all="is_busy"
+      .medium-7.small-centered.columns
+        .sign_in-box.radius
+          .row
+            .sign_in-section.sign_in-section--collapse
+              .sign_in-section__title Sign in
+              form.sign_in-form [name="SignInForm" role="form" ng-submit="submit()"]
+                .row
+                  .alert-box.info.radius ng-show='error'
+                    span
+                      br /
+                      | Your login is invalid. Please try again.
+                      br /
+                      | If you've forgotten your password, please 
+                      a ui-sref="account.password_reset" click here to reset
+                      | .
+                  .row.collapse.sign_in-form__field--collapse_inputs.sign_in-form__field--first
+                    .small-3.medium-2.columns
+                      label.fa.fa-envelope-o.prefix for="user_session.login"
+                    .small-9.medium-10.columns
+                      = field "user_session.login", required: true, placeholder: "Email", type: "email", class: ''
+
+                  .row.collapse.sign_in-form__field--collapse_inputs.sign_in-form__field--last
+                    .small-3.medium-2.columns
+                      label.fa.fa-lock.prefix for="user_session.password"
+                    .small-9.medium-10.columns
+                      = field "user_session.password", required: true, placeholder: "Password", type: "password", class: ''
+                    .text-right.sign_in-form__link
+                      a ui-sref="account.password_reset" Forgot password?
+
+                  .sign_in-form__actions
+                    button.button.success.radius.expand type="submit" Sign in
+                    br /
+                    br /
+                    button.button.facebook.radius.expand type="button" id="login" ng-click="FBLogin()"
+                      i.fa.fa-facebook-official.fa-middle
+                      span  Sign in with Facebook
+                    br /
+                    br /
+                    google-signin-button on-signin="GoogleLogin(response)"/
+
+          .row
+            .sign_in-section__separator
+          .row
+            .sign_in-section.sign_in-section--wide.sign_in-section--light.radius
+              ul.stack.radius.button-group
+                li
+                  a.button ui-sref='account.sign_up' Sign up now

@@ -1,0 +1,52 @@
+.sign_in-section
+  padding: 10px
+
+  &__title
+    font-size: 1.5rem
+    margin-bottom: 15px
+
+  &__separator
+    margin-bottom: -40px
+    text-align: center
+    &:after
+      content: "OR"
+      position: relative
+      display: inline-block
+      font-size: 13px
+      width: 36px
+      height: 36px
+      line-height: 36px
+      bottom: -22px
+      border-radius: 100%
+      border-bottom: $gainsboro 1px solid
+      background-color: $white
+
+  i.fa
+    font-size: 1.8rem
+    line-height: 0.2rem
+    margin-right: 5px
+
+  &--light
+    border-top: $gainsboro 1px solid
+    background-color: $white-smoke
+
+  &--wide
+    padding: 10px
+    margin-top: 10px
+
+.radius
+  .sign_in-section
+    border-bottom-left-radius: $extra-radius
+    border-bottom-right-radius: $extra-radius
+
+
+@media #{$medium-up}
+  .sign_in-section
+    padding: 40px
+
+    &--wide
+      padding: 40px
+      margin-top: 40px
+
+    &--collapse
+      padding-bottom: 0

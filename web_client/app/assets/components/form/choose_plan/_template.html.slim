@@ -1,0 +1,11 @@
+.section__title ng-bind="::title" ng-show="::title"
+.choose-plan
+  .plan [
+    ng-repeat="available_plan in plans track by ::available_plan.id"
+    ng-click="choosePlan(available_plan)"
+    ng-class="{'plan--selected': isSelected(available_plan)}"
+  ]
+    .plan__body
+      .plan__name ng-bind="::available_plan.name"
+      .plan__description ng-bind=":: features(available_plan)"
+      .plan__price ng-bind="::available_plan.cost | currency:'$'"

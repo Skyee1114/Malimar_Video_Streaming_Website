@@ -1,0 +1,109 @@
+{
+  "resource": "Rokupay notifications",
+  "http_method": "POST",
+  "route": "/callback/rokupay_notifications",
+  "description": "Rokupay notification with invalid device serial",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "rokupay_notifications",
+      "description": "Notification request object"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "amount",
+      "description": "Amount paid"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "required": false,
+      "name": "description",
+      "description": "Transaction description"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "transaction_id",
+      "description": "Transaction id"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "authorization_code",
+      "description": "Authorization code"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "required": false,
+      "name": "response",
+      "description": "Transaction response"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "required": false,
+      "name": "invoice",
+      "description": "Invoice number"
+    },
+    {
+      "scope": "rokupay_notifications",
+      "name": "links",
+      "description": "Linked objects"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "errors",
+      "description": "Errors object"
+    },
+    {
+      "scope": "errors",
+      "name": "title",
+      "description": "Summary of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "detail",
+      "description": "Explanation of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "status",
+      "description": "The HTTP status code applicable to this problem"
+    },
+    {
+      "scope": "errors",
+      "name": "links",
+      "description": ""
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/callback/rokupay_notifications",
+      "request_body": "{\"rokupay_notifications\":{\"amount\":\"33.00\",\"description\":\"1 Month\",\"transaction_id\":\"8UH417299T4422516\",\"authorization_code\":\"ABCD\",\"response\":\"Completed\",\"invoice\":\"ABCD123\",\"links\":{\"device\":{\"serial_number\":\"INVALID!\",\"type\":\"Device::Roku\"},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"plan\":1,\"user\":{\"email\":\"tomas@example.com\"}}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE2NDI5NjExOTkuODE3NjkyNSwidXNlciI6eyJpZCI6MiwibG9naW4iOiJkb2N0b3IxNy53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE3Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE2NDMwNDc1OTl9.jFlrUtpIRzPkCqSjX8ghDZoNGD6ovzFctYl-dagWgr7jnOZAXVy_jK4zOp5d-S9AeeI9nP_52mPmE2Vosint2w",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\"errors\":{\"status\":422,\"title\":\"Validation error\",\"detail\":\"Device #\\u003cActiveModel::Errors:0x00005568f270f7c8\\u003e\",\"links\":{\"callback_rokupay_notification\":{\"device\":[{\"serial_number\":[\"Only letters and numbers are allowed\"]}]}}}}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/vnd.api+json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "4866c446-a1dd-40af-b521-a42f23423f16",
+        "Content-Length": "236"
+      },
+      "response_content_type": "application/vnd.api+json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/callback/rokupay_notifications\" -d '{\"rokupay_notifications\":{\"amount\":\"33.00\",\"description\":\"1 Month\",\"transaction_id\":\"8UH417299T4422516\",\"authorization_code\":\"ABCD\",\"response\":\"Completed\",\"invoice\":\"ABCD123\",\"links\":{\"device\":{\"serial_number\":\"INVALID!\",\"type\":\"Device::Roku\"},\"billing_address\":{\"first_name\":\"Tomas\",\"last_name\":\"Buyer\",\"email\":\"billme@example.com\",\"phone\":\"+1 111 1111 1111\",\"address\":\"Main str\",\"city\":\"Hope\",\"state\":\"DE\",\"zip\":\"1234\",\"country\":\"US\"},\"plan\":1,\"user\":{\"email\":\"tomas@example.com\"}}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE2NDI5NjExOTkuODE3NjkyNSwidXNlciI6eyJpZCI6MiwibG9naW4iOiJkb2N0b3IxNy53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE3Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE2NDMwNDc1OTl9.jFlrUtpIRzPkCqSjX8ghDZoNGD6ovzFctYl-dagWgr7jnOZAXVy_jK4zOp5d-S9AeeI9nP_52mPmE2Vosint2w\""
+    }
+  ]
+}

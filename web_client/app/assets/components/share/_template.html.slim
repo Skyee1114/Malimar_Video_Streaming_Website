@@ -1,0 +1,16 @@
+.share-video
+  a.share-video__item href="" ng-if="comments_url"
+    i.fa.fa-comment.share-video__icon
+    span comments
+
+  a.share-video__item ng-href="{{::twitter_url}}" ng-if="twitter_url"
+    i.fa.fa-twitter.share-video__icon
+    span tweet
+
+  a.share-video__item ng-href="{{::facebook_url}}" ng-if="facebook_url"
+    i.fa.fa-facebook-square.share-video__icon
+    span facebook
+
+  a.share-video__item href="" ng-if="share_url"
+    i.fa.fa-share.share-video__icon
+    span share

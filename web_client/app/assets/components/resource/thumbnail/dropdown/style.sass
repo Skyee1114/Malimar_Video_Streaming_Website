@@ -1,0 +1,138 @@
+$thumbnail-dropdown-bg: #2c2726
+
+.thumbnail-dropdown
+  position: absolute
+  top: 0
+  left: 0
+  z-index: $thumbnail-dropdown
+  display: none
+  width: 265px
+  font-size: 12px
+  font-weight: normal
+  text-align: left
+  white-space: normal
+  background-color: $thumbnail-dropdown-bg
+  box-shadow: 0 0px 15px rgba(0, 0, 0, .4)
+  &.top
+    margin-top: -10px
+  &.right
+    margin-left: 10px
+  &.bottom
+    margin-top: 10px
+  &.left
+    margin-left: -10px
+
+.thumbnail-dropdown__header
+  margin: 0
+  background-color: $contrast-color
+  min-height: 28px
+  box-shadow: 0 2px 2px rgba(0,0,0,0.1)
+  text-transform: uppercase
+  .thumbnail-dropdown__title
+    font-size: 12px
+    font-weight: 600
+    margin: 0
+  .thumbnail-dropdown__subtitle
+    color: $secondary-white
+    font-size: 0.9em
+    margin-top: 4px
+
+.thumbnail-dropdown__footer
+  border-top: 1px solid rgba(101, 94, 91, 0.3)
+
+.thumbnail-dropdown__content
+  overflow: hidden
+
+.thumbnail-dropdown__header,
+.thumbnail-dropdown__footer
+  padding: 14px 24px
+
+.thumbnail-dropdown__rating,
+.thumbnail-dropdown__favourites
+  display: inline-block
+  vertical-align: top
+  font-size: 0.9em
+
+.thumbnail-dropdown__favourites
+  color: $primary-color
+
+.thumbnail-dropdown__title-data
+  color: $white
+
+.thumbnail-dropdown__data
+  padding: 16px 24px
+  color: $secondary-white
+  &:empty
+    display: none
+
+.thumbnail-dropdown > .arrow,
+.thumbnail-dropdown > .arrow:after
+  position: absolute
+  display: block
+  width: 0
+  height: 0
+  border-color: transparent
+  border-style: solid
+
+.thumbnail-dropdown > .arrow
+  border-width: 18px
+  &:after
+    content: ""
+    border-width: 17px
+
+.thumbnail-dropdown.top > .arrow
+  bottom: -18px
+  left: 50%
+  margin-left: -18px
+  border-top-color: #999
+  border-top-color: rgba(0, 0, 0, .15)
+  border-bottom-width: 0
+  &:after
+    bottom: 1px
+    margin-left: -17px
+    content: " "
+    border-top-color: $thumbnail-dropdown-bg
+    border-bottom-width: 0
+
+.thumbnail-dropdown.right > .arrow
+  top: 50%
+  left: -18px
+  margin-top: -18px
+  border-right-color: #999
+  border-right-color: rgba(0, 0, 0, .15)
+  border-left-width: 0
+  &:after
+    bottom: -17px
+    left: 1px
+    content: " "
+    border-right-color: $thumbnail-dropdown-bg
+    border-left-width: 0
+
+.thumbnail-dropdown.bottom > .arrow
+  top: -18px
+  left: 50%
+  margin-left: -18px
+  border-top-width: 0
+  border-bottom-color: #999
+  border-bottom-color: rgba(0, 0, 0, .15)
+  &:after
+    top: 1px
+    margin-left: -17px
+    content: " "
+    border-top-width: 0
+    border-bottom-color: $contrast-color
+
+.thumbnail-dropdown.left > .arrow
+  top: 50%
+  right: -18px
+  margin-top: -18px
+  border-right-width: 0
+  border-left-color: #999
+  border-left-color: rgba(0, 0, 0, .15)
+  &:after
+    right: 1px
+    bottom: -17px
+    content: " "
+    border-right-width: 0
+    border-left-color: $thumbnail-dropdown-bg
+

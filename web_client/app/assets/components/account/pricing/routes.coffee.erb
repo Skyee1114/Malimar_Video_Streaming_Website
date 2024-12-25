@@ -1,0 +1,10 @@
+<% if feature_active? :subscription %>
+angular.module('tv-dashboard').config ['$stateProvider', ($stateProvider) ->
+  $stateProvider
+    .state "account.pricing", {
+      url: "/pricing"
+      templateUrl: 'account/pricing.html'
+      controller: 'PricingCtrl'
+    }
+]
+<% end %>

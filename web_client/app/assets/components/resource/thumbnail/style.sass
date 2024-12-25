@@ -1,0 +1,97 @@
+@import 'playing_overlay'
+@import 'dropdown/style'
+@import 'resize'
+
+.thumbnail
+  display: inline-block
+  vertical-align: top
+  position: relative
+  margin-right: 8px
+  margin-bottom: 8px
+  &:before, &:after
+    content: ''
+    position: absolute
+    display: none
+
+  &:before
+    border-top: 3px solid $dark-accent-color
+    border-bottom: 3px solid $light-accent-color
+    background-position: 0 0, 100% 0
+    background-repeat: no-repeat
+    background-size: 3px 100%
+    background-image: linear-gradient(to bottom, $dark-accent-color 0%, $light-accent-color 100%), linear-gradient(to bottom, $dark-accent-color 0%, $light-accent-color 100%)
+    z-index: 1
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+
+  &:hover
+    &:before
+      display: block
+
+    .thumbnail-details
+      display: block
+      z-index: 1
+      &:hover
+        opacity: 1
+    .thumbnail-actions
+      display: block
+      z-index: 2
+
+  &--load_more
+    display: inline-block
+    color: $white
+    font-size: 1.2rem
+    text-align: center
+    vertical-align: middle
+
+.thumbnail-details
+  background: rgba($black, .75)
+  transition: 1.5s
+  transition-delay: 1s
+  opacity: 0
+  overflow: hidden
+  display: none
+  position: absolute
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 13px
+  white-space: pre-wrap
+
+  &__title
+    text-transform: inherit
+    font-weight: 600
+    font-size: 1em
+    color: $white
+
+  &__synopsis
+    font-size: .9em
+    margin-top: 1em
+    color: $white
+
+.thumbnail-actions
+  display: none
+  position: absolute
+  top: 0
+  right: 0
+  padding: 0
+  margin-top: 3px
+  margin-right: 3px
+
+  &__item
+    display: block
+    text-align: center
+    vertical-align: middle
+    color: $white
+    width: 30px
+    height: 30px
+    &:hover
+      color: $white
+      background-color: $primary-color
+
+@media #{$large-up}
+  .thumbnail
+    box-shadow: 1px 3px 5px rgba(0,0,0,.6)

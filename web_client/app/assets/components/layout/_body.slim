@@ -1,0 +1,8 @@
+.layout__body
+  .row
+    .columns.small-12
+      aside.sidebar.layout__side.layout__side--left
+        = render 'layout/sidebar/content'
+      section.layout__side.layout__side--right
+        toaster-container toaster-options="{'close-button':true, 'time-out': 7000 }"
+        div [ui-view]

@@ -1,0 +1,100 @@
+{
+  "resource": "Thumbnails",
+  "http_method": "GET",
+  "route": "/thumbnails?container=:container_id&limit=:limit",
+  "description": "Get a list of thumbnails limited to n elements",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "container_id",
+      "description": "Container id: show or dashboard id for example"
+    },
+    {
+      "name": "limit",
+      "description": "Limits the amout of thumbnails returned"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "thumbnails",
+      "description": "Thumbnails for the elements in given container"
+    },
+    {
+      "scope": "thumbnails",
+      "name": "id",
+      "description": "Resource id"
+    },
+    {
+      "scope": "thumbnails",
+      "name": "title",
+      "description": "Resource title"
+    },
+    {
+      "scope": "thumbnails",
+      "name": "href",
+      "description": "Link to resource"
+    },
+    {
+      "scope": "thumbnails",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    },
+    {
+      "scope": "thumbnails",
+      "required": false,
+      "name": "synopsis",
+      "description": "Brief description"
+    },
+    {
+      "scope": "thumbnails",
+      "name": "type",
+      "description": "Type of the resource"
+    },
+    {
+      "scope": "thumbnails",
+      "name": "is_recently_updated",
+      "description": "Boolean. True when resource was updated"
+    },
+    {
+      "scope": "thumbnails",
+      "required": false,
+      "name": "highlight",
+      "description": "Additional information"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/thumbnails?container=Documentary_and_Education_CF&limit=1",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODkuNzI2NTk5NSwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMjkud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMjkud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4OX0.LKnvHe2m_Llf_8VJUdSTrI2xYdyWT1HF8x9Wf0RIu41qrFgadWSptuT0cX8iJEk3VwQi26Db6PYBwbDxduOLNw",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "container": "Documentary_and_Education_CF",
+        "limit": "1"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"thumbnails\": [\n    {\n      \"id\": \"EnglishOnTour19\",\n      \"title\": \"ENGLISH ON TOUR\",\n      \"cover_image\": {\n        \"sd\": \"https://i.malimarcdn.com/EnglishOnTour19F.jpg\",\n        \"hd\": \"https://i.malimarcdn.com/EnglishOnTour19HDF.jpg\",\n        \"wide\": \"https://i.malimarcdn.com/EnglishOnTour19HD-large.jpg\"\n      },\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/shows/EnglishOnTour19?grid=Documentary_and_Education_CF\",\n      \"type\": \"show\",\n      \"synopsis\": \"Updated On: 26-Jul-2019 with 145  Episode(s)  Plays On: Monday, Tuesday, Wednesday, Thursday, Friday Language: Thai\",\n      \"is_recently_updated\": false,\n      \"highlight\": null\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"cb89b9f2f170338af505d035e8bf1442\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "68381ade-b7b1-40e5-a96f-094c1acfb467",
+        "Content-Length": "554"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/thumbnails?container=Documentary_and_Education_CF&limit=1\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODkuNzI2NTk5NSwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMjkud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMjkud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4OX0.LKnvHe2m_Llf_8VJUdSTrI2xYdyWT1HF8x9Wf0RIu41qrFgadWSptuT0cX8iJEk3VwQi26Db6PYBwbDxduOLNw\""
+    }
+  ]
+}

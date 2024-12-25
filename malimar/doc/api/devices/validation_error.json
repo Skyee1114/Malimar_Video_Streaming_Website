@@ -1,0 +1,91 @@
+{
+  "resource": "Devices",
+  "http_method": "POST",
+  "route": "/devices",
+  "description": "Validation error",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "devices",
+      "description": "Device resource object"
+    },
+    {
+      "scope": "devices",
+      "name": "name",
+      "description": "Device name"
+    },
+    {
+      "scope": "devices",
+      "name": "type",
+      "description": "Device type"
+    },
+    {
+      "scope": "devices",
+      "name": "serial_number",
+      "description": "Device serial number"
+    },
+    {
+      "scope": "devices",
+      "name": "links",
+      "description": "Links"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "errors",
+      "description": "Errors object"
+    },
+    {
+      "scope": "errors",
+      "name": "title",
+      "description": "Summary of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "detail",
+      "description": "Explanation of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "status",
+      "description": "The HTTP status code applicable to this problem"
+    },
+    {
+      "scope": "errors",
+      "name": "links",
+      "description": ""
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/devices",
+      "request_body": "{\"devices\":{\"name\":\"Home TV\",\"type\":\"Device::Roku\",\"serial_number\":\"ABC\",\"links\":{\"user\":1}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzYuMDcxNjE2NCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I1Ny53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjU3Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzZ9.Iu3CaOrIMGXbbkaqzyQv39-yjSmzbF_ChgPmmQ2sjCreYBWRdhebix6lR8osLZV9LGDMDJy7g89CcE35D_hnWQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": {\n    \"status\": 422,\n    \"title\": \"Validation error\",\n    \"detail\": \"Serial number is too short (minimum is 6 characters)\",\n    \"links\": {\n      \"device_roku\": {\n        \"serial_number\": [\n          \"is too short (minimum is 6 characters)\"\n        ]\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "17da49ad-0aca-446e-9e68-2b308f1c2b5c",
+        "Content-Length": "201"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/devices\" -d '{\"devices\":{\"name\":\"Home TV\",\"type\":\"Device::Roku\",\"serial_number\":\"ABC\",\"links\":{\"user\":1}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzYuMDcxNjE2NCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I1Ny53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjU3Lndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzZ9.Iu3CaOrIMGXbbkaqzyQv39-yjSmzbF_ChgPmmQ2sjCreYBWRdhebix6lR8osLZV9LGDMDJy7g89CcE35D_hnWQ\""
+    }
+  ]
+}

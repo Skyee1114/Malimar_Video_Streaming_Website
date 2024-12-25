@@ -1,0 +1,94 @@
+{
+  "resource": "Episodes",
+  "http_method": "GET",
+  "route": "/episodes?show=:show_id&limit=:limit",
+  "description": "Get a list of episodes for given show limited to n episodes",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "show_id",
+      "description": "Show id"
+    },
+    {
+      "name": "limit",
+      "description": "Limits the amout of episodes returned"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "episodes",
+      "description": "Episodes of the given show"
+    },
+    {
+      "scope": "episodes",
+      "name": "href",
+      "description": "Link to episode"
+    },
+    {
+      "scope": "episodes",
+      "name": "id",
+      "description": "Episode id"
+    },
+    {
+      "scope": "episodes",
+      "name": "title",
+      "description": "Episode title"
+    },
+    {
+      "scope": "episodes",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    },
+    {
+      "scope": "episodes",
+      "name": "number",
+      "description": "Episode number in the show"
+    },
+    {
+      "scope": "episodes",
+      "name": "release_date",
+      "description": "Date when episode was released"
+    },
+    {
+      "scope": "episodes",
+      "required": false,
+      "name": "synopsis",
+      "description": "Synopsis"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/episodes?show=WonderfulAnimals19&limit=1",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuMDczODcwMiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNTEud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNTEud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4M30._HuE_4iTSVselI_e8eD0joYygeVrDLvi6WNRh2brmy8oSEp3prbvTyaDt2OzUUlvOqcO8CpjumLzZ4ggGgtB-g",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "show": "WonderfulAnimals19",
+        "limit": "1"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"episodes\": [\n    {\n      \"id\": \"EP1405342\",\n      \"title\": \"Wonderful Animals | Episode 42  | Jul 22, 2019\",\n      \"synopsis\": null,\n      \"cover_image\": {\n        \"sd\": \"https://i.malimarcdn.com/WonderfulAnimals19F.jpg\",\n        \"hd\": \"https://i.malimarcdn.com/WonderfulAnimals19HDF.jpg\",\n        \"wide\": \"https://i.malimarcdn.com/WonderfulAnimals19HD-large.jpg\"\n      },\n      \"number\": 42,\n      \"release_date\": \"22-Jul-2019\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/episodes/EP1405342?show=WonderfulAnimals19\"\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"45dfb646a17c2c4e7563942f803a9d08\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "2ee8f259-28ab-48bb-83d4-d169fb477e0a",
+        "Content-Length": "442"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/episodes?show=WonderfulAnimals19&limit=1\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuMDczODcwMiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNTEud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNTEud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4M30._HuE_4iTSVselI_e8eD0joYygeVrDLvi6WNRh2brmy8oSEp3prbvTyaDt2OzUUlvOqcO8CpjumLzZ4ggGgtB-g\""
+    }
+  ]
+}

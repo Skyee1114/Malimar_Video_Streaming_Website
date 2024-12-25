@@ -1,0 +1,20 @@
+.row
+  .small-centered.columns
+    .show
+      .medium-12.large-4.columns
+        .show-detail.text-center
+          h3 ng-bind="::show.title"
+          img.show__image ng-src="{{ ::show.cover_image.hd }}" alt="{{ ::show.title }}"
+      .medium-12.large-8.columns.end
+        .row
+          hr.show-for-medium-only.horizontal-rule.horizontal-rule--dark
+          .show-episodes
+            div dir-paginate="episode in episodes | itemsPerPage: 12"
+              a.grid-episode ng-href="{{:: episode.href }}"
+                .grid-episode__title
+                  | Episode {{ ::episode.number }}
+                .grid-episode__date
+                  | {{:: episode.release_date | date }}
+        .row
+          .pagination-centered
+            dir-pagination-controls [ boundary-links="true" ]

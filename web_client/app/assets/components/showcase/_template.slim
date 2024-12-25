@@ -1,0 +1,4 @@
+.showcase ng-controller="ShowcaseCtrl"
+  .showcase__options.show-for-medium-up
+    a.button.small.showcase__option ng-click="showcase(exibit)" ng-bind="::exibit.title" ng-repeat="exibit in ::categories track by ::exibit.id" ng-class="category.id == exibit.id ? 'disabled' : ''"
+  .showcase__display scroll-elements="thumbnails" scroll-elements-options="::scroll_options" scroll-elements-bind="true"

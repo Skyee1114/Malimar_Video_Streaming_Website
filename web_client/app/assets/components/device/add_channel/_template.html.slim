@@ -1,0 +1,28 @@
+.account
+  .account-category
+    .account-category__title
+      i.fa.fa-plug
+      | Add #{ company_name } TV channel
+
+    .account-category__body.account-category__body--shifted
+      .text-center
+        ul.button-group.stack-for-small.round
+          li
+            a.button ui-sref="^.landing" Back to features
+          li
+            a.button ui-sref=".step1" ui-sref-active="button--active" Step 1
+          li
+            a.button ui-sref=".step2" ui-sref-active="button--active" Step 2
+          li 
+            a.button ui-sref=".step3" ui-sref-active="button--active" Step 3
+          li
+            a.button ui-sref=".step4" ui-sref-active="button--active" Step 4
+          li
+            a.button ui-sref=".step5" ui-sref-active="button--active" Step 5
+          li
+            a.button ui-sref=".step6" ui-sref-active="button--active" Step 6
+          li
+            a.button ui-sref="^.activation.form" Start free trial now
+
+        .slider
+          .slider__content [ui-view]

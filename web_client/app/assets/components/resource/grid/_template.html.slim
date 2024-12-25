@@ -1,0 +1,16 @@
+.grid-content
+  .grid-header
+    h2.grid-header__title
+      | {{ grid.title || '...' }} 
+      span.grid-header__subtitle ng-bind=":: grid.title_translated"
+
+  .grid-content__thumbnails
+    a.thumbnail [ng-repeat="thumbnail in ::thumbnails track by thumbnail.id"
+                 ng-href="{{:: thumbnail.href }}"]
+
+      img.thumbnail__image [ng-src="{{:: thumbnail.cover_image.hd }}"
+                            alt="{{:: thumbnail.title}}"]
+
+      .thumbnail-details
+        .thumbnail-details__title ng-bind="::thumbnail.title"
+        .thumbnail-details__synopsis ng-bind="::thumbnail.synopsis"

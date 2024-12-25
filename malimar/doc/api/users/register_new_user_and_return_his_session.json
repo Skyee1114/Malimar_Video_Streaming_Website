@@ -1,0 +1,84 @@
+{
+  "resource": "Users",
+  "http_method": "POST",
+  "route": "/users?include=session",
+  "description": "Register new user and return his session",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "users",
+      "description": "User resource object"
+    },
+    {
+      "scope": "users",
+      "name": "email",
+      "description": "User email"
+    },
+    {
+      "scope": "users",
+      "name": "password",
+      "description": "User desired password"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "users",
+      "description": "User resource object"
+    },
+    {
+      "scope": "users",
+      "name": "links",
+      "description": "Embedded resources"
+    },
+    {
+      "scope": "users",
+      "name": "id",
+      "description": "User id"
+    },
+    {
+      "scope": "users",
+      "name": "email",
+      "description": "User email"
+    },
+    {
+      "scope": "users",
+      "name": "login",
+      "description": "User login"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users?include=session",
+      "request_body": "{\"users\":{\"email\":\"alice@example.com\",\"password\":\"secret123456\"}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTEuODA1MjA0NCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IzMzIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IzMzIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MX0.UQH5m1WzmsH9z8BACcnHkk_lMKSLwk3rcOEYFTEuG7Glv7U2mxFRTagI14tD0eZUt7Cl6V4huj3w047CV_qHoA",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "session"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"users\": {\n    \"id\": 2,\n    \"email\": \"alice@example.com\",\n    \"login\": \"alice@example.com\",\n    \"links\": {\n      \"session\": {\n        \"user\": {\n          \"email\": \"alice@example.com\",\n          \"password_digest\": \"$2a$04$ZRrzUfdLlmY4OvBl0JiOuuRM4x/AFR7xuZHTbFtyzgB8j9UagqAtm\",\n          \"created_at\": \"2020-06-07T22:08:11.814Z\",\n          \"updated_at\": \"2020-06-07T22:08:11.814Z\",\n          \"login\": \"alice@example.com\",\n          \"id\": 2\n        },\n        \"id\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTEuODE4MDAzNywidXNlciI6eyJpZCI6MiwibG9naW4iOiJhbGljZUBleGFtcGxlLmNvbSIsImVtYWlsIjoiYWxpY2VAZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDkxfQ.4srraekOn45XBH3u7KW9lwFKix07yqqOK1x3cT1d-XsmEk_Sl1hkrFX0Xhr7MxyrkBouIwPZjoPLHq0h3wRRVA\"\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/users/2",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"d9d598bf4b9533d16e04ee038ca6858a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "a4586717-c167-4e84-a0c9-425b8ac85be2",
+        "Content-Length": "723"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/users?include=session\" -d '{\"users\":{\"email\":\"alice@example.com\",\"password\":\"secret123456\"}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTEuODA1MjA0NCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IzMzIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IzMzIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MX0.UQH5m1WzmsH9z8BACcnHkk_lMKSLwk3rcOEYFTEuG7Glv7U2mxFRTagI14tD0eZUt7Cl6V4huj3w047CV_qHoA\""
+    }
+  ]
+}

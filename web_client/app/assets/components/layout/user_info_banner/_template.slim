@@ -1,0 +1,45 @@
+.user-info-banner ng-if="is_premium"
+  .row
+    .user-info-banner__section
+      .display-field.display-field--yellow
+        .display-field__label You are currently logged in as
+        .display-field__value ng-bind="current_user.login"
+      .display-field.display-field--yellow.display-field--last
+        .display-field__label Password
+        a.display-field__value ui-sref="account.edit" Click here to change
+
+    .user-info-banner__section ng-controller="AccountSettingsSubscriptionCtrl"
+      .row ng-show="premium"
+        .display-field.display-field--yellow.display-field--last
+          .display-field__label Web online access
+          div
+            | Your membership expires on 
+            span.display-field__value.display-field__value--accent.display-field__value--nowrap ng-bind="premium.expires_at | date"
+
+          div
+            | You have 
+            span.display-field__value.display-field__value--accent ng-bind="days_on_premium"
+            ng-pluralize [
+              count="days_on_premium"
+              when="{'one': ' day',
+                     'other': ' days'}"
+            ]
+            |  remaining.
+      .row ng-hide="premium"
+        div No active subscription.
+        div
+          span Purchase one 
+          a ui-sref="account.subscribe.form" here
+
+    .user-info-banner__section.user-info-banner__section--small.user-info-banner__section--last
+      .row
+        a.button.medium.expand.button--with_icon.radius ui-sref="account.subscribe.form"
+          i.fa.fa-arrow-circle-up 
+          span Top Up
+      .row
+        .user-info-banner__button_description TopUp here to extend your membership.
+        .user-info-banner__button_description 
+          | For Help, Chat with us or call us toll free at: 
+          br /
+          span.display-field__value.display-field__value--nowrap 1-619-940-5522 USA or 33-977-55-77-55 France
+

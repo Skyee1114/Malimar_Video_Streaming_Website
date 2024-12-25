@@ -1,0 +1,88 @@
+{
+  "resource": "Channels",
+  "http_method": "GET",
+  "route": "/channels/:id?include=container",
+  "description": "Get channel information with embedded container",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Channel id"
+    }
+  ],
+  "response_fields": [
+    {
+      "scope": "channels",
+      "name": "links",
+      "description": "Embedded resources"
+    },
+    {
+      "name": "channels",
+      "description": "Channel resource object"
+    },
+    {
+      "scope": "channels",
+      "name": "id",
+      "description": "Channel id"
+    },
+    {
+      "scope": "channels",
+      "name": "title",
+      "description": "Channel title"
+    },
+    {
+      "scope": "channels",
+      "name": "cover_image",
+      "description": "Cover images of the resource"
+    },
+    {
+      "scope": "channels",
+      "name": "background_image",
+      "description": "Huge background images of the resource"
+    },
+    {
+      "scope": "channels",
+      "name": "synopsis",
+      "description": "Synopsis"
+    },
+    {
+      "scope": "channels",
+      "name": "stream_url",
+      "description": "Url with token to play the channel"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/channels/tea_tv?include=container",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODAuNjA3MTY1MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxMjcud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxMjcud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4MH0.Vwl5jwvOUTdtp8_L6ZZOu1KmYGXawuCxqum3FMCP_ELjJxeAuLS0ZZLxfZQJR1kzjfBuacu7sfDYtgC3faY47Q",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "container"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"channels\": {\n    \"id\": \"tea_tv\",\n    \"title\": \"TEA TV\",\n    \"synopsis\": \"USA Shopping Television 909 329 2727\",\n    \"cover_image\": {\n      \"sd\": \"https://i.malimarcdn.com/teatvlaoF.jpg\",\n      \"hd\": \"https://i.malimarcdn.com/teatvlaoHDF.jpg\",\n      \"wide\": \"https://i.malimarcdn.com/teatvlaoHD-large.jpg\"\n    },\n    \"stream_url\": \"https://livefta.malimarcdn.com/ftaedge00/teatv.sdp/playlist.m3u8?verify=1591578480_sBmR3gE1H4J9DGXwaQaEIja6FwGnoyiQN6p94tDYH4s%3D\",\n    \"background_image\": {\n      \"sd\": null,\n      \"hd\": null\n    },\n    \"links\": {\n      \"container\": {\n        \"id\": \"LiveTV_Free_CF\",\n        \"url\": \"https://malimartv.s3.amazonaws.com/roku/xml/Home/LiveTV_Free_CF.xml\"\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8b0e4971a44a2c56687cd46fc6106310\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "1c482a8a-d397-45ba-94f9-7fd8d34d580b",
+        "Content-Length": "568"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/channels/tea_tv?include=container\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODAuNjA3MTY1MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxMjcud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxMjcud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4MH0.Vwl5jwvOUTdtp8_L6ZZOu1KmYGXawuCxqum3FMCP_ELjJxeAuLS0ZZLxfZQJR1kzjfBuacu7sfDYtgC3faY47Q\""
+    }
+  ]
+}

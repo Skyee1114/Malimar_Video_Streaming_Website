@@ -1,0 +1,18 @@
+.account-category
+  .account-category__title
+    | Our Premium plans line
+
+  .account-category__body
+    .row
+      .small-12.columns
+        choose-plan ng-model='plan' plans='plans' choose-plan-default-price="min"
+
+    .row ng-if="plan.description"
+      .small-12.columns
+        .plan-description ng-bind-html="plan.description | trust_html"
+
+    .row
+      .small-12.columns
+        a.button.radius ui-sref="account.sign_up" Sign Up and Subscribe
+        span  or 
+        a.button.success.radius ui-sref="session.sign_in" Sign in

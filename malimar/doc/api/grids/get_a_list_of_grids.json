@@ -1,0 +1,70 @@
+{
+  "resource": "Grids",
+  "http_method": "GET",
+  "route": "/grids",
+  "description": "Get a list of grids",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "grids",
+      "description": "Grids of the home dashboard"
+    },
+    {
+      "scope": "grids",
+      "name": "href",
+      "description": "Link to grid"
+    },
+    {
+      "scope": "grids",
+      "name": "id",
+      "description": "Grid id"
+    },
+    {
+      "scope": "grids",
+      "name": "title",
+      "description": "Grid title"
+    },
+    {
+      "scope": "grids",
+      "required": false,
+      "name": "title_translated",
+      "description": "Grid title in another language"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/grids",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuODk3MDk0NSwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNjcud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNjcud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4M30.ZcJwc3AMt_43XKTLagd_ooJqYB2yTFdzpuUuN-_KNBMhmuwl3d7_Bwbg0snKDFG-V4RdC0iw0Jk0e0YQ149Z6w",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"grids\": [\n    {\n      \"id\": \"Language_Menu_CF\",\n      \"title\": \"Language Menu\",\n      \"title_translated\": \"ถ่ายทอดสดทางโทรทัศน์ | พรีเมี่ยมแบบ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Language_Menu_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"LiveTV_Free_Premium_Sponsors_CF\",\n      \"title\": \"Live TV Free | Premium Sponsors\",\n      \"title_translated\": \"พรีเมี่ยมสปอนเซอร์ | ฟรี\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/LiveTV_Free_Premium_Sponsors_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"LiveTV_Local_Channels_CF\",\n      \"title\": \"Live TV | Local Channels\",\n      \"title_translated\": \"ถ่ายทอดสดทางโทรทัศน์ | ช่องโลโค\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/LiveTV_Local_Channels_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Premium_View_CF\",\n      \"title\": \"Premium View\",\n      \"title_translated\": \"พรีเมี่ยมวิว\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Premium_View_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"LiveTV_Premium_CF\",\n      \"title\": \"Live TV | Premium\",\n      \"title_translated\": \"ถ่ายทอดสดทางโทรทัศน์ | พรีเมี่ยมแบบ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/LiveTV_Premium_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Drama_Thai_New_Episodes_CF\",\n      \"title\": \"Thai Drama | Onair\",\n      \"title_translated\": \"ละครไทย| ออกอากาศ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Drama_Thai_New_Episodes_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Thai_Dramas_CF\",\n      \"title\": \"Thai Dramas\",\n      \"title_translated\": \"ละครไทย\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Thai_Dramas_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Drama_World_New_Episodes_CF\",\n      \"title\": \"World Drama | Onair\",\n      \"title_translated\": \"ละครโลก | ออกอากาศ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Drama_World_New_Episodes_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"World_Dramas_CF\",\n      \"title\": \"World Dramas\",\n      \"title_translated\": \"ละครโลก\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/World_Dramas_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Recently_Added_CF\",\n      \"title\": \"Recently Added\",\n      \"title_translated\": \"ที่เพิ่มเข้ามาเมื่อเร็ว ๆ นี้\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Recently_Added_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Sitcom_CF\",\n      \"title\": \"Sitcoms | Onair\",\n      \"title_translated\": \"ซิทคอม | ออกอากาศ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Sitcom_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Sitcoms_CF\",\n      \"title\": \"Sitcoms\",\n      \"title_translated\": \"ซิทคอม\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Sitcoms_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"News_New_Episodes_CF\",\n      \"title\": \"News | Onair\",\n      \"title_translated\": \"ข่าว | ออกอากาศ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/News_New_Episodes_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"News_CF\",\n      \"title\": \"News\",\n      \"title_translated\": \"ข่าว\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/News_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Variety_New_Episodes_CF\",\n      \"title\": \"Variety Shows | Onair\",\n      \"title_translated\": \"รายการวาไรตี้ | ออกอากาศ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Variety_New_Episodes_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Variety_Shows_CF\",\n      \"title\": \"Variety Shows\",\n      \"title_translated\": \"รายการวาไรตี้\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Variety_Shows_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Food_CF\",\n      \"title\": \"Food and Travel | Onair\",\n      \"title_translated\": \"อาหารและการเดินทาง\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Food_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Food_and_Travel_CF\",\n      \"title\": \"Food and Travel\",\n      \"title_translated\": \"อาหารและการเดินทาง\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Food_and_Travel_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Game_CF\",\n      \"title\": \"Game Shows\",\n      \"title_translated\": \"เกมโชว์\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Game_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Local_Theater_CF\",\n      \"title\": \"Local | Theater\",\n      \"title_translated\": \"ท้องถิ่น | โรงละคร\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Local_Theater_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Sport_CF\",\n      \"title\": \"Sports\",\n      \"title_translated\": \"กีฬา\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Sport_CF?dashboard=HomeGrid\"\n    },\n    {\n      \"id\": \"Documentary_and_Education_CF\",\n      \"title\": \"Documentary and Education\",\n      \"title_translated\": \"สารคดีและการศึกษา\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Documentary_and_Education_CF?dashboard=HomeGrid\"\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"0e82d5437a8207942d7b014fa91bcb58\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "aa611d6d-8695-423e-b9f7-e2d047d7989c",
+        "Content-Length": "4928"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/grids\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuODk3MDk0NSwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNjcud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNjcud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4M30.ZcJwc3AMt_43XKTLagd_ooJqYB2yTFdzpuUuN-_KNBMhmuwl3d7_Bwbg0snKDFG-V4RdC0iw0Jk0e0YQ149Z6w\""
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+p Hello
+
+p We got a new request for Device activation from #{ domain }
+
+p For check all details about the submission form please check the attached file.
+
+p
+  b Device serial number: 
+  span = @activation.serial_number
+  br /
+  b Device type: 
+  span = @activation.device_type
+  br /
+  b First name: 
+  span = @activation.first_name
+  br /
+  b Last name: 
+  span = @activation.last_name
+  br /
+  b Email: 
+  span = @activation.email
+  br /
+  b Telephone number: 
+  span = @activation.phone
+  br /
+  b Street address: 
+  span = @activation.address
+  br /
+  b City: 
+  span = @activation.city
+  br /
+  b State: 
+  span = @activation.state
+  br /
+  b Zip code: 
+  span = @activation.zip
+  br /
+  b Country: 
+  span = @activation.country
+  br /
+  b IP: 
+  span = @activation.ip
+  br /
+  b How did you hear about us?: 
+  span = @activation.referral
+  br /
+  b Service type: 
+  span = @activation.service

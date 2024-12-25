@@ -1,0 +1,50 @@
+.header-menu
+  ul.header-menu__list
+    li.header-menu__item
+      a.header-menu-entry href="/" ng-class="{'header-menu-entry--active': current_dashboard === 'HomeGrid' }"
+        img.header-menu-entry__icon src="#{ image_url "header/icon_home.png" }" alt="Home"
+        .header-menu-entry__caption
+          .header-menu-entry__title Home
+
+    li.header-menu__item
+      a.header-menu-entry href="/thai" ng-class="{'header-menu-entry--active': current_dashboard === 'thai' }"
+        img.header-menu-entry__icon src="#{ image_url "header/icon_thailand.png" }" alt="Thailand"
+        .header-menu-entry__caption
+          .header-menu-entry__title Thailand
+
+    li.header-menu__item
+      a.header-menu-entry href="/lao" ng-class="{'header-menu-entry--active': current_dashboard === 'lao' }"
+        img.header-menu-entry__icon src="#{ image_url "header/icon_laos.png" }" alt="Laos"
+        .header-menu-entry__caption
+          .header-menu-entry__title Laos
+
+    li.header-menu__item
+      a.header-menu-entry href="/khmer" ng-class="{'header-menu-entry--active': current_dashboard === 'khmer' }"
+        img.header-menu-entry__icon src="#{ image_url "header/icon_cambodia.png" }" alt="Cambodia"
+        .header-menu-entry__caption
+          .header-menu-entry__title Cambodia
+
+    li.header-menu__item
+      a.header-menu-entry href="/hmong" ng-class="{'header-menu-entry--active': current_dashboard === 'hmong' }"
+        img.header-menu-entry__icon src="#{ image_url "header/icon_hmong.png" }" alt="Hmong"
+        .header-menu-entry__caption
+          .header-menu-entry__title Hmong
+
+    - if feature_active? :roku
+      li.header-menu__item
+        a.header-menu-entry ui-sref="device.landing" ui-sref-active="header-menu-entry--active"
+          img.header-menu-entry__icon src="#{ image_url "header/icon_device.png" }" alt="Devices"
+          .header-menu-entry__caption
+            .header-menu-entry__title Devices
+
+    li.header-menu__item ng-if="!is_user_a_guest"
+      a.header-menu-entry ui-sref="watchlist" ui-sref-active="header-menu-entry--active"
+        img.header-menu-entry__icon src="#{ image_url "header/icon_watchlist.png" }" alt="Watchlist"
+        .header-menu-entry__caption
+          .header-menu-entry__title Watchlist
+
+    li.header-menu__item.show-for-xlarge-up
+      a.header-menu-entry href="https://help.malimar.tv/" target="_blank"
+        img.header-menu-entry__icon src="#{ image_url "header/icon_support.png" }" alt="Contact Us"
+        .header-menu-entry__caption
+          .header-menu-entry__title Contact us

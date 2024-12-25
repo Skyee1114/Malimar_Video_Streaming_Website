@@ -1,0 +1,27 @@
+.section__title Your device
+.choose-device
+  .device [
+    ng-repeat="available_device in devices track by ::available_device.id"
+    ng-click="chooseDevice(available_device)"
+    ng-class="{'device--selected': isSelected(available_device)}"
+  ]
+    .device__body
+      .device__name ng-bind="::available_device.name"
+
+.row ng-if="hasSerial"
+  .large-8.small-12.columns
+    .form-field__important
+      = field 'device.serial_number', required: false, label: '{{ serial_number_label }}', class: 'upcased radius', :'ui-mask' => "{{ device.validation.mask }}"
+    .form-field__note.form-field__note--first 
+      span Your serial number is located on your {{ device.name }} device. It is {{ device.validation.length }} characters long.
+      span ng-if="!required"
+        br /
+        | It is possible to add {{ device.name }} serial number later by calling customer support.
+    .form-field__note ng-show="isRokuDevice(device)"
+      span 
+        | Note: You may have a 6 digit activation code on the screen in our app. Please follow the link to add: 
+        a ui-sref="device.add_channel.step1" Add channel to your {{ device.name }} here
+
+  .large-4.medium-5.small-12.columns.end
+    .form-field__important.form-field__important--transparent
+      = field 'invoice', required: false, label: 'Order No (optional)'

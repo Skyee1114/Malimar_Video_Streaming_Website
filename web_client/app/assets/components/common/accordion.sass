@@ -1,0 +1,61 @@
+.accordion dd > a
+  border-top: 1px solid $light-border-color
+
+.accordion dd:first-child > a
+  border-top: none
+
+.radius
+  .accordion
+    border-radius: $global-radius
+
+  .accordion dd:first-child > a
+    border-top-left-radius: $global-radius
+    border-top-right-radius: $global-radius
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+  
+  .accordion dd:first-child div.content
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    border-bottom-left-radius: 0
+    border-bottom-right-radius: 0
+  
+  .accordion dd > div.content
+    border-top-left-radius: 0 !important
+    border-top-right-radius: 0 !important
+    border-bottom-left-radius: 0 !important
+    border-bottom-right-radius: 0 !important
+  
+  .accordion dd:last-child > a
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    border-bottom-left-radius: $global-radius
+    border-bottom-right-radius: $global-radius
+  
+  .accordion dd:last-child div.content
+    border-top-left-radius: 0
+    border-top-right-radius: 0
+    border-bottom-left-radius: $global-radius !important
+    border-bottom-right-radius: $global-radius !important
+  
+
+.border
+  .accordion dd > div.content
+    border: 1px $light-border-color solid
+    border-top: none
+    border-bottom: none
+
+  .accordion dd:last-child > a
+    border-bottom: 1px $light-border-color solid
+
+  .accordion dd:last-child > div.content
+    border-bottom: 1px $light-border-color solid
+
+  .accordion dd > a
+    border: 1px $light-border-color solid
+    border-bottom: none
+    &.active
+      border-bottom: none
+      border-bottom-left-radius: 0
+      border-bottom-right-radius: 0
+

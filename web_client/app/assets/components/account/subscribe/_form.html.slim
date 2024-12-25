@@ -1,0 +1,92 @@
+.row
+  form.form [name="PaymentCommonForm" role="form"]
+    .row
+      .row
+        .small-12.columns
+          = render "form/errors"
+          = render "form/field_error", field: 'form_subscription_payment.base'
+
+      .row
+        .small-12.columns
+          choose-plan ng-model='plan' plans='plans' choose-plan-title='Premium plans'
+
+      .row ng-if="plan.description"
+        .small-12.columns
+          .plan-description ng-bind-html="plan.description | trust_html"
+
+      .row ng-if="plan.includes_roku_content && !plan.includes_hardware"
+        .small-12.columns
+          choose-device ng-model='device' devices='devices'
+
+.row
+  .small-12.columns
+    plan-total ng-model='plan' plan-total-title='Your premium plan'
+    .seals
+      authorize-net-seal
+      paypal-seal
+      digicert-seal
+
+.row
+  .small-12.columns
+    .section__title Payment method
+    accordion.radius.border close-others="true"
+      accordion-group.payment-method is-open="cc_open"
+        accordion-heading
+          i.payment-method__arrow ng-class="{'fa fa-chevron-down': cc_open, 'fa fa-chevron-right': !cc_open}" &nbsp;
+          .payment-method__name Credit Card
+          .payment-method__image = image_tag 'credit-cards_small.png'
+
+        form.form [name="SubscriptionCcForm" role="form" ng-submit="PaymentCommonForm.$valid && SubscriptionCcForm.$valid && submit()"]
+          .row
+            .fieldset Enter your billing information
+            = render "account/billing/form"
+          .row
+            .small-12.columns disable-all="is_busy"
+              button.success.submit.radius.large-5 type="submit" Finish and Submit
+          .row
+            .small-12.columns
+              .payment-method__tos
+                | By clicking "Finish and Submit", I acknowledge that I am over 18, and I agree to the terms and conditions of the 
+                a ng-click="readDocument('tos')" Terms of use
+                |  and 
+                a ng-click="readDocument('policy')" Privacy Policy.
+
+
+      accordion-group.payment-method is-open="pp_open"
+        accordion-heading
+          i.payment-method__arrow ng-class="{'fa fa-chevron-down': pp_open, 'fa fa-chevron-right': !pp_open}" &nbsp;
+          .payment-method__name Paypal
+          .payment-method__image = image_tag 'PayPal_logo.png'
+
+        p To finish payment, click on the "Finish and Submit" button and log on to PayPal using your email and password
+
+        form.form [name="SubscriptionPpForm" role="form" ng-submit="SubscriptionPpForm.$valid"]
+          .row
+            .row
+              .small-12.large-6.columns = field 'billing_address.phone', required: true, label: 'Phone', type: 'tel', minlength: '8'
+        .row
+          .small-12.columns
+            paypal-button [
+              data-amount="plan.cost"
+              data-name="plan.name"
+              data-number="plan.id"
+              data-phone="billing_address.phone"
+              data-user-id="current_user.id"
+              data-serial-number="device.serial_number"
+              data-device-type="device.type"
+              data-caption="Finish and Submit"
+              data-common-form="PaymentCommonForm"
+              data-pp-form="SubscriptionPpForm"
+            ]
+        .row
+          .small-12.columns
+            .payment-method__tos
+              | By clicking "Finish and Submit", I acknowledge that I am over 18, and I agree to the terms and conditions of the 
+              a ng-click="readDocument('tos')" Terms of use
+              |  and 
+              a ng-click="readDocument('policy')" Privacy Policy.
+
+.row
+  .small-12.columns
+    .payment-method__note
+      | Your online access to #{ company_name } TV Network will begin when you click Finish and Submit. You can cancel any time by contact us via email (#{ support_email }) or phone (1-619-940-5522 USA or 33-977-55-77-55 France). Programming fees are charged monthly in advance and no credits or refunds will be available after the seventh day of your subscription. All prices, fees, charges, package, programming feature, functionality and offers subject to change without prior notice.

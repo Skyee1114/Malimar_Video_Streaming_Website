@@ -1,0 +1,86 @@
+{
+  "resource": "Channels",
+  "http_method": "GET",
+  "route": "/channels/:id?grid=:grid_id",
+  "description": "Get premium channel on free subscription",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Channel id"
+    },
+    {
+      "name": "grid_id",
+      "description": "Grid id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "channels",
+      "description": "Channel resource object"
+    },
+    {
+      "scope": "channels",
+      "name": "id",
+      "description": "Channel id"
+    },
+    {
+      "scope": "channels",
+      "name": "title",
+      "description": "Channel title"
+    },
+    {
+      "scope": "channels",
+      "name": "cover_image",
+      "description": "Cover images of the resource"
+    },
+    {
+      "scope": "channels",
+      "name": "background_image",
+      "description": "Huge background images of the resource"
+    },
+    {
+      "scope": "channels",
+      "name": "synopsis",
+      "description": "Synopsis"
+    },
+    {
+      "scope": "channels",
+      "name": "stream_url",
+      "description": "Url with token to play the channel"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/channels/thai_5_hd?grid=LiveTV_Premium_CF",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODIuMDMxMzY5LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjE0MS53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE0MS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDgyfQ.LBI_dc4QbW3G_ffS93pJ0Q9GXr-jLdOeM1ojVx8OWmjDMI_CTYhGZmo4PSj2WGIISn5rKwbAqhjJxLdHECZfOQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "grid": "LiveTV_Premium_CF"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 403,
+      "response_status_text": "Forbidden",
+      "response_body": null,
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "a1214c6b-f47c-48c6-be9a-8c1586a909e3",
+        "Content-Length": "0"
+      },
+      "response_content_type": "application/json",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/channels/thai_5_hd?grid=LiveTV_Premium_CF\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODIuMDMxMzY5LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjE0MS53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE0MS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDgyfQ.LBI_dc4QbW3G_ffS93pJ0Q9GXr-jLdOeM1ojVx8OWmjDMI_CTYhGZmo4PSj2WGIISn5rKwbAqhjJxLdHECZfOQ\""
+    }
+  ]
+}

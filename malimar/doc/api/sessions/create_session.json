@@ -1,0 +1,54 @@
+{
+  "resource": "Sessions",
+  "http_method": "POST",
+  "route": "/sessions",
+  "description": "Create session",
+  "explanation": "Bearer or Basic authentication allowed",
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "sessions",
+      "description": "Session object"
+    },
+    {
+      "scope": "sessions",
+      "name": "id",
+      "description": "Bearer token"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Basic ZG9jdG9yMzAzLndob0BleGFtcGxlLmNvbTpzZWNyZXQ=",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"sessions\": {\n    \"id\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTEuNDYwMjExNSwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IzMDMud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IzMDMud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MX0.X13ijsozFpc_rs5XlM51cSJUAbjpJW2lYpVps2GvsxvJS8Z_8E8RnDwjoutEoEUV5QPfLMrqQIlcwuUXtmXCww\"\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"69ab01cdf2fa201805c1782e7716bbb8\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "6e44c017-c04a-4430-90d0-402f03bc7d26",
+        "Content-Length": "429"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/sessions\" -d '' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-u doctor303.who@example.com:secret"
+    }
+  ]
+}

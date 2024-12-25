@@ -1,0 +1,161 @@
+@font-face {
+  font-family: "malimar";
+  src: font-url("malimar.eot");
+  src: font-url("malimar.eot?#iefix") format("embedded-opentype"),
+    font-url("malimar.woff") format("woff"),
+    font-url("malimar.ttf") format("truetype"),
+    font-url("malimar.svg#malimar") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon__"]:before,
+[class*=" icon__"]:before,
+%custom-icon:before {
+  font-family: "malimar" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fa-middle {
+  vertical-align: middle;
+}
+
+.icon__headphone:before {
+  content: "\e600";
+}
+.icon__helmet:before {
+  content: "\e601";
+}
+.icon__image:before {
+  content: "\e602";
+}
+.icon__card:before {
+  content: "\e603";
+}
+.icon__theatre:before {
+  content: "\e604";
+}
+.icon__feeling:before {
+  content: "\e605";
+}
+.icon__happy:before {
+  content: "\e606";
+}
+.icon__sad:before {
+  content: "\e607";
+}
+.icon__heartbeat:before {
+  content: "\e608";
+}
+.icon__saxo:before {
+  content: "\e609";
+}
+.icon__micro:before {
+  content: "\e60a";
+}
+.icon__music:before {
+  content: "\e60b";
+}
+.icon__microphone:before {
+  content: "\e60c";
+}
+.icon__listen:before {
+  content: "\e60d";
+}
+.icon__play:before {
+  content: "\e60e";
+}
+.icon__glasses:before {
+  content: "\e60f";
+}
+.icon__chat:before {
+  content: "\e700";
+}
+.icon__sofa:before {
+  content: "\e701";
+}
+.icon__bullhorn:before {
+  content: "\e702";
+}
+.icon__camera:before {
+  content: "\e703";
+}
+.icon__bowtie:before {
+  content: "\e704";
+}
+.icon__smile:before {
+  content: "\e705";
+}
+.icon__surprise:before {
+  content: "\e706";
+}
+.icon__comment:before {
+  content: "\e707";
+}
+.icon__love:before {
+  content: "\e708";
+}
+.icon__angelheart:before {
+  content: "\e709";
+}
+.icon__earth:before {
+  content: "\e70a";
+}
+.icon__beach:before {
+  content: "\e70b";
+}
+.icon__map:before {
+  content: "\e70c";
+}
+.icon__money:before {
+  content: "\e70d";
+}
+.icon__lock:before {
+  content: "\e70e";
+}
+.icon__search:before {
+  content: "\e70f";
+}
+.icon__shot:before {
+  content: "\e800";
+}
+.icon__eye:before {
+  content: "\e801";
+}
+.icon__skull:before {
+  content: "\e802";
+}
+.icon__world:before {
+  content: "\e803";
+}
+.icon__justice:before {
+  content: "\e804";
+}
+.icon__action:before {
+  content: "\e805";
+}
+.icon__remote:before {
+  content: "\e806";
+}
+.icon__episodes:before {
+  content: "\e807";
+}
+.icon__purchase_history:before {
+  content: inline("purchase_history.png")
+}
+.icon__manage:before {
+  content: inline("manage.png")
+}
+.icon__trash:before {
+  content: inline("trash.png")
+}
+.icon__add_channel:before {
+  content: inline("add_channel.png")
+}

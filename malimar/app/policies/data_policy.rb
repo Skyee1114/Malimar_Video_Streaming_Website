@@ -1,0 +1,2 @@
+class DataPolicy < ApplicationPolicy
+end

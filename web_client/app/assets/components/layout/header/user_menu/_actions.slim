@@ -1,0 +1,28 @@
+- if feature_active? :subscription
+  li ng-show="is_free"
+    a ui-sref="account.subscribe.form"
+      i.fa.fa-arrow-circle-up
+      | Top Up Account
+- if feature_active? :registration
+  li
+    a ui-sref="account.settings"
+      i.fa.fa-user
+      | My Account
+- if feature_active? :roku
+  li
+    a ui-sref="device.landing"
+      i.fa.fa-square
+      | Devices
+li
+  a href="https://help.malimar.tv/" target="_blank"
+    i.fa.fa-life-ring
+    | Contact us
+li
+  a href="https://help.malimar.tv/" target="_blank"
+    i.fa.fa-life-ring
+    | Help Center
+- if feature_active? :registration
+  li
+    a ui-sref="session.sign_out"
+      i.fa.fa-sign-out
+      | Sign out

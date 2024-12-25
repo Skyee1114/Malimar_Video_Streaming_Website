@@ -1,0 +1,28 @@
+.row
+  .small-12.large-6.columns = field 'card.first_name',  required: true,  label: 'First name'
+  .small-12.large-6.columns = field 'card.last_name',   required: true,  label: 'Last name'
+.row
+  .small-12.medium-8.xlarge-9.columns = field 'card.number',  required: true,  label: 'Credit card number'
+  .small-12.medium-4.xlarge-3.columns = field 'card.cvv',     required: true,  label: 'CVC/CVV CODE'
+.row
+  .small-12.medium-4.xlarge-3.medium-offset-8.xlarge-offset-9.columns
+    .form-cvv.has-tip tooltip-placement="bottom" tooltip-html-unsafe="<div class='form-cvv__image'></div>" What is this?
+.row
+  .small-7.medium-6.xlarge-4.columns     = field 'card.expiry_month',  required: true,  label: 'Expiration Month',  field: 'select-month'
+  .small-5.medium-6.xlarge-2.columns.end = field 'card.expiry_year',   required: true,  label: 'Year',              field: 'select-year',  limit: 10
+
+hr.hr--form
+
+.row ng-switch="is_focus_country_selected"
+  .small-12.large-8.columns  = field 'billing_address.country',      required: true,  label: 'Country',             field: 'select-country'
+  .small-12.medium-4.columns ng-switch-when="true"  = field 'billing_address.zip',  required: true,   label: '{{ zip_code_name }}'
+  .small-12.medium-4.columns ng-switch-when="false" = field 'billing_address.zip',  required: false,  label: '{{ zip_code_name }}'
+
+.row ng-if="is_focus_country_selected"
+  .small-12.large-4.columns = field 'billing_address.state',    required: true,  label: 'State',   field: 'select-state',  :'select-state-country' => 'billing_address.country'
+  .small-12.large-3.columns = field 'billing_address.city',     required: true,  label: 'City'
+  .small-12.large-5.columns = field 'billing_address.address',  required: true,  label: 'Address'
+
+.row
+  .small-12.large-6.columns = field 'billing_address.phone', required: true, label: 'Phone', type: 'tel', minlength: '8'
+  .small-12.large-6.columns = field 'billing_address.email', required: true, label: 'Email', type: 'email'

@@ -1,0 +1,90 @@
+{
+  "resource": "Plans",
+  "http_method": "GET",
+  "route": "/plans",
+  "description": "Get a list of plans",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "plans",
+      "description": "Available plans"
+    },
+    {
+      "scope": "plans",
+      "name": "id",
+      "description": "Plan id"
+    },
+    {
+      "scope": "plans",
+      "name": "name",
+      "description": "Plan name"
+    },
+    {
+      "scope": "plans",
+      "required": false,
+      "name": "description",
+      "description": "Plan description"
+    },
+    {
+      "scope": "plans",
+      "name": "cost",
+      "description": "Plan cost"
+    },
+    {
+      "scope": "plans",
+      "name": "period_in_monthes",
+      "description": "Integer amout of monthes"
+    },
+    {
+      "scope": "plans",
+      "name": "includes_web_content",
+      "description": "Is web access granted"
+    },
+    {
+      "scope": "plans",
+      "name": "includes_roku_content",
+      "description": "Is roku access granted"
+    },
+    {
+      "scope": "plans",
+      "name": "includes_hardware",
+      "description": "Is hardware provided with the plan"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/plans",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMjE2NDk5NiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxMDIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxMDIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3OX0.PUxfIfJLOzS8sMgaFSGkcvUf8M1gvijf1WJ2sDpws6EOC7NhzTn5NC4AnR6J5tCkoMDaIBv7d_TUuDhKuRlKKg",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"plans\": [\n    {\n      \"id\": 1,\n      \"name\": \"1 Month Membership\",\n      \"description\": null,\n      \"cost\": \"33.00\",\n      \"period_in_monthes\": 1,\n      \"includes_web_content\": true,\n      \"includes_roku_content\": false,\n      \"includes_hardware\": false\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8cb4cfdeac1901400a57b676a691ade9\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d1b8016e-9a46-416b-b6a5-b9a016d78e4d",
+        "Content-Length": "188"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/plans\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMjE2NDk5NiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxMDIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxMDIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3OX0.PUxfIfJLOzS8sMgaFSGkcvUf8M1gvijf1WJ2sDpws6EOC7NhzTn5NC4AnR6J5tCkoMDaIBv7d_TUuDhKuRlKKg\""
+    }
+  ]
+}

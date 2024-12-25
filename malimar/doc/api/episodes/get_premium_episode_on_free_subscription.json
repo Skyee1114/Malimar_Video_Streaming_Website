@@ -1,0 +1,102 @@
+{
+  "resource": "Episodes",
+  "http_method": "GET",
+  "route": "/episodes/:id?show=:show_id",
+  "description": "Get premium episode on free subscription",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Episode id"
+    },
+    {
+      "name": "show_id",
+      "description": "Show id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "episodes",
+      "description": "Episode resource object"
+    },
+    {
+      "scope": "episodes",
+      "name": "stream_url",
+      "description": "Url with token to play the episode"
+    },
+    {
+      "scope": "episodes",
+      "name": "player_url",
+      "description": "Url to the player"
+    },
+    {
+      "scope": "episodes",
+      "name": "background_image",
+      "description": "Huge background images of the resource"
+    },
+    {
+      "scope": "episodes",
+      "name": "id",
+      "description": "Episode id"
+    },
+    {
+      "scope": "episodes",
+      "name": "title",
+      "description": "Episode title"
+    },
+    {
+      "scope": "episodes",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    },
+    {
+      "scope": "episodes",
+      "name": "number",
+      "description": "Episode number in the show"
+    },
+    {
+      "scope": "episodes",
+      "name": "release_date",
+      "description": "Date when episode was released"
+    },
+    {
+      "scope": "episodes",
+      "required": false,
+      "name": "synopsis",
+      "description": "Synopsis"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/episodes/EP104502?show=VimKojKuvThaijPaubKevHlub",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuODQwMzExLCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjE2Ni53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE2Ni53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDgzfQ.X1CZLUSzieSEbpu-yGMRbrmGml7FSBQvCibc0yPdQMEPw7nuuL7Ol2pgt90A3-Hy7XTT7n0J5uTzEkjdG-CPsQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "show": "VimKojKuvThaijPaubKevHlub"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 403,
+      "response_status_text": "Forbidden",
+      "response_body": null,
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "6d65851a-0345-4e7f-8c17-e0da4fe02247",
+        "Content-Length": "0"
+      },
+      "response_content_type": "application/json",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/episodes/EP104502?show=VimKojKuvThaijPaubKevHlub\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuODQwMzExLCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjE2Ni53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE2Ni53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDgzfQ.X1CZLUSzieSEbpu-yGMRbrmGml7FSBQvCibc0yPdQMEPw7nuuL7Ol2pgt90A3-Hy7XTT7n0J5uTzEkjdG-CPsQ\""
+    }
+  ]
+}

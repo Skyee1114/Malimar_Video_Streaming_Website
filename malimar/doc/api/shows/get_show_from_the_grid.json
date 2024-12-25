@@ -1,0 +1,72 @@
+{
+  "resource": "Shows",
+  "http_method": "GET",
+  "route": "/shows/:id?grid=:grid_id",
+  "description": "Get show from the grid",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Show id"
+    },
+    {
+      "name": "grid_id",
+      "description": "Grid id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "shows",
+      "description": "Show resource object"
+    },
+    {
+      "scope": "shows",
+      "name": "id",
+      "description": "Show id"
+    },
+    {
+      "scope": "shows",
+      "name": "title",
+      "description": "Show title"
+    },
+    {
+      "scope": "shows",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/shows/WonderfulAnimals19?grid=Documentary_and_Education_CF",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODUuNTk4NTI5MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMDIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMDIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NX0.ix8HCY-x6m_8dTPA-qZO4UsdrnuB5pMp6CPiu9bN6pyxzFriThYrkofgg2UlOkqKKA87_Z3vcEZuNgjbhsmmhw",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "grid": "Documentary_and_Education_CF"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"shows\": {\n    \"id\": \"WonderfulAnimals19\",\n    \"title\": \"WONDERFUL ANIMALS\",\n    \"cover_image\": {\n      \"sd\": \"https://i.malimarcdn.com/WonderfulAnimals19F.jpg\",\n      \"hd\": \"https://i.malimarcdn.com/WonderfulAnimals19HDF.jpg\",\n      \"wide\": \"https://i.malimarcdn.com/WonderfulAnimals19HD-large.jpg\"\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"6f2f2a3fc52f2b21edb90c712302ccb6\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "7e7c99a4-2dcd-4723-9313-2671680bc657",
+        "Content-Length": "260"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/shows/WonderfulAnimals19?grid=Documentary_and_Education_CF\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODUuNTk4NTI5MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMDIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMDIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NX0.ix8HCY-x6m_8dTPA-qZO4UsdrnuB5pMp6CPiu9bN6pyxzFriThYrkofgg2UlOkqKKA87_Z3vcEZuNgjbhsmmhw\""
+    }
+  ]
+}

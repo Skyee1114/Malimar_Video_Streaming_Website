@@ -1,0 +1,7 @@
+.section__title ng-bind="::title || 'Your TV package'"
+.total.clearfix
+  .total__title.left You will be charged:
+  .total__value.right ng-if="! isFree(plan)"
+    | {{ plan.cost | currency:'$' }} USD
+  .total__value.right ng-if="isFree(plan)" FREE
+hr

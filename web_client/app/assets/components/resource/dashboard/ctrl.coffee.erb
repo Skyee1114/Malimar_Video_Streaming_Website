@@ -1,0 +1,25 @@
+angular.module('tv-dashboard').controller 'DashboardCtrl', [
+  '$scope', '$stateParams', '$rootScope', '$window', 'Grids'
+  ($scope, $params, $root, $window, Grids) ->
+    'use strict'
+
+    $window.document.title = '<%= ENV['COMPANY_NAME'] %> TV Network | Thai TV, Lao TV, Khmer TV, and Hmong TV'
+
+    $scope.grids = undefined
+    $scope.dashboard = { id: $params.id }
+
+    $scope.scroll_options =
+      template_url: 'resource/dashboard/grid/scroller.html'
+
+    params = { dashboard: $scope.dashboard.id }
+
+    Grids.get params, (resource) ->
+      $root.$emit 'dashboard:loaded', angular.copy(resource)
+      $scope.grids = resource.grids
+      return
+
+    $scope.isLandingPage = ->
+      $scope.dashboard.id == 'HomeGrid' || $scope.dashboard.id == 'thai'
+
+    return
+]

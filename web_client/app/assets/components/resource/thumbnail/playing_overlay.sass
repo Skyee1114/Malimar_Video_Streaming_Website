@@ -1,0 +1,27 @@
+.thumbnail__overlay, .thumbnail__playing
+  background-color: rgba($contrast-color, 0.8)
+  position: absolute
+  text-align: center
+  right: 0
+  left: 0
+
+.thumbnail
+  &__overlay
+    display: none
+    bottom: 0
+    top: 0
+    &--active
+      display: block
+
+  &__playing
+    padding: 0.5em
+
+    &__icon
+      font-size: 1.8em
+      color: $white
+
+    &__text
+      margin-top: -0.5em
+      font-size: 0.7em
+      font-weight: 600
+      color: $white

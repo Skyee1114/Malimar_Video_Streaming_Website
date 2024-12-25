@@ -1,0 +1,31 @@
+=resize_header($topbar-height)
+  .header
+    height: $topbar-height + rem_calc(2)
+
+    &__logo
+      height: $topbar-height
+
+  .header-menu
+    height: $topbar-height
+
+  .header-menu-entry
+    height: $topbar-height
+
+  .user-menu
+    height: $topbar-height
+
+  .layout__body
+    padding-top: $topbar-height
+
+  body .buorg
+    top: $topbar-height
+
+@media #{$medium-down}
+  +resize_header($tabbar-height)
+  .header
+    position: relative
+  .layout__body
+    padding-top: 0
+
+@media #{$large-up}
+  +resize_header($topbar-height)

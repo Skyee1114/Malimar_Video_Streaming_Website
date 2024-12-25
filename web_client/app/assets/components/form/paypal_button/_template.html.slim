@@ -1,0 +1,35 @@
+.paypal
+  form.form [
+    action="{{ pp_submit_url }}"
+    method="post"
+    role="form"
+    name="PaymentPaypal"
+    ng-submit="PaymentPaypal.$valid" 
+  ]
+    #errorBox.hide
+    input [name="custom"        type="hidden" value="{{ phone }}"         required]
+    input [name="amount"        type="hidden" value="{{ amount }}"        required]
+    input [name="item_name"     type="hidden" value="{{ name }}"          required]
+    input [name="item_number"   type="hidden" value="{{ number }}"        required]
+    input [name="os0"           type="hidden" value="{{ serial_number }}"         ]
+    input [name="os1"           type="hidden" value="{{ user_id }}"       required]
+    input [name="os2"           type="hidden" value="{{ device_type }}"           ]
+
+    input name="on0" type="hidden" value="Device serial number"
+    input name="on1" type="hidden" value="User account number"
+    input name="on2" type="hidden" value="Device type"
+    input name="notify_url" type="hidden" value="{{ pp_callback_url }}"
+    input name="business" type="hidden" value="{{ pp_merchant_id }}"
+    input name="env" type="hidden" value="www"
+
+    input name="quantity" type="hidden" value="1"
+    input name="button" type="hidden" value="buynow"
+    input name="currency_code" type="hidden" value="USD"
+    input name="shipping" type="hidden" value="0"
+    input name="tax" type="hidden" value="0"
+    input name="cmd" type="hidden" value="_ext-enter"
+    input name="redirect_cmd" type="hidden" value="_xclick"
+    input name="bn" type="hidden" value="JavaScriptButton_buynow"
+
+    button.paypal__button.radius.large-5 ng-disabled="commonForm.$invalid || ppForm.$invalid" type="submit"
+      | {{ caption }}

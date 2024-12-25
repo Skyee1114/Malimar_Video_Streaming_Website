@@ -1,0 +1,31 @@
+.grid-header
+  span.grid-header__title
+    | {{ ::$parent.grid.title }} 
+
+.grid-scroller ng-class="{'grid-scroller--loading': !elements_loaded}"
+  a.grid-scroller__control.grid-scroller__control--right ng-click="startAnimation(1)"
+  a.grid-scroller__control.grid-scroller__control--left ng-click="startAnimation(-1)"
+
+  .grid-scroller__container
+    .grid-scroller__element ng-repeat="thumbnail in chunk track by ::thumbnail.id "
+      .thumbnail 
+        a ng-href="{{:: thumbnail.href }}"
+
+          img.thumbnail__image [ng-src="{{:: thumbnail.cover_image.hd }}"
+                                alt="{{:: thumbnail.title}}"]
+          .thumbnail-details
+            .thumbnail-details__title ng-bind="::thumbnail.title"
+            .thumbnail-details__synopsis ng-bind="::thumbnail.synopsis"
+
+
+          .thumbnail-highlights ng-if="::thumbnail.highlight"
+            .thumbnail-highlights__button ng-bind="::thumbnail.highlight"
+
+        .thumbnail-actions
+          a.thumbnail-actions__item ng-click="remove(chunk, thumbnail.id)"
+            i.fa.fa-trash
+
+    a.thumbnail.thumbnail--load_more ng-click="consumeQueue()" ng-show="elements_loaded && !queue_exhausted"
+      i.fa.fa-angle-double-right.fa-3x
+      br /
+      | Load more

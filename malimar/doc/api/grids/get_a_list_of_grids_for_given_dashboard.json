@@ -1,0 +1,74 @@
+{
+  "resource": "Grids",
+  "http_method": "GET",
+  "route": "/grids?dashboard=:dashboard_id",
+  "description": "Get a list of grids for given dashboard",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "dashboard_id",
+      "description": "Dashboard id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "grids",
+      "description": "Grids of the given dashboard"
+    },
+    {
+      "scope": "grids",
+      "name": "href",
+      "description": "Link to grid"
+    },
+    {
+      "scope": "grids",
+      "name": "id",
+      "description": "Grid id"
+    },
+    {
+      "scope": "grids",
+      "name": "title",
+      "description": "Grid title"
+    },
+    {
+      "scope": "grids",
+      "required": false,
+      "name": "title_translated",
+      "description": "Grid title in another language"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/grids?dashboard=lao",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODQuMjAwNTI3LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjE3My53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE3My53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDg0fQ.Ka2YpZxPrU70MF2O6mQBK0lxHHfEzSJM16EXTBiLH0vQ4FlZBwjIt1gansbensFcpZIZGV9ECBii8TsVMky5rw",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "dashboard": "lao"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"grids\": [\n    {\n      \"id\": \"Lao_LiveTV_Premium_CF\",\n      \"title\": \"LAO LIVE TV | PREMIUM\",\n      \"title_translated\": \"ຊ່ອງລາວສົດ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Lao_LiveTV_Premium_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Lao_LiveTV_Free_CF\",\n      \"title\": \"LAO LIVE TV | FREE\",\n      \"title_translated\": \"ຊ່ອງລາວຟຣີ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Lao_LiveTV_Free_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Oh_Muang_Lao_CF\",\n      \"title\": \"OH MUANG LAO\",\n      \"title_translated\": \"ໂອ້ ເມືອງລາວ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Oh_Muang_Lao_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Lao_News_And_Doc_CF\",\n      \"title\": \"LAO NEWS AND DOCUMENTARY\",\n      \"title_translated\": \"ຂ່າວ ແລະ ສາລະຄະດີລາວ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Lao_News_And_Doc_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"OML_ZAP_CF\",\n      \"title\": \"CHANSOUDA PHAZAP\",\n      \"title_translated\": \"ຈັນສຸດາ ພາແຊບ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/OML_ZAP_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"OML_MaderKinKhao_CF\",\n      \"title\": \"MA DER KIN KHAO\",\n      \"title_translated\": \"ມາເດີ້ກິນເຂົ້າ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/OML_MaderKinKhao_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Lao_Movie_CF\",\n      \"title\": \"LAO MOVIE\",\n      \"title_translated\": \"ຫນັງລາວ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Lao_Movie_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Lao_Buddhist_CF\",\n      \"title\": \"LAO BUDDHIST\",\n      \"title_translated\": \"ລາວ ສາສະຫນາພຸດ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Lao_Buddhist_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Lao_Music_CF\",\n      \"title\": \"LAO MUSIC\",\n      \"title_translated\": \"ເພງລາວ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Lao_Music_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Lao_Pop_Music_CF\",\n      \"title\": \"LAO POP MUSIC\",\n      \"title_translated\": \"ເພງ ພ໊ອບ ລາວ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Lao_Pop_Music_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Maniphone_2013_CF\",\n      \"title\": \"MANIPHONE 2013\",\n      \"title_translated\": \"ຂ່າວຄາວລາວຕ່າງແດນ 2013\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Maniphone_2013_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Maniphone_2012_CF\",\n      \"title\": \"MANIPHONE 2012\",\n      \"title_translated\": \"ຂ່າວຄາວລາວຕ່າງແດນ 2012\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Maniphone_2012_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Maniphone_2011_CF\",\n      \"title\": \"MANIPHONE 2011\",\n      \"title_translated\": \"ຂ່າວຄາວລາວຕ່າງແດນ 2011\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Maniphone_2011_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Maniphone_2010_CF\",\n      \"title\": \"MANIPHONE 2010\",\n      \"title_translated\": \"ຂ່າວຄາວລາວຕ່າງແດນ 2010\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Maniphone_2010_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Maniphone_2009_CF\",\n      \"title\": \"MANIPHONE 2009\",\n      \"title_translated\": \"ຂ່າວຄາວລາວຕ່າງແດນ 2009\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Maniphone_2009_CF?dashboard=lao\"\n    },\n    {\n      \"id\": \"Maniphone_2008_CF\",\n      \"title\": \"MANIPHONE 2008\",\n      \"title_translated\": \"ຂ່າວຄາວລາວຕ່າງແດນ 2008\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Maniphone_2008_CF?dashboard=lao\"\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"d8533f4246736e31746a4c78268d823c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "20e91474-0589-4796-aa78-321ef310093b",
+        "Content-Length": "3374"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/grids?dashboard=lao\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODQuMjAwNTI3LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjE3My53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjE3My53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDg0fQ.Ka2YpZxPrU70MF2O6mQBK0lxHHfEzSJM16EXTBiLH0vQ4FlZBwjIt1gansbensFcpZIZGV9ECBii8TsVMky5rw\""
+    }
+  ]
+}

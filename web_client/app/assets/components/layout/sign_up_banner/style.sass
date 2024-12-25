@@ -1,0 +1,57 @@
+.sign_up-banner
+  padding: 1.3em
+  box-shadow: 10px 5px 30px rgba(0,0,0,0.6)
+
+.roku-sign_up
+  &__text
+    font-size: 1.3rem
+    margin-bottom: 1rem
+    vertical-align: middle
+
+  &__button
+    vertical-align: middle
+
+  &__images
+    display: none
+    max-height: 200px
+    img
+      max-height: 200px
+
+  &__button_text
+    line-height: 2rem
+
+  &__button_price
+    line-height: 2rem
+    font-size: 1.3em
+
+@media #{$medium-up}
+  .roku-sign_up
+    display: table
+    width: 100%
+    padding-right: 1.3em
+
+    &__text
+      display: table-cell
+      padding-left: 1.3rem
+      padding-right: 1.3rem
+      margin-bottom: 0
+
+    &__button
+      display: table-cell
+      width: 210px
+
+@media #{$xlarge-up}
+  .roku-sign_up
+    &__images
+      display: table-cell
+      text-align: center
+      width: 585px
+
+@media #{$xxlarge-up}
+  .roku-sign_up
+    &__images
+      width: auto
+    &__button
+      width: 260px
+    &__text
+      max-width: 780px

@@ -1,0 +1,35 @@
+.display-field
+  margin-bottom: 10px
+
+  &__label
+    color: $black
+    font-size: 0.9rem
+    font-weight: 600
+    text-transform: uppercase
+
+  &__value
+    &--important
+      font-weight: 600
+
+    &--accent
+      color: $alert-color
+      font-weight: bold
+
+    &--nowrap
+      white-space: nowrap
+
+    &:empty
+      &:after
+        content: "--"
+
+  &--yellow
+    .display-field__label
+      color: $yellow
+
+  i.fa
+    margin-right: 10px
+
+@media #{$large-up}
+  .display-field
+    &--last
+      margin-bottom: 0

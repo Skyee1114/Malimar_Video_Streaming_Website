@@ -1,0 +1,7 @@
+ul.sidebar__list
+  li.sidebar__list__item ng-repeat="resource in resources track by resource.id"
+    a.sidebar__data ng-href="{{ resource.href }}"
+      i.sidebar__data__icon.icon__feeling
+      .sidebar__data__text
+        .sidebar__data__title ng-bind="resource.title"
+        .sidebar__data__subtitle ng-bind="resource.title_translated"

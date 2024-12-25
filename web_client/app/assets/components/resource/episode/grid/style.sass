@@ -1,0 +1,84 @@
+$grid-scroller-container-height--episode: 316px
+
+.grid-scroller--episode
+  .grid-scroller
+    &__container
+      height: $grid-scroller-container-height--episode + $grid-scroller-scrollbar-margin
+
+    &__control
+      height: $grid-scroller-container-height--episode
+      &:before
+        top: $grid-scroller-container-height--episode / 2 - $grid-scroller-arrow-size / 2
+
+//
+// Episode
+//
+.grid-episode
+  display: block
+  width: 300px
+  border-bottom: $contrast-color 1px solid
+  padding: 15px
+  margin-right: 25px
+  position: relative
+  &:before
+    content: inline("play.png")
+    position: absolute
+    top: 25%
+    height: 38px
+    width: 38px
+    right: 15px
+
+  &:hover
+    background-color: $contrast-color
+
+  &__playing
+    background-image: linear-gradient(to bottom, $accent-color 0%, $orange 100%)
+    padding: 0.4em 0.8em
+    border-radius: 2px
+    font-size: 0.85em
+    font-weight: 600
+    position: absolute
+    display: none
+    right: 15px
+    top: 30%
+    color: $white
+    text-shadow: 1px 1px 2px $black
+
+  &__date
+    color: $monsoon
+
+  &__title
+    font-weight: 600
+    color: $white
+
+  &--active
+    .grid-episode__title
+      color: $accent-color
+
+    .grid-episode__playing
+      display: block
+
+    &:before
+      display: none
+
+@media #{$small-only}
+  .grid-episode
+    width: auto
+
+  .grid-scroller--episode
+    .grid-scroller__control
+      display: none
+
+    &:hover
+      .grid-scroller__control
+        display: none
+
+    .grid-scroller__element
+      display: block
+      float: none
+
+    .grid-scroller__container
+      height: auto
+      margin-left: 0
+      margin-right: 0
+      margin-bottom: -8px

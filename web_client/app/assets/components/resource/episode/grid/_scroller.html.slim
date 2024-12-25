@@ -1,0 +1,17 @@
+.grid-scroller.grid-scroller--ondemand.grid-scroller--episode
+  a.grid-scroller__control.grid-scroller__control--right ng-click="startAnimation(1)"
+  a.grid-scroller__control.grid-scroller__control--left ng-click="startAnimation(-1)"
+
+  .grid-scroller__container
+    .grid-scroller__element ng-repeat="chunk in ::elements"
+      a.grid-episode [
+        ng-repeat="episode in chunk track by ::episode.id"
+        ng-href="{{:: episode.href }}"
+        ng-class="{'grid-episode--active': options.active === episode.id}"
+      ]
+        .grid-episode__title
+          | {{:: episode.number }}. Episode {{:: episode.number }}
+        .grid-episode__date
+          | {{:: episode.release_date | date }}
+
+        .grid-episode__playing href="" Now Playing

@@ -1,0 +1,93 @@
+{
+  "resource": "Devices",
+  "http_method": "POST",
+  "route": "/devices",
+  "description": "Add new Device",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "devices",
+      "description": "Device resource object"
+    },
+    {
+      "scope": "devices",
+      "name": "name",
+      "description": "Device name"
+    },
+    {
+      "scope": "devices",
+      "name": "type",
+      "description": "Device type"
+    },
+    {
+      "scope": "devices",
+      "name": "serial_number",
+      "description": "Device serial number"
+    },
+    {
+      "scope": "devices",
+      "name": "links",
+      "description": "Links"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "devices",
+      "description": "Device resource object"
+    },
+    {
+      "scope": "devices",
+      "name": "id",
+      "description": "Device id"
+    },
+    {
+      "scope": "devices",
+      "name": "name",
+      "description": "Device name"
+    },
+    {
+      "scope": "devices",
+      "name": "type",
+      "description": "Device type"
+    },
+    {
+      "scope": "devices",
+      "name": "serial_number",
+      "description": "Device serial number"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/devices",
+      "request_body": "{\"devices\":{\"name\":\"Home TV\",\"type\":\"Device::Roku\",\"serial_number\":\"123456789012\",\"links\":{\"user\":1}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuOTg0MTI2LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjQ4Lndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yNDgud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3NX0.lA69C6vD9FydiIMrXGA0Q9644VrzFtlktEZ7XepMwtsLlCxXRsX7xa43fmM7XBuumwpDrHPJQsLOfIo2CyMpKw",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"devices\": {\n    \"id\": 1,\n    \"name\": \"Device::Roku\",\n    \"type\": \"Device::Roku\",\n    \"serial_number\": \"123456789012\"\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Location": "http://example.org/devices/1",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a80aeaeb0103355e1a9f82f5127eb52c\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d78f128a-c915-448e-8069-80a02b109455",
+        "Content-Length": "95"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/devices\" -d '{\"devices\":{\"name\":\"Home TV\",\"type\":\"Device::Roku\",\"serial_number\":\"123456789012\",\"links\":{\"user\":1}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuOTg0MTI2LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjQ4Lndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yNDgud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3NX0.lA69C6vD9FydiIMrXGA0Q9644VrzFtlktEZ7XepMwtsLlCxXRsX7xa43fmM7XBuumwpDrHPJQsLOfIo2CyMpKw\""
+    }
+  ]
+}

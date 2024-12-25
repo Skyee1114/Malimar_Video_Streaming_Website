@@ -1,0 +1,28 @@
+$admin-action-buttons-padding: 0.7em
+a.member_link
+  @include rounded($skinBorderRadius)
+  @include shadow
+  text-decoration: none
+  padding: $admin-action-buttons-padding
+  margin-bottom: 3px
+  color: white
+
+a.view_link
+  background-color: #1fa67a
+  padding-left: $admin-action-buttons-padding * 2
+  padding-right: $admin-action-buttons-padding * 2
+
+a.edit_link
+  background-color: #5ea3d3
+
+a.delete_link
+  @extend .fa
+  @extend .fa-trash
+  background-color: #fa8144
+
+a.add_link
+  @extend .fa
+  @extend .fa-plus
+  &:before
+    padding-right: 1em
+  background-color: #1fa67a

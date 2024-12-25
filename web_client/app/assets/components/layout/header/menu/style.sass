@@ -1,0 +1,63 @@
+.header-menu
+  &__list
+    display: inline-block
+    @include reset-list
+    max-width: 890px
+    font-size: 1em
+    vertical-align: top
+
+  &__item
+    display: inline-block
+    vertical-align: top
+    border-right: 1px solid $tuatara
+
+.header-menu-entry
+  text-align: center
+  padding: 0.6rem
+  padding-top: 1rem
+  padding-bottom: 0
+  line-height: 1rem
+  display: block
+
+  &__icon
+    display: inline-block
+    vertical-align: top
+    color: $secondary-white
+    line-height: 1em
+    width: 50px
+    height: 50px
+
+  &__caption
+    vertical-align: top
+
+  &__title
+    line-height: 1.5em
+    font-size: 0.9em
+    color: $white
+
+  &__subtitle
+    color: $secondary-white
+    line-height: 0.95em
+    font-size: 0.75em
+
+  &:hover,
+  &--active
+    background: $primary-color
+
+@media #{$large-up}
+  .header-menu-entry
+    padding: 1.0rem
+    padding-top: 1rem
+    padding-bottom: 0
+
+@media #{$xmedium-only}
+  .header-menu-entry
+    padding: 0.6rem
+    padding-top: 1rem
+    padding-bottom: 0
+
+@media #{$xlarge-up}
+  .header-menu-entry
+    padding: 1.4rem
+    padding-top: 1rem
+    padding-bottom: 0

@@ -1,0 +1,138 @@
+{
+  "resource": "Device activation requests",
+  "http_method": "POST",
+  "route": "/device/activation_requests?include=device",
+  "description": "Create new activation request and send the emails",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "activation_requests",
+      "description": "Activation request object"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "first_name",
+      "description": "Person name"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "last_name",
+      "description": "Person name"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "email",
+      "description": "Contact email"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "phone",
+      "description": "Contact phone number"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "address",
+      "description": "Street address"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "city",
+      "description": "City"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "state",
+      "description": "State"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "zip",
+      "description": "Postal code"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "country",
+      "description": "Country code"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "referral",
+      "description": "Referal"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "service",
+      "description": "Service type"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "links",
+      "description": "Linked objects"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "activation_requests",
+      "description": "Activation request object"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "first_name",
+      "description": "Person name"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "last_name",
+      "description": "Person name"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "email",
+      "description": "Contact email"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "service",
+      "description": "Service type"
+    },
+    {
+      "scope": "activation_requests",
+      "name": "links",
+      "description": "Embedded resources"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/device/activation_requests?include=device",
+      "request_body": "{\"activation_requests\":{\"first_name\":\"Eldon\",\"last_name\":\"Bogisich\",\"email\":\"otis_spinka@cain.biz\",\"phone\":\"964.905.7233 x894\",\"address\":\"199 Cassi Trafficway\",\"city\":\"South William\",\"state\":\"Maine\",\"zip\":\"74022\",\"country\":\"CA\",\"referral\":\"friend\",\"service\":\"trial\",\"links\":{\"device\":{\"id\":null,\"serial_number\":\"4114AC001000\",\"name\":\"Roku\",\"user_id\":null,\"created_at\":null,\"updated_at\":null,\"type\":\"Device::Roku\"}}}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuMDgwMDI4OCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I3Lndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yNy53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDc1fQ.AlvVr7gF3NACPgSqFterqmLH8ZcfJ6q-7oma2jiG98HWhPm4kJg2eH2U13yqjfB9UdkwYV66J18LYV4LRk0wWg",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "device"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"activation_requests\": {\n    \"first_name\": \"Eldon\",\n    \"last_name\": \"Bogisich\",\n    \"email\": \"otis_spinka@cain.biz\",\n    \"service\": \"trial\",\n    \"links\": {\n      \"device\": {\n        \"id\": null,\n        \"serial_number\": \"4114AC001000\",\n        \"name\": \"Device::Roku\",\n        \"user_id\": null,\n        \"created_at\": null,\n        \"updated_at\": null\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"e576bc85456bacc54ff3c0d5bbcb0b24\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "545d03cb-9622-4381-80d1-2e5fa6f8b4dd",
+        "Content-Length": "253"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/device/activation_requests?include=device\" -d '{\"activation_requests\":{\"first_name\":\"Eldon\",\"last_name\":\"Bogisich\",\"email\":\"otis_spinka@cain.biz\",\"phone\":\"964.905.7233 x894\",\"address\":\"199 Cassi Trafficway\",\"city\":\"South William\",\"state\":\"Maine\",\"zip\":\"74022\",\"country\":\"CA\",\"referral\":\"friend\",\"service\":\"trial\",\"links\":{\"device\":{\"id\":null,\"serial_number\":\"4114AC001000\",\"name\":\"Roku\",\"user_id\":null,\"created_at\":null,\"updated_at\":null,\"type\":\"Device::Roku\"}}}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuMDgwMDI4OCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I3Lndob0BleGFtcGxlLmNvbSIsImVtYWlsIjoiZG9jdG9yNy53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDc1fQ.AlvVr7gF3NACPgSqFterqmLH8ZcfJ6q-7oma2jiG98HWhPm4kJg2eH2U13yqjfB9UdkwYV66J18LYV4LRk0wWg\""
+    }
+  ]
+}

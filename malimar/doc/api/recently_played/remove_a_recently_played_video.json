@@ -1,0 +1,88 @@
+{
+  "resource": "Recently played",
+  "http_method": "DELETE",
+  "route": "/recently_played/:id",
+  "description": "Remove a recently played video",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "recently_played",
+      "description": "List of thumbnails"
+    },
+    {
+      "scope": "recently_played",
+      "name": "id",
+      "description": "Resource id"
+    },
+    {
+      "scope": "recently_played",
+      "name": "title",
+      "description": "Resource title"
+    },
+    {
+      "scope": "recently_played",
+      "name": "href",
+      "description": "Link to resource"
+    },
+    {
+      "scope": "recently_played",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    },
+    {
+      "scope": "recently_played",
+      "required": false,
+      "name": "synopsis",
+      "description": "Brief description"
+    },
+    {
+      "scope": "recently_played",
+      "name": "type",
+      "description": "Type of the resource"
+    },
+    {
+      "scope": "recently_played",
+      "name": "is_recently_updated",
+      "description": "Boolean. True when resource was updated"
+    },
+    {
+      "scope": "recently_played",
+      "required": false,
+      "name": "highlight",
+      "description": "Extra information"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "DELETE",
+      "request_path": "/recently_played/Video_19",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMzk0MTY1LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjExNS53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjExNS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDc5fQ.cpZz8zKLHgnwaFfEaiJcSJzz_R_vppIIhGwUhybrftt1Q3oZ2cXRfdjMrFdnriBla8DIPTpoShDiGnG6ShJS-A",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 204,
+      "response_status_text": "No Content",
+      "response_body": null,
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "347a5df9-061e-4390-b777-efd744088b1d"
+      },
+      "response_content_type": null,
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/recently_played/Video_19\" -d '' -X DELETE \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMzk0MTY1LCJ1c2VyIjp7ImlkIjoxLCJsb2dpbiI6ImRvY3RvcjExNS53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjExNS53aG9AZXhhbXBsZS5jb20iLCJvcmlnaW4iOiJsb2NhbCIsInByZW1pdW0iOmZhbHNlfSwiZXhwIjoxNTkxNjU0MDc5fQ.cpZz8zKLHgnwaFfEaiJcSJzz_R_vppIIhGwUhybrftt1Q3oZ2cXRfdjMrFdnriBla8DIPTpoShDiGnG6ShJS-A\""
+    }
+  ]
+}

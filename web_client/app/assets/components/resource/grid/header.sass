@@ -1,0 +1,29 @@
+.grid-header
+  &__title
+    line-height: 1em
+    font-weight: lighter
+    font-size: 2em
+    margin: 0
+    color: $white
+    word-wrap: break-word
+
+  &__subtitle
+    color: $accent-color
+
+a.grid-header__title
+  &:hover, &:focus
+    color: $primary-color
+
+    .grid-header__subtitle
+      color: $primary-color
+
+@media #{$medium-only}
+  .grid-header
+    font-size: 0.8em
+
+@media #{$small-only}
+  .grid-header
+    font-size: 0.6em
+
+    &__subtitle
+      display: block

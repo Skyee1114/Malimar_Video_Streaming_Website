@@ -1,0 +1,74 @@
+{
+  "resource": "Grids",
+  "http_method": "GET",
+  "route": "/grids/:id?include=thumbnails",
+  "description": "Get grid information with embedded thumbnails",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Grid id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "grids",
+      "description": "Grid resource object"
+    },
+    {
+      "scope": "grids",
+      "name": "links",
+      "description": "Embedded resources"
+    },
+    {
+      "scope": "grids",
+      "name": "id",
+      "description": "Grid id"
+    },
+    {
+      "scope": "grids",
+      "name": "title",
+      "description": "Grid title"
+    },
+    {
+      "scope": "grids",
+      "required": false,
+      "name": "title_translated",
+      "description": "Grid title in another language"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/grids/LiveTV_Free_Premium_Sponsors_CF?include=thumbnails",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODUuMjQ4NjYwMywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxOTIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxOTIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NX0.EcoPUc2KjjMkvofebi20tQt3D_yxX7VrUwIlQs6lbXXZ-58r-CAgO5Tu_8MgH4cqtskj_R4xdS2ww3VcBxyIvQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "thumbnails"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"grids\": {\n    \"id\": \"LiveTV_Free_Premium_Sponsors_CF\",\n    \"title\": \"Live TV Free | Premium Sponsors\",\n    \"title_translated\": \"พรีเมี่ยมสปอนเซอร์ | ฟรี\",\n    \"links\": {\n      \"thumbnails\": [\n        {\n          \"id\": \"look_thoong_tv_hd\",\n          \"title\": \"LOOK THOONG TV HD\",\n          \"cover_image\": {\n            \"sd\": \"https://i.malimarcdn.com/LOOKTHOONGTVNEW2F.jpg\",\n            \"hd\": \"https://i.malimarcdn.com/LOOKTHOONGTVNEW2HDF.jpg\",\n            \"wide\": \"https://i.malimarcdn.com/LOOKTHOONGTVNEW2HD-large.jpg\"\n          },\n          \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/look_thoong_tv_hd?grid=LiveTV_Free_Premium_Sponsors_CF\",\n          \"type\": \"channel\",\n          \"synopsis\": \"USA Thai Entertainment Country Music TV 559 579 8477\",\n          \"is_recently_updated\": false,\n          \"highlight\": null\n        },\n        {\n          \"id\": \"lao_muslim_tv\",\n          \"title\": \"LAO MUSLIM TV\",\n          \"cover_image\": {\n            \"sd\": \"https://i.malimarcdn.com/laomuslimtvF.jpg\",\n            \"hd\": \"https://i.malimarcdn.com/laomuslimtvHDF.jpg\",\n            \"wide\": \"https://i.malimarcdn.com/laomuslimtvHD-large.jpg\"\n          },\n          \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/lao_muslim_tv?grid=LiveTV_Free_Premium_Sponsors_CF\",\n          \"type\": \"channel\",\n          \"synopsis\": \"Live from Vientiane Laos.\",\n          \"is_recently_updated\": false,\n          \"highlight\": null\n        },\n        {\n          \"id\": \"tea_tv\",\n          \"title\": \"TEA TV\",\n          \"cover_image\": {\n            \"sd\": \"https://i.malimarcdn.com/TeaTvLaoF.jpg\",\n            \"hd\": \"https://i.malimarcdn.com/TeaTvLaoHDF.jpg\",\n            \"wide\": \"https://i.malimarcdn.com/TeaTvLaoHD-large.jpg\"\n          },\n          \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/tea_tv?grid=LiveTV_Free_Premium_Sponsors_CF\",\n          \"type\": \"channel\",\n          \"synopsis\": \"USA Shopping Television 909 329 2727\",\n          \"is_recently_updated\": false,\n          \"highlight\": null\n        },\n        {\n          \"id\": \"dr_gamhom_tv\",\n          \"title\": \"DR GAMHOM TV\",\n          \"cover_image\": {\n            \"sd\": \"https://i.malimarcdn.com/gamhomF.jpg\",\n            \"hd\": \"https://i.malimarcdn.com/gamhomHDF.jpg\",\n            \"wide\": \"https://i.malimarcdn.com/gamhomHD-large.jpg\"\n          },\n          \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/dr_gamhom_tv?grid=LiveTV_Free_Premium_Sponsors_CF\",\n          \"type\": \"channel\",\n          \"synopsis\": \"888 706 3999\",\n          \"is_recently_updated\": false,\n          \"highlight\": null\n        },\n        {\n          \"id\": \"good_idea_tv_usa\",\n          \"title\": \"GOOD IDEA TV USA\",\n          \"cover_image\": {\n            \"sd\": \"https://i.malimarcdn.com/gtvcF.jpg\",\n            \"hd\": \"https://i.malimarcdn.com/gtvcHDF.jpg\",\n            \"wide\": \"https://i.malimarcdn.com/gtvcHD-large.jpg\"\n          },\n          \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/good_idea_tv_usa?grid=LiveTV_Free_Premium_Sponsors_CF\",\n          \"type\": \"channel\",\n          \"synopsis\": \"USA Thai Entertainment and Shopping Channel 888 988 8933\",\n          \"is_recently_updated\": false,\n          \"highlight\": null\n        },\n        {\n          \"id\": \"oh_muang_lao_live\",\n          \"title\": \"OH MUANG LAO LIVE\",\n          \"cover_image\": {\n            \"sd\": \"https://i.malimarcdn.com/ohmuanglaoliveF.jpg\",\n            \"hd\": \"https://i.malimarcdn.com/ohmuanglaoliveHDF.jpg\",\n            \"wide\": \"https://i.malimarcdn.com/ohmuanglaoliveHD-large.jpg\"\n          },\n          \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/oh_muang_lao_live?grid=LiveTV_Free_Premium_Sponsors_CF\",\n          \"type\": \"channel\",\n          \"synopsis\": \"Live from Vientiane Laos.\",\n          \"is_recently_updated\": false,\n          \"highlight\": null\n        }\n      ]\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"64e368bd4dc6f3c01a026d3de3f1892a\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "d17e1763-756d-4d1b-8c0c-22a435ae1e47",
+        "Content-Length": "2883"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/grids/LiveTV_Free_Premium_Sponsors_CF?include=thumbnails\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODUuMjQ4NjYwMywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxOTIud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxOTIud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NX0.EcoPUc2KjjMkvofebi20tQt3D_yxX7VrUwIlQs6lbXXZ-58r-CAgO5Tu_8MgH4cqtskj_R4xdS2ww3VcBxyIvQ\""
+    }
+  ]
+}

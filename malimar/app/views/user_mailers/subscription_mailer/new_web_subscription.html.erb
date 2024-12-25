@@ -1,0 +1,119 @@
+<table class="centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto">
+  <tbody><tr>
+      <td class="border" style="padding: 0;vertical-align: top;font-size: 1px;line-height: 1px;background-color: #ededed;width: 1px">&#8203;</td>
+      <td style="padding: 0;vertical-align: top">
+        <table class="one-col" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;width: 600px;background-color: #ffffff;font-size: 14px;table-layout: fixed">
+          <tbody><tr>
+              <td class="column" style="padding: 0;vertical-align: top;text-align: left">
+                <div><div class="column-top" style="font-size: 32px;line-height: 32px">&nbsp;</div></div>
+                <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                  <tbody><tr>
+                      <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+                        <h1 style="Margin-top: 0;color: #0d4282;font-weight: 700;font-size: 36px;Margin-bottom: 18px;font-family: sans-serif;line-height: 44px;text-align: center">Payment Successful!</h1>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">
+                          Dear <%= @payment.sender_name %>,</p>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">
+                          Thank you for submitting a <strong>Web subscription payment</strong>!
+                          You're all set to continue enjoying TV shows, movies, and Live TV.&nbsp;Your premium subscription will be activated within 5 minutes.</p>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">
+                          <strong>Your Payment and Plan Details:</strong><br />
+                          <strong>Your Plan: </strong><%= @payment.plan_name %><br />
+                          <strong>Your Plan Expires: </strong><%= @payment.expiration_date %><br />
+                          <strong>Amount Paid: </strong><%= @payment.amount %><br />
+                          <strong>Transaction ID: </strong><%= @payment.transaction_id %></p>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">
+                          <strong>First Name: </strong><%= @payment.first_name %><br />
+                          <strong>Last Name: </strong><%= @payment.last_name %><br />
+                          <% if @payment.address.present? %>
+                          <strong>Street Address: </strong><%= @payment.address %><br />
+                          <% end %>
+                          <% if @payment.city.present? %>
+                          <strong>City: </strong><%= @payment.city %><br />
+                          <% end %>
+                          <% if @payment.state.present? %>
+                          <strong>State: </strong><%= @payment.state %><br />
+                          <% end %>
+                          <strong>Zip Code: </strong><%= @payment.zip %><br />
+                          <strong>Country: </strong><%= @payment.country %><br />
+                          <strong>Telephone: </strong><%= @payment.phone %><br />
+                          <strong>Email: </strong><%= @payment.email %><br />
+                          <% if @payment.invoice.present? %>
+                          <strong>Invoice #:&nbsp;</strong><%= @payment.invoice %>
+                          <% end %>
+                        </p>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">
+                          If you require immediate assistance with website, please feel free to contact customer service at: <strong>1-619-940-5522</strong> (USA) or <strong>33-977-55-77-55</strong> (France).
+                          Our office hours are between 8:00 AM &#8211; 6:00 PM Pacific Standard Time (California, USA Time).</p>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">
+                          &nbsp;</p>
+
+                      </td>
+                    </tr>
+                </tbody></table>
+
+                <div class="column-bottom" style="font-size: 8px;line-height: 8px">&nbsp;</div>
+              </td>
+            </tr>
+        </tbody></table>
+      </td>
+      <td class="border" style="padding: 0;vertical-align: top;font-size: 1px;line-height: 1px;background-color: #ededed;width: 1px">&#8203;</td>
+    </tr>
+</tbody></table>
+
+<table class="border" style="border-collapse: collapse;border-spacing: 0;font-size: 1px;line-height: 1px;background-color: #ededed;Margin-left: auto;Margin-right: auto" width="602">
+  <tbody><tr><td style="padding: 0;vertical-align: top">&#8203;</td></tr>
+</tbody></table>
+
+<div class="spacer" style="font-size: 1px;line-height: 32px;width: 100%">&nbsp;</div>
+<table class="footer centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;width: 602px">
+  <tbody><tr>
+      <td class="social" style="padding: 0;vertical-align: top;padding-top: 32px;padding-bottom: 22px" align="center">
+
+      </td>
+    </tr>
+    <tr><td class="border" style="padding: 0;vertical-align: top;font-size: 1px;line-height: 1px;background-color: #ededed;width: 1px">&nbsp;</td></tr>
+    <tr>
+      <td style="padding: 0;vertical-align: top">
+        <table style="border-collapse: collapse;border-spacing: 0">
+          <tbody><tr>
+              <td class="address" style="padding: 0;vertical-align: top;width: 250px;padding-top: 32px;padding-bottom: 64px">
+                <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                  <tbody><tr>
+                      <td class="padded" style="padding: 0;vertical-align: top;padding-left: 0;padding-right: 10px;word-break: break-word;word-wrap: break-word;text-align: left;font-size: 12px;line-height: 20px;color: #000;font-family: sans-serif">
+                        <div>Questions? Call: 1-619-940-5522 (USA) or 33-977-55-77-55 (France)<br />
+                          Email: <%= support_email %><br />
+                          Website: <%= domain %></div>
+                      </td>
+                    </tr>
+                </tbody></table>
+              </td>
+              <td class="subscription" style="padding: 0;vertical-align: top;width: 350px;padding-top: 32px;padding-bottom: 64px">
+                <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                  <tbody><tr>
+                      <td class="padded" style="padding: 0;vertical-align: top;padding-left: 10px;padding-right: 0;word-break: break-word;word-wrap: break-word;font-size: 12px;line-height: 20px;color: #000;font-family: sans-serif;text-align: right">
+                        <div>
+                          <div align="left">This account email has been sent to you as part of your <%= company_name %> Web Subscription. To change your email preferences at any time, please reply to this email or call:<br />
+                            1-619-940-5522 (USA) or 33-977-55-77-55 (France).</div>
+                        </div>
+                        <div>
+                          <span class="block">
+
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                </tbody></table>
+              </td>
+            </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,14 @@
+.row ng-controller="AccountSettingsInformationCtrl"
+  .display-field
+    .display-field__label Login
+    .display-field__value ng-bind="user.login"
+  .display-field
+    .display-field__label Contact email
+    .display-field__value ng-bind="user.email"
+  .display-field
+    .display-field__label Password
+    .display-field__value
+      | ***
+.row
+  .account-settings__actions
+    a.button.radius ui-sref="^.edit" Update

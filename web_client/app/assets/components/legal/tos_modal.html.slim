@@ -1,0 +1,5 @@
+.legal.legal--modal
+  = Slim::Template.new("#{ __dir__ }/tos.html.slim").render.html_safe
+
+a.close-reveal-modal ng-click="close()" &#215;
+button.button ng-click="close()" Close

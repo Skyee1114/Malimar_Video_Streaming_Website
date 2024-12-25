@@ -1,0 +1,15 @@
+angular.module('tv-dashboard').config ['$stateProvider', ($stateProvider) ->
+  $stateProvider
+    .state 'legal', {
+      url: '/legal'
+      templateUrl: 'legal.html'
+    }
+    .state 'legal.policy', {
+      url: '/policy'
+      templateUrl: <%= "'#{asset_url('legal/policy.html')}'" %>
+    }
+    .state 'legal.tos', {
+      url: '/tos'
+      templateUrl: <%= "'#{asset_url('legal/tos.html')}'" %>
+    }
+]

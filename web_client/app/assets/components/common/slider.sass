@@ -1,0 +1,27 @@
+.slider
+  margin-top: 1rem
+  position: relative
+  height: 700px
+  overflow: hidden
+
+  &__content
+    &.ng-enter, &.ng-leave
+      transition: all ease-out .7s
+
+      display: block
+      width: 100%
+
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+
+    &.ng-enter
+      left: 100%
+
+      &.ng-enter-active
+        left: 0
+
+    &.ng-leave.ng-leave-active
+      left: -100%

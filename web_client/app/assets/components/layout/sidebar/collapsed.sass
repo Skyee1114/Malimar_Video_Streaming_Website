@@ -1,0 +1,45 @@
+.with--sidebar-collapsed
+  .layout__side--left
+    width: $collapsed-sidebar-width
+
+  .logo__image
+    background-image: inline("collapsed-logo.png")
+
+  .logo__arrow
+    background-image: inline("right-arrow.png")
+
+  .sidebar__data
+    padding: 0.95rem 0.5rem 0.95rem 1.8rem
+
+    &__text
+      display: none
+    &__icon
+      display: inline-block
+
+// FIXME: Duplicated code when there is no content in the sidebar
+// or medium or lower screen size. Unfortunately there is no way
+// to extend the .with--sidebar-disabled class or create a mixin
+// in order to reuse the css
+
+.with--sidebar-disabled
+  .sidebar
+    display: none
+
+  .header__logo
+    width: $collapsed-sidebar-width
+    .logo__image
+      background-image: inline("collapsed-logo.png")
+    .logo__arrow
+      display: none
+
+
+@media #{$medium-down}
+  .sidebar
+    display: none
+
+  .header__logo
+    width: $collapsed-sidebar-width
+    .logo__image
+      background-image: inline("collapsed-logo.png")
+    .logo__arrow
+      display: none

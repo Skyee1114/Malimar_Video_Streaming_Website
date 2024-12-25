@@ -1,0 +1,48 @@
+{
+  "resource": "Thumbnails",
+  "http_method": "GET",
+  "route": "/thumbnails",
+  "description": "Get a list of thumbnails",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "thumbnails",
+      "description": "Thumbnail resourses"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/thumbnails",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODcuNDU4NDkxOCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMTYud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMTYud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4N30.FN3NxpaONNSGcD_s7elOPkEwgHZZvopqpS42Sj2aCa8u7d5wf40JUX9wOIvGGu7y9zd0_eK4sCg2peORaIWiSg",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 404,
+      "response_status_text": "Not Found",
+      "response_body": null,
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "ce27829d-52d7-4b9a-9ec5-1de00ae897b3",
+        "Content-Length": "0"
+      },
+      "response_content_type": "application/json",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/thumbnails\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODcuNDU4NDkxOCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMTYud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMTYud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4N30.FN3NxpaONNSGcD_s7elOPkEwgHZZvopqpS42Sj2aCa8u7d5wf40JUX9wOIvGGu7y9zd0_eK4sCg2peORaIWiSg\""
+    }
+  ]
+}

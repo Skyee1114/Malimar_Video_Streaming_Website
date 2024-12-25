@@ -1,0 +1,15 @@
+header
+  nav.tab-bar.header [ng-switch on="is_user_a_guest" ng-cloak]
+    section.left-small
+      a.left-off-canvas-toggle.menu-icon href="#"
+        span
+
+    section.middle.tab-bar-section
+      a.logo__image.logo__image--small href="/"
+
+    section.right ng-switch-when="true"
+      a.button.small.radius ui-sref="session.sign_in" Sign In
+
+    section.right-small ng-switch-when="false"
+      a.right-off-canvas-toggle.menu-icon href="#"
+        span

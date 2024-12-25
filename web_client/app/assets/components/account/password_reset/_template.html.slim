@@ -1,0 +1,21 @@
+.account-category
+  .account-category__title
+    i.fa.fa-refresh
+    | Password reset
+
+  .account-category__body
+    .password-reset
+      = render "form/errors"
+      form.form [name="PasswordResetForm" role="form" ng-submit="PasswordResetForm.$valid && submit()"]
+        .row
+          .small-12.large-7.columns
+            .row
+              .small-12.columns = field 'user_password_reset.login', required: true, label: 'Email when you registered', type: :email
+
+            .row
+              .small-12.columns
+                ul.button-group.radius disable-all="is_busy"
+                  li
+                    button.success type="submit" Send reset password instructions
+                  li
+                    a.button ui-sref='session.sign_in' Cancel

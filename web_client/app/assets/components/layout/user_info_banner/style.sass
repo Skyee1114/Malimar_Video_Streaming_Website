@@ -1,0 +1,25 @@
+.user-info-banner
+  width: 100%
+  padding: 1.3em
+  box-shadow: 10px 5px 30px rgba(0,0,0,0.6)
+
+  &__button_description
+    font-size: 0.9rem
+    text-align: center
+
+@media #{$medium-up}
+  .user-info-banner
+    display: table
+
+    &__section
+      display: table-cell
+      vertical-align: top
+      padding-right: 1em
+
+      &--last
+        padding-right: 0
+
+@media #{$large-up}
+  .user-info-banner
+    &__section
+      padding-right: 2em

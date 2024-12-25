@@ -1,0 +1,91 @@
+$grid-scroller-arrow-size: 30px
+$grid-scroller-padding: 15px
+
+$grid-scroller-scrollbar-margin: 40px
+
+.grid-scroller
+  overflow: hidden
+  position: relative
+  padding: $grid-scroller-padding 0 7px 0
+  &:hover .grid-scroller__control
+    display: block
+
+  &--loading
+    &:before
+      font-family: FontAwesome
+      position: absolute
+      text-align: center
+      font-size: 3em
+      color: $white
+      margin-left: -0.5em
+      margin-top: -0.5em
+      line-height: 1em
+      // height: 1.1em
+      width: 1.1em
+      left: 50%
+      top: 50%
+      animation: spinner 1s linear infinite
+      content: "\f1ce"
+      z-index: $fixed-elements
+
+  &__container
+    padding-left: 15px
+    padding-right: 7px
+    margin-bottom: -$grid-scroller-scrollbar-margin
+    white-space: nowrap
+    overflow-y: hidden !important
+    overflow-x: scroll !important
+    -webkit-overflow-scrolling: touch
+
+  &__element
+    display: inline-block
+    vertical-align: top
+
+  &__control
+    display: block
+    position: absolute
+    top: $grid-scroller-padding
+
+    background: rgba($dark-oil, 0.5)
+    width: 50px
+    z-index: 2
+
+    &:before
+      display: block
+      position: absolute
+
+      color: rgba($white, 0.4)
+      width: $grid-scroller-arrow-size
+      height: $grid-scroller-arrow-size
+      border-top: none
+      border-left: none
+      border-bottom: 2px solid
+      border-right: 2px solid
+      content: ""
+
+    &:hover
+      background: rgba($dark-oil, 0.8)
+      &:before
+        color: $white
+
+    &--left
+      right: auto
+      left: 0
+      &:before
+        right: 0
+        transform: rotate(135deg)
+
+    &--right
+      left: auto
+      right: 0
+      &:before
+        left: 0
+        transform: rotate(-45deg)
+
+@keyframes spinner
+  to
+    transform: rotate(359deg)
+
+@media #{$xlarge-up}
+  .grid-scroller__control
+    display: none

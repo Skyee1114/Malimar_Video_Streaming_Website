@@ -1,0 +1,80 @@
+{
+  "resource": "Grids",
+  "http_method": "GET",
+  "route": "/grids?include=thumbnails&limit=:limit",
+  "description": "Get a list of grids with thumbnails embedded limited to n grids",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "limit",
+      "description": "Limits the amout of grids returned"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "grids",
+      "description": "Grids of the home dashboard"
+    },
+    {
+      "scope": "grids",
+      "name": "href",
+      "description": "Link to grid"
+    },
+    {
+      "scope": "grids",
+      "name": "links",
+      "description": "Embedded resources"
+    },
+    {
+      "scope": "grids",
+      "name": "id",
+      "description": "Grid id"
+    },
+    {
+      "scope": "grids",
+      "name": "title",
+      "description": "Grid title"
+    },
+    {
+      "scope": "grids",
+      "required": false,
+      "name": "title_translated",
+      "description": "Grid title in another language"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/grids?include=thumbnails&limit=2",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODQuNDU0MTExNiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNzkud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNzkud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NH0.exCQ7HtT9ozay3kkHBEW7gDmDkOSZNBweNtaa4Iw9PLGOh6BrYcfrxDyapmJN-3zjQQAfXruX0LdJcPW4jtTvA",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "thumbnails",
+        "limit": "2"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"grids\": [\n    {\n      \"id\": \"Language_Menu_CF\",\n      \"title\": \"Language Menu\",\n      \"title_translated\": \"ถ่ายทอดสดทางโทรทัศน์ | พรีเมี่ยมแบบ\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/Language_Menu_CF?dashboard=HomeGrid\",\n      \"links\": {\n        \"thumbnails\": [\n          {\n            \"id\": \"vietnamese\",\n            \"title\": \"VIETNAMESE LIVE AND ON DEMAND\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/vietnameseF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/vietnameseHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/vietnameseHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/dashboards/vietnamese\",\n            \"type\": \"dashboard\",\n            \"synopsis\": \"Updated On: 30-Dec-1899 with   Episode(s) Vietnamese TV, Drama, Movies, and Music Language: Thai\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"khmer\",\n            \"title\": \"KHMER LIVE AND ON DEMAND\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/khmerF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/khmerHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/khmerHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/dashboards/khmer\",\n            \"type\": \"dashboard\",\n            \"synopsis\": \"Updated On: 30-Dec-1899 with   Episode(s) Khmer TV, Drama, Movies, and Music Language: Khmer\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"thai\",\n            \"title\": \"THAI LIVE AND ON DEMAND\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/thaiF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/thaiHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/thaiHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/dashboards/thai\",\n            \"type\": \"dashboard\",\n            \"synopsis\": \"Updated On: 30-Dec-1899 with   Episode(s) Thai TV, Drama, Movies, and Music Language: Thai\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"hmong\",\n            \"title\": \"HMONG LIVE AND ON DEMAND\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/hmongF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/hmongHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/hmongHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/dashboards/hmong\",\n            \"type\": \"dashboard\",\n            \"synopsis\": \"Updated On: 20-Apr-2014 with 99  Episode(s) Hmong TV, Drama, Movies, and Music Language: Lao\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"lao\",\n            \"title\": \"LAO LIVE AND ON DEMAND\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/laoF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/laoHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/laoHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/dashboards/lao\",\n            \"type\": \"dashboard\",\n            \"synopsis\": \"Updated On: 30-Dec-1899 with   Episode(s) Lao TV, Drama, Movies, and Music Language: Lao\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          }\n        ]\n      }\n    },\n    {\n      \"id\": \"LiveTV_Free_Premium_Sponsors_CF\",\n      \"title\": \"Live TV Free | Premium Sponsors\",\n      \"title_translated\": \"พรีเมี่ยมสปอนเซอร์ | ฟรี\",\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/grids/LiveTV_Free_Premium_Sponsors_CF?dashboard=HomeGrid\",\n      \"links\": {\n        \"thumbnails\": [\n          {\n            \"id\": \"look_thoong_tv_hd\",\n            \"title\": \"LOOK THOONG TV HD\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/LOOKTHOONGTVNEW2F.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/LOOKTHOONGTVNEW2HDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/LOOKTHOONGTVNEW2HD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/look_thoong_tv_hd?grid=LiveTV_Free_Premium_Sponsors_CF\",\n            \"type\": \"channel\",\n            \"synopsis\": \"USA Thai Entertainment Country Music TV 559 579 8477\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"lao_muslim_tv\",\n            \"title\": \"LAO MUSLIM TV\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/laomuslimtvF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/laomuslimtvHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/laomuslimtvHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/lao_muslim_tv?grid=LiveTV_Free_Premium_Sponsors_CF\",\n            \"type\": \"channel\",\n            \"synopsis\": \"Live from Vientiane Laos.\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"tea_tv\",\n            \"title\": \"TEA TV\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/TeaTvLaoF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/TeaTvLaoHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/TeaTvLaoHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/tea_tv?grid=LiveTV_Free_Premium_Sponsors_CF\",\n            \"type\": \"channel\",\n            \"synopsis\": \"USA Shopping Television 909 329 2727\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"dr_gamhom_tv\",\n            \"title\": \"DR GAMHOM TV\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/gamhomF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/gamhomHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/gamhomHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/dr_gamhom_tv?grid=LiveTV_Free_Premium_Sponsors_CF\",\n            \"type\": \"channel\",\n            \"synopsis\": \"888 706 3999\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"good_idea_tv_usa\",\n            \"title\": \"GOOD IDEA TV USA\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/gtvcF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/gtvcHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/gtvcHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/good_idea_tv_usa?grid=LiveTV_Free_Premium_Sponsors_CF\",\n            \"type\": \"channel\",\n            \"synopsis\": \"USA Thai Entertainment and Shopping Channel 888 988 8933\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          },\n          {\n            \"id\": \"oh_muang_lao_live\",\n            \"title\": \"OH MUANG LAO LIVE\",\n            \"cover_image\": {\n              \"sd\": \"https://i.malimarcdn.com/ohmuanglaoliveF.jpg\",\n              \"hd\": \"https://i.malimarcdn.com/ohmuanglaoliveHDF.jpg\",\n              \"wide\": \"https://i.malimarcdn.com/ohmuanglaoliveHD-large.jpg\"\n            },\n            \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/oh_muang_lao_live?grid=LiveTV_Free_Premium_Sponsors_CF\",\n            \"type\": \"channel\",\n            \"synopsis\": \"Live from Vientiane Laos.\",\n            \"is_recently_updated\": false,\n            \"highlight\": null\n          }\n        ]\n      }\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b162e6d58457a5f450216b75bf6f8700\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b06fd09a-5df2-4469-8b9a-579322a98143",
+        "Content-Length": "5554"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/grids?include=thumbnails&limit=2\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODQuNDU0MTExNiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNzkud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNzkud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NH0.exCQ7HtT9ozay3kkHBEW7gDmDkOSZNBweNtaa4Iw9PLGOh6BrYcfrxDyapmJN-3zjQQAfXruX0LdJcPW4jtTvA\""
+    }
+  ]
+}

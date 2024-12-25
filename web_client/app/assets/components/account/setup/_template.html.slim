@@ -1,0 +1,24 @@
+.account-category
+  .account-category__title
+    i.fa.fa-user
+    | Account setup
+
+  .account-category__body
+    .setup-account
+      = render "form/errors"
+      form.form [name="AccountSetupForm" role="form" ng-submit="AccountSetupForm.$valid && submit()"]
+        .row
+          .small-12.large-7.columns
+            .row
+              .small-12.columns = field 'user.email', required: true, label: 'Login', disabled: true
+            .row
+              .small-12.large-6.columns = field "user.password",               required: false,  label: "Password",          type: "password",  equals: "{{user.password_confirmation}}"
+              .small-12.large-6.columns = field "user.password_confirmation",  required: false,  label: "Confirm password",  type: "password",  equals: "{{user.password}}"
+
+            .row
+              .small-12.columns
+                ul.button-group.radius disable-all="is_busy"
+                  li
+                    button.success type="submit" Create my account
+                  li
+                    a.button ui-sref='resource.dashboard' Cancel

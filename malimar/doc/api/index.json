@@ -1,0 +1,477 @@
+{
+  "resources": [
+    {
+      "name": "Channels",
+      "examples": [
+        {
+          "description": "Get channel for given grid",
+          "link": "channels/get_channel_for_given_grid.json",
+          "groups": "all",
+          "route": "/channels/:id?grid=:grid_id",
+          "method": "get"
+        },
+        {
+          "description": "Get premium channel on free subscription",
+          "link": "channels/get_premium_channel_on_free_subscription.json",
+          "groups": "all",
+          "route": "/channels/:id?grid=:grid_id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Countries",
+      "examples": [
+        {
+          "description": "Get a list of countries",
+          "link": "countries/get_a_list_of_countries.json",
+          "groups": "all",
+          "route": "/countries",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Device activation requests",
+      "examples": [
+        {
+          "description": "Create activation with invalid email",
+          "link": "device_activation_requests/create_activation_with_invalid_email.json",
+          "groups": "all",
+          "route": "/device/activation_requests?include=device",
+          "method": "post"
+        },
+        {
+          "description": "Create new activation request and send the emails",
+          "link": "device_activation_requests/create_new_activation_request_and_send_the_emails.json",
+          "groups": "all",
+          "route": "/device/activation_requests?include=device",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Devices",
+      "examples": [
+        {
+          "description": "Add new Device",
+          "link": "devices/add_new_device.json",
+          "groups": "all",
+          "route": "/devices",
+          "method": "post"
+        },
+        {
+          "description": "Get a list of devices for user",
+          "link": "devices/get_a_list_of_devices_for_user.json",
+          "groups": "all",
+          "route": "/devices?user=:user_id",
+          "method": "get"
+        },
+        {
+          "description": "Get device details",
+          "link": "devices/get_device_details.json",
+          "groups": "all",
+          "route": "/devices/:id",
+          "method": "get"
+        },
+        {
+          "description": "Validation error",
+          "link": "devices/validation_error.json",
+          "groups": "all",
+          "route": "/devices",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Episodes",
+      "examples": [
+        {
+          "description": "Get a list of episodes",
+          "link": "episodes/get_a_list_of_episodes.json",
+          "groups": "all",
+          "route": "/episodes",
+          "method": "get"
+        },
+        {
+          "description": "Get a list of episodes for given show",
+          "link": "episodes/get_a_list_of_episodes_for_given_show.json",
+          "groups": "all",
+          "route": "/episodes?show=:show_id",
+          "method": "get"
+        },
+        {
+          "description": "Get a list of episodes for given show limited to n episodes",
+          "link": "episodes/get_a_list_of_episodes_for_given_show_limited_to_n_episodes.json",
+          "groups": "all",
+          "route": "/episodes?show=:show_id&limit=:limit",
+          "method": "get"
+        },
+        {
+          "description": "Get episode for given show",
+          "link": "episodes/get_episode_for_given_show.json",
+          "groups": "all",
+          "route": "/episodes/:id?show=:show_id",
+          "method": "get"
+        },
+        {
+          "description": "Get episode information",
+          "link": "episodes/get_episode_information.json",
+          "groups": "all",
+          "route": "/episodes/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get premium episode on free subscription",
+          "link": "episodes/get_premium_episode_on_free_subscription.json",
+          "groups": "all",
+          "route": "/episodes/:id?show=:show_id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Favorite Videos",
+      "examples": [
+        {
+          "description": "Add new favorite video",
+          "link": "favorite_videos/add_new_favorite_video.json",
+          "groups": "all",
+          "route": "/favorite_videos",
+          "method": "post"
+        },
+        {
+          "description": "Get a list of favorite videos for a user",
+          "link": "favorite_videos/get_a_list_of_favorite_videos_for_a_user.json",
+          "groups": "all",
+          "route": "/favorite_videos?user=:user_id",
+          "method": "get"
+        },
+        {
+          "description": "Remove a video from user's favorite videos list",
+          "link": "favorite_videos/remove_a_video_from_user's_favorite_videos_list.json",
+          "groups": "all",
+          "route": "/favorite_videos/:id?user=:user_id",
+          "method": "delete"
+        }
+      ]
+    },
+    {
+      "name": "Grids",
+      "examples": [
+        {
+          "description": "Get a list of grids",
+          "link": "grids/get_a_list_of_grids.json",
+          "groups": "all",
+          "route": "/grids",
+          "method": "get"
+        },
+        {
+          "description": "Get a list of grids for given dashboard",
+          "link": "grids/get_a_list_of_grids_for_given_dashboard.json",
+          "groups": "all",
+          "route": "/grids?dashboard=:dashboard_id",
+          "method": "get"
+        },
+        {
+          "description": "Get a list of grids with thumbnails embedded limited to n grids",
+          "link": "grids/get_a_list_of_grids_with_thumbnails_embedded_limited_to_n_grids.json",
+          "groups": "all",
+          "route": "/grids?include=thumbnails&limit=:limit",
+          "method": "get"
+        },
+        {
+          "description": "Get grid information",
+          "link": "grids/get_grid_information.json",
+          "groups": "all",
+          "route": "/grids/:id",
+          "method": "get"
+        },
+        {
+          "description": "Get grid information with embedded thumbnails",
+          "link": "grids/get_grid_information_with_embedded_thumbnails.json",
+          "groups": "all",
+          "route": "/grids/:id?include=thumbnails",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Invitations",
+      "examples": [
+        {
+          "description": "Create invitation with invalid email",
+          "link": "invitations/create_invitation_with_invalid_email.json",
+          "groups": "all",
+          "route": "/invitations",
+          "method": "post"
+        },
+        {
+          "description": "Create new invitaiton and sends the email",
+          "link": "invitations/create_new_invitaiton_and_sends_the_email.json",
+          "groups": "all",
+          "route": "/invitations",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Passwords",
+      "examples": [
+        {
+          "description": "Create new password and sends the email",
+          "link": "passwords/create_new_password_and_sends_the_email.json",
+          "groups": "all",
+          "route": "/passwords",
+          "method": "post"
+        },
+        {
+          "description": "Create password with unexisting login",
+          "link": "passwords/create_password_with_unexisting_login.json",
+          "groups": "all",
+          "route": "/passwords",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Permissions",
+      "examples": [
+        {
+          "description": "Get a list of active user permissions",
+          "link": "permissions/get_a_list_of_active_user_permissions.json",
+          "groups": "all",
+          "route": "/permissions?user=:user_id&filter[active]=true",
+          "method": "get"
+        },
+        {
+          "description": "Get a list of permissions for given user",
+          "link": "permissions/get_a_list_of_permissions_for_given_user.json",
+          "groups": "all",
+          "route": "/permissions?user=:user_id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Plans",
+      "examples": [
+        {
+          "description": "Get a list of plans",
+          "link": "plans/get_a_list_of_plans.json",
+          "groups": "all",
+          "route": "/plans",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Recently played",
+      "examples": [
+        {
+          "description": "Get a list of recently played videos for user",
+          "link": "recently_played/get_a_list_of_recently_played_videos_for_user.json",
+          "groups": "all",
+          "route": "/recently_played",
+          "method": "get"
+        },
+        {
+          "description": "Remove a recently played video",
+          "link": "recently_played/remove_a_recently_played_video.json",
+          "groups": "all",
+          "route": "/recently_played/:id",
+          "method": "delete"
+        }
+      ]
+    },
+    {
+      "name": "Rokupay notifications",
+      "examples": [
+        {
+          "description": "Rokupay notification creates user account and subscribtion",
+          "link": "rokupay_notifications/rokupay_notification_creates_user_account_and_subscribtion.json",
+          "groups": "all",
+          "route": "/callback/rokupay_notifications",
+          "method": "post"
+        },
+        {
+          "description": "Rokupay notification with invalid device serial",
+          "link": "rokupay_notifications/rokupay_notification_with_invalid_device_serial.json",
+          "groups": "all",
+          "route": "/callback/rokupay_notifications",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Sessions",
+      "examples": [
+        {
+          "description": "Authentication error",
+          "link": "sessions/authentication_error.json",
+          "groups": "all",
+          "route": "/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Create session",
+          "link": "sessions/create_session.json",
+          "groups": "all",
+          "route": "/sessions",
+          "method": "post"
+        },
+        {
+          "description": "Create session and return authenticated user",
+          "link": "sessions/create_session_and_return_authenticated_user.json",
+          "groups": "all",
+          "route": "/sessions?include=user",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Shows",
+      "examples": [
+        {
+          "description": "Get show from the grid",
+          "link": "shows/get_show_from_the_grid.json",
+          "groups": "all",
+          "route": "/shows/:id?grid=:grid_id",
+          "method": "get"
+        },
+        {
+          "description": "Get show from the grid with embedded episodes",
+          "link": "shows/get_show_from_the_grid_with_embedded_episodes.json",
+          "groups": "all",
+          "route": "/shows/:id?include=episodes&grid=:grid_id",
+          "method": "get"
+        },
+        {
+          "description": "Get show information",
+          "link": "shows/get_show_information.json",
+          "groups": "all",
+          "route": "/shows/:id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "States",
+      "examples": [
+        {
+          "description": "Get a list of states for given country",
+          "link": "states/get_a_list_of_states_for_given_country.json",
+          "groups": "all",
+          "route": "/states?country=:country_id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Subscription Payments",
+      "examples": [
+        {
+          "description": "Create subscription payment and return plan",
+          "link": "subscription_payments/create_subscription_payment_and_return_plan.json",
+          "groups": "all",
+          "route": "/subscription_payments?include=plan",
+          "method": "post"
+        },
+        {
+          "description": "Pay for roku subscription",
+          "link": "subscription_payments/pay_for_roku_subscription.json",
+          "groups": "all",
+          "route": "/subscription_payments",
+          "method": "post"
+        },
+        {
+          "description": "Pay for subscription",
+          "link": "subscription_payments/pay_for_subscription.json",
+          "groups": "all",
+          "route": "/subscription_payments",
+          "method": "post"
+        },
+        {
+          "description": "Payment with invalid email",
+          "link": "subscription_payments/payment_with_invalid_email.json",
+          "groups": "all",
+          "route": "/subscription_payments",
+          "method": "post"
+        }
+      ]
+    },
+    {
+      "name": "Thumbnails",
+      "examples": [
+        {
+          "description": "Get a list of thumbnails",
+          "link": "thumbnails/get_a_list_of_thumbnails.json",
+          "groups": "all",
+          "route": "/thumbnails",
+          "method": "get"
+        },
+        {
+          "description": "Get a list of thumbnails for given container",
+          "link": "thumbnails/get_a_list_of_thumbnails_for_given_container.json",
+          "groups": "all",
+          "route": "/thumbnails?container=:container_id",
+          "method": "get"
+        },
+        {
+          "description": "Get a list of thumbnails limited to n elements",
+          "link": "thumbnails/get_a_list_of_thumbnails_limited_to_n_elements.json",
+          "groups": "all",
+          "route": "/thumbnails?container=:container_id&limit=:limit",
+          "method": "get"
+        },
+        {
+          "description": "Get episodes as thumbnails for the show",
+          "link": "thumbnails/get_episodes_as_thumbnails_for_the_show.json",
+          "groups": "all",
+          "route": "/thumbnails?container=:container_id",
+          "method": "get"
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "examples": [
+        {
+          "description": "Get user details",
+          "link": "users/get_user_details.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "get"
+        },
+        {
+          "description": "Register new user",
+          "link": "users/register_new_user.json",
+          "groups": "all",
+          "route": "/users",
+          "method": "post"
+        },
+        {
+          "description": "Register new user and return his session",
+          "link": "users/register_new_user_and_return_his_session.json",
+          "groups": "all",
+          "route": "/users?include=session",
+          "method": "post"
+        },
+        {
+          "description": "Update user details",
+          "link": "users/update_user_details.json",
+          "groups": "all",
+          "route": "/users/:id",
+          "method": "put"
+        },
+        {
+          "description": "Validation error",
+          "link": "users/validation_error.json",
+          "groups": "all",
+          "route": "/users",
+          "method": "post"
+        }
+      ]
+    }
+  ]
+}

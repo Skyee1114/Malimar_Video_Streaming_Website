@@ -1,0 +1,60 @@
+{
+  "resource": "Sessions",
+  "http_method": "POST",
+  "route": "/sessions?include=user",
+  "description": "Create session and return authenticated user",
+  "explanation": "Bearer or Basic authentication allowed",
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "sessions",
+      "description": "Session object"
+    },
+    {
+      "scope": "sessions",
+      "name": "links",
+      "description": "Embedded resources"
+    },
+    {
+      "scope": "sessions",
+      "name": "id",
+      "description": "Bearer token"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/sessions?include=user",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Basic ZG9jdG9yMzExLndob0BleGFtcGxlLmNvbTpzZWNyZXQ=",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "include": "user"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"sessions\": {\n    \"id\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTEuNTQ0NDE5OCwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IzMTEud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IzMTEud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MX0.gWhKCzs4aoqDvGIHK4LR3HMA9Uvr1odOUC7N-2gGMbP_acOkMKNxXrG4d-tjdm-gwZDBkZQxLr3wVpdD8rrbcA\",\n    \"links\": {\n      \"user\": {\n        \"id\": 1,\n        \"email\": \"doctor311.who@example.com\",\n        \"login\": \"doctor311.who@example.com\",\n        \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/users/1\"\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"b01f98c7d05fdc3f3f7b5d9f2714c151\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "b2f24609-9047-40c6-98b0-e43c7388ed00",
+        "Content-Length": "592"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/sessions?include=user\" -d '' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-u doctor311.who@example.com:secret"
+    }
+  ]
+}

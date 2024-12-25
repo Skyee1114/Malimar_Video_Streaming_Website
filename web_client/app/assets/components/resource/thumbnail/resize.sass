@@ -1,0 +1,36 @@
+=resize_thumbnail($thumbnail-width, $thumbnail-height)
+  $grid-scroller-container-height: $thumbnail-height + 8px
+
+  .thumbnail
+    &__image
+      width: $thumbnail-width
+      height: $thumbnail-height
+
+    &--load_more
+      width: $thumbnail-width
+      height: $thumbnail-height
+      padding-top: $thumbnail-height / 4
+
+    &__playing
+      top: $thumbnail-height / 2 - 33px
+
+  .grid-scroller
+    &__container
+      height: $grid-scroller-container-height + $grid-scroller-scrollbar-margin
+    &__control
+      height: $thumbnail-height + 1px
+      &:before
+        top: $thumbnail-height / 2 - $grid-scroller-arrow-size / 2
+
+  .grid-scroller--ondemand
+    .grid-scroller
+      &__control
+        height: $grid-scroller-container-height
+
+@media #{$medium-down}
+  .thumbnail-details
+    font-size: 0.8em
+  +resize_thumbnail(272px, 153px)
+
+@media #{$large-up}
+  +resize_thumbnail(400px, 225px)

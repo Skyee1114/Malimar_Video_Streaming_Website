@@ -1,0 +1,81 @@
+{
+  "resource": "Users",
+  "http_method": "POST",
+  "route": "/users",
+  "description": "Validation error",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "users",
+      "description": "User resource object"
+    },
+    {
+      "scope": "users",
+      "name": "email",
+      "description": "User email"
+    },
+    {
+      "scope": "users",
+      "name": "password",
+      "description": "User desired password"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "errors",
+      "description": "Errors object"
+    },
+    {
+      "scope": "errors",
+      "name": "title",
+      "description": "Summary of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "detail",
+      "description": "Explanation of the problem"
+    },
+    {
+      "scope": "errors",
+      "name": "status",
+      "description": "The HTTP status code applicable to this problem"
+    },
+    {
+      "scope": "errors",
+      "name": "links",
+      "description": ""
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/users",
+      "request_body": "{\"users\":{\"email\":\"alice@example.com\",\"password\":\"\"}}",
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTEuNzQ1Mjk2MiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IzMjYud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IzMjYud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MX0.4tUvZFL0beOf3Qr8nik8pb027ojPgsg6jqgCf1HvTFO7M0EuxkOjaGlJMK2kpdoE_ckff71t9bx4SsFarqhDpQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 422,
+      "response_status_text": "Unprocessable Entity",
+      "response_body": "{\n  \"errors\": {\n    \"status\": 422,\n    \"title\": \"Validation error\",\n    \"detail\": \"Password can't be blank\",\n    \"links\": {\n      \"user\": {\n        \"password\": [\n          \"can't be blank\"\n        ]\n      }\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "Cache-Control": "no-cache",
+        "X-Request-Id": "5d51be9b-a696-420c-a0c6-c417cb2070db",
+        "Content-Length": "136"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/users\" -d '{\"users\":{\"email\":\"alice@example.com\",\"password\":\"\"}}' -X POST \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2OTEuNzQ1Mjk2MiwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IzMjYud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IzMjYud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA5MX0.4tUvZFL0beOf3Qr8nik8pb027ojPgsg6jqgCf1HvTFO7M0EuxkOjaGlJMK2kpdoE_ckff71t9bx4SsFarqhDpQ\""
+    }
+  ]
+}

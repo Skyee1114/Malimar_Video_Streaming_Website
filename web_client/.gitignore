@@ -1,0 +1,25 @@
+/.bundle/
+/.yardoc
+/_yardoc/
+/coverage/
+/doc/
+/pkg/
+/spec/reports/
+/spec/dummy/log/
+/spec/dummy/tmp/
+/tmp/
+*.bundle
+*.so
+*.o
+*.a
+mkmf.log
+
+/tags
+
+# Ignore node modules
+/node_modules
+
+.env
+
+/.ruby-gemset
+/.ruby-version

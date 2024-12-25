@@ -1,0 +1,10 @@
+<% if feature_active? :registration %>
+angular.module('tv-dashboard').config ['$stateProvider', ($stateProvider) ->
+  $stateProvider
+    .state "account", {
+      abstract: true
+      url: "/account",
+      templateUrl: 'account.html',
+    }
+]
+<% end %>

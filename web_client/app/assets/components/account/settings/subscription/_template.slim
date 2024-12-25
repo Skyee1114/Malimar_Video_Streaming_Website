@@ -1,0 +1,27 @@
+div ng-controller="AccountSettingsSubscriptionCtrl"
+  .row ng-show="has_subscription"
+    .display-field ng-if="premium"
+      .display-field__label Web online access
+      div
+        | Your membership expires on 
+        span.display-field__value.display-field__value--important.display-field__value--nowrap ng-bind="premium.expires_at | date"
+  .row ng-hide="has_subscription"
+    div No active subscription.
+    div
+      span Purchase one 
+      a ui-sref="^.subscribe.form" here
+
+  .row
+    hr.horizontal-rule
+    div 
+      | You do not have to wait till the end of your membership to Top 
+      | Up your account. Top Up now to add more membership days to 
+      | your account and continue accessing premium content.
+
+
+  .row
+    .account-settings__actions
+      ul.button-group.radius
+        li
+          a.button.success ui-sref="^.subscribe.form" Top Up Account
+

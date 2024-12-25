@@ -1,0 +1,35 @@
+.account-category
+  padding: 10px
+
+  &__title
+    font-size: 1.8rem
+    margin-bottom: 15px
+    color: $primary-color
+
+    i.fa
+      margin-right: 10px
+
+  &__body
+    max-width: 1175px
+
+    &--small
+      max-width: 916px
+
+  &--light
+    background-color: $white-smoke
+
+  &--wide
+    padding: 10px
+    margin: 10px 0
+
+@media #{$medium-up}
+  .account-category
+    padding: 50px
+
+    &--wide
+      padding: 50px
+      margin: 50px 0
+
+    &__body
+      &--shifted
+        margin-left: 40px

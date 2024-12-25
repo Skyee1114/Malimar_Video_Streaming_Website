@@ -1,0 +1,103 @@
+{
+  "resource": "Episodes",
+  "http_method": "GET",
+  "route": "/episodes/:id?show=:show_id",
+  "description": "Get episode for given show",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Episode id"
+    },
+    {
+      "name": "show_id",
+      "description": "Show id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "episodes",
+      "description": "Episode resource object"
+    },
+    {
+      "scope": "episodes",
+      "name": "stream_url",
+      "description": "Url with token to play the episode"
+    },
+    {
+      "scope": "episodes",
+      "name": "player_url",
+      "description": "Url to the player"
+    },
+    {
+      "scope": "episodes",
+      "name": "background_image",
+      "description": "Huge background images of the resource"
+    },
+    {
+      "scope": "episodes",
+      "name": "id",
+      "description": "Episode id"
+    },
+    {
+      "scope": "episodes",
+      "name": "title",
+      "description": "Episode title"
+    },
+    {
+      "scope": "episodes",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    },
+    {
+      "scope": "episodes",
+      "name": "number",
+      "description": "Episode number in the show"
+    },
+    {
+      "scope": "episodes",
+      "name": "release_date",
+      "description": "Date when episode was released"
+    },
+    {
+      "scope": "episodes",
+      "required": false,
+      "name": "synopsis",
+      "description": "Synopsis"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/episodes/EP1405321?show=WonderfulAnimals19",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuMjc0NTUyMywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNjAud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNjAud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjp0cnVlfSwiZXhwIjoxNTkxNjU0MDgzfQ.uZ_82tfv_fC_k5D18xDWrAyLtQp-GF5J-BFRcUUml6LqDi27D0xeqJAJqWxy0dtyBb9PyuPy_Y6zSKqSxmYfCA",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "show": "WonderfulAnimals19"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"episodes\": {\n    \"id\": \"EP1405321\",\n    \"title\": \"Wonderful Animals | Episode 21  | Jun 08, 2019\",\n    \"synopsis\": null,\n    \"cover_image\": {\n      \"sd\": \"https://i.malimarcdn.com/WonderfulAnimals19F.jpg\",\n      \"hd\": \"https://i.malimarcdn.com/WonderfulAnimals19HDF.jpg\",\n      \"wide\": \"https://i.malimarcdn.com/WonderfulAnimals19HD-large.jpg\"\n    },\n    \"number\": 21,\n    \"release_date\": \"8-Jun-2019\",\n    \"stream_url\": \"https://vodhls.malimarcdn.net/1591654083_f5745e760e6aaf577bf5bfb2f73468d265075ec6/Documentary/WonderfulAnimals19/WonderfulAnimals19-21.m3u8\",\n    \"player_url\": \"//cdn.jwplayer.com/libraries/iMxCLH6i.js\",\n    \"background_image\": {\n      \"sd\": null,\n      \"hd\": null\n    }\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"df6afcb4fc1ee67e5072ec69130b5ef5\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "c9ccf0ae-d43f-4a36-826d-113437bcce7f",
+        "Content-Length": "591"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/episodes/EP1405321?show=WonderfulAnimals19\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODMuMjc0NTUyMywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxNjAud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxNjAud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjp0cnVlfSwiZXhwIjoxNTkxNjU0MDgzfQ.uZ_82tfv_fC_k5D18xDWrAyLtQp-GF5J-BFRcUUml6LqDi27D0xeqJAJqWxy0dtyBb9PyuPy_Y6zSKqSxmYfCA\""
+    }
+  ]
+}

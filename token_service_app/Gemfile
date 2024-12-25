@@ -1,0 +1,21 @@
+# frozen_string_literal: true
+
+source 'https://rubygems.org'
+
+gem 'bundler', '< 1.18'
+gem 'sinatra-subdomain'
+gem 'url_tokenizer', '~> 1.7.0'
+
+unless ENV['RACK_ENV'] == 'production'
+  group :development, :test do
+    gem 'dotenv'
+    gem 'rack-test'
+    gem 'rspec', '~> 3.1.0'
+
+    # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+    gem 'byebug'
+    gem 'pry-byebug'
+    # Formatter for rspec
+    gem 'fivemat'
+  end
+end

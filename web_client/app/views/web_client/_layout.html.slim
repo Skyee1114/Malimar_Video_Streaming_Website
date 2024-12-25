@@ -1,0 +1,61 @@
+doctype html
+html lang="en" ng-app="tv-dashboard"
+  head
+    meta charset="utf-8"
+    meta name="title" content="#{ company_name } TV Network | Thai TV, Lao TV, Khmer TV, and Hmong TV"
+    meta name="keywords" content="Doo Thai TV, Doo TV, Thai TV, Lao TV, Khmer TV, Hmong TV, Thai TV on OTT Devices, Live Thai TV, Live Khmer TV, Khmer TV on OTT Devices"
+    meta name="description" content="Doo Thai TV, Watch Thai, Lao, Khmer TV from anywhere around the world. Watch Live and Video on demand on TV with OTT Devices today. Compatible with PC, Mac, iOS Device, Andriod Tablet and OTT Devices devices"
+    meta name="viewport" content="width=device-width, initial-scale=1.0"
+    meta name="theme-color" content="#{ ENV["ADDRESSBAR_COLOR"] || "#272221" }"
+    meta name="robots" content="{{robots_index_directive || 'index'}}"
+    meta name="google-site-verification" content="yFeHQ4tZtMg1mkoABZpoPcSmw2ttPbk62ejnkJXLoD8"
+    title #{ company_name } TV Network | Thai TV, Lao TV, Khmer TV, and Hmong TV
+    base href="/"
+
+    = favicon_link_tag 'favicon.ico'
+
+    -# Touch icons for mobile devices.
+    -# For Chrome for Android
+    = favicon_link_tag 'favicons/192.png', rel: 'icon', type: 'image/png', sizes: '192x192'
+    -# For iPhone 6 Plus with @3× display
+    = favicon_link_tag 'favicons/180.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '180x180'
+    -# For iPad with @2× display running iOS ≥ 7
+    = favicon_link_tag 'favicons/152.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '152x152'
+    -# For iPad with @2× display running iOS ≤ 6
+    = favicon_link_tag 'favicons/144.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '144x144'
+    -# For iPhone with @2× display running iOS ≥ 7
+    = favicon_link_tag 'favicons/120.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '120x120'
+    -# For iPhone with @2× display running iOS ≤ 6
+    = favicon_link_tag 'favicons/114.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '114x114'
+    -# For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7
+    = favicon_link_tag 'favicons/76.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '76x76'
+    -# For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6
+    = favicon_link_tag 'favicons/72.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '72x72'
+    -# For non-Retina iPhone, iPod Touch, and Android 2.1+ devices, 57x57px
+    = favicon_link_tag 'favicons/57.png', rel: 'apple-touch-icon-precomposed', type: 'image/png'
+    = favicon_link_tag 'favicons/60.png', rel: 'apple-touch-icon-precomposed', type: 'image/png', sizes: '60x60'
+
+    = stylesheet_link_tag "application", media: "all"
+    = javascript_include_tag "application", defer: true
+    = javascript_include_tag "//cdn.flowplayer.com/players/3cab1617-111f-49ee-bc44-a7fd0f64bf88/native/flowplayer.async.js", defer: true
+    = javascript_include_tag "//cdn.flowplayer.com/releases/native/stable/plugins/chromecast.min.js", defer: true
+    = javascript_include_tag "//cdn.flowplayer.com/releases/native/stable/plugins/airplay.min.js", defer: true
+    = javascript_include_tag "//cdn.jwplayer.com/libraries/iMxCLH6i.js", defer: true
+
+  body [ng-controller="SidebarCtrl" ng-class="{'with--sidebar-collapsed': sidebar_collapsed, 'with--sidebar-disabled': sidebar_disabled}" ng-cloak]
+    .off-canvas-wrap [data-offcanvas]
+      .inner-wrap
+        .hide-for-large-up ng-controller="UserMenuCtrl"
+          = render 'layout/off_canvas/header'
+          = render 'layout/off_canvas/left'
+          = render 'layout/off_canvas/right'
+
+        .show-for-large-up ng-controller="UserMenuCtrl"
+          = render 'layout/header'
+
+        section.main-section
+          = render 'layout/body'
+          = render 'layout/footer'
+          live_chat_tawk
+          browser_update
+        a.exit-off-canvas

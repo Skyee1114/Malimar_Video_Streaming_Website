@@ -1,0 +1,51 @@
+.account
+  .account-category.account-category--light
+    .account-category__title
+      i.fa.fa-paper-plane-o
+      |  Subscription Payment Successful!
+
+    .account-category__body.account-category__body--shifted
+      p Thank you for your payment! Payment for your subscription was successful! For a receipt of your recent transaction, please check your email address.
+
+      p 
+        | Congratulations, you're ready to start watching TV shows, movies, and Live TV on #{ company_name } TV Network Website and your selected device.
+        br
+        | Your premium subscription to #{ company_name } TV Network on your TV is now activated. Rebooting your Roku (or Fire TV) device may be required
+
+      p 
+        | If you are unable to access premium content on your TV after 5 minutes of your payment, 
+        br /
+        | please contact us at: 
+        a href="tel:+1-619-940-5522" +1-619-940-5522 (USA)
+        |,  
+        a href="tel:+33-977-55-77-55" +33-977-55-77-55 (France)
+        |  or 
+        a href="tel:+44-20-3514-1880" +44-20-3514-1880 (United Kingdom)
+        |, or email customer service at 
+        a href="mailto:#{ support_email }" = support_email
+
+      p If you haven’t added #{ company_name } TV Network to your Roku device, please follow the steps below.
+
+  .account-category
+    .account-category__title
+      i.fa.fa-plug
+      | Don't forget to add #{ company_name } TV on your Roku!
+
+    .account-category__body.account-category__body--shifted
+      .text-center
+        ul.button-group.stack-for-small.round
+          li
+            a.button ui-sref=".step1" ui-sref-active="button--active" Step 1
+          li
+            a.button ui-sref=".step2" ui-sref-active="button--active" Step 2
+          li 
+            a.button ui-sref=".step3" ui-sref-active="button--active" Step 3
+          li
+            a.button ui-sref=".step4" ui-sref-active="button--active" Step 4
+          li
+            a.button ui-sref=".step5" ui-sref-active="button--active" Step 5
+          li
+            a.button ui-sref=".step6" ui-sref-active="button--active" Step 6
+
+        .slider
+          .slider__content [ui-view]

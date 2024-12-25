@@ -1,0 +1,36 @@
+$video-player-grid-padding: 80px
+
+//
+// Grid
+//
+.video-player-grid
+  padding: 0 $video-player-grid-padding
+
+.video-player-grid__scroller
+  margin: 0 0 - $video-player-grid-padding
+
+//
+// Scroller
+//
+.grid-scroller--ondemand
+  padding: 0
+  .grid-scroller
+    &__container
+      margin-left: $video-player-grid-padding
+      margin-right: $video-player-grid-padding
+      padding-left: 0
+      padding-right: 0
+
+    &__control
+      display: block
+      top: 0
+      background-color: $secondary-color
+      width: $video-player-grid-padding
+
+      &--left
+        &:before
+          right: $video-player-grid-padding / 2 - $grid-scroller-arrow-size
+
+      &--right
+        &:before
+          left: $video-player-grid-padding / 2 - $grid-scroller-arrow-size

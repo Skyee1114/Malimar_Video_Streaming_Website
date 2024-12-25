@@ -1,0 +1,96 @@
+<table class="centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto">
+  <tbody><tr>
+      <td class="border" style="padding: 0;vertical-align: top;font-size: 1px;line-height: 1px;background-color: #ededed;width: 1px">&#8203;</td>
+      <td style="padding: 0;vertical-align: top">
+        <table class="one-col" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;width: 600px;background-color: #ffffff;font-size: 14px;table-layout: fixed">
+          <tbody><tr>
+              <td class="column" style="padding: 0;vertical-align: top;text-align: left">
+                <div><div class="column-top" style="font-size: 32px;line-height: 32px">&nbsp;</div></div>
+                <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                  <tbody>
+                    <tr>
+                      <td class="padded" style="padding: 0;vertical-align: top;padding-left: 32px;padding-right: 32px;word-break: break-word;word-wrap: break-word">
+
+                        <h1 style="Margin-top: 0;color: #0d4282;font-weight: 700;font-size: 36px;Margin-bottom: 18px;font-family: sans-serif;line-height: 44px;text-align: center">30 Day Trial&nbsp;Activated!</h1>
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">Dear <%= @activation.first_name %>,&nbsp;<br />
+                          <br />
+                          Thank you for trying<strong> <%= company_name %> TV Network on your</strong> streaming device! Your device with the serial number: <strong><%= @activation.serial_number %></strong> is now activated to watch premium content for <strong>30</strong> days. <strong>Your trial will be deactivated on: <%= @activation.deactivation_date %>.&nbsp;</strong><br />
+                          <br />
+                          &#8203;Our goal to to provide the community with the best streaming experience.&nbsp;Our customer service representatives will follow up with you via telephone or email in 24 - 48 hours to make sure everything is working perfectly.</p>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">Do not forget to add <%= company_name %> TV to your Roku: <%= link_to add_channel_instruction_url, add_channel_instruction_url %></p>
+
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">
+                          <strong>Your Information Provided:</strong><br />
+                          <strong>First Name: </strong><%= @activation.first_name %><br />
+                          <strong>Last Name: </strong><%= @activation.last_name %><br />
+                          <strong>Email: </strong><%= @activation.email %><br />
+                          <strong>Telephone Number: </strong><%= @activation.phone %><br />
+                          <strong>Street Address: </strong><%= @activation.address %><br />
+                          <strong>City: </strong><%= @activation.city %><br />
+                          <strong>State: </strong><%= @activation.state %><br />
+                          <strong>Zip Code: </strong><%= @activation.zip %><br />
+                          <strong>Country: </strong><%= @activation.country %><br />
+                          <strong>How did you hear about us?:</strong> <%= @activation.referral %></p>
+                        <p style="Margin-top: 0;color: #000;font-family: sans-serif;font-size: 16px;line-height: 24px;Margin-bottom: 24px">If you require immediate assistance with your device, please feel free to contact customer service at <strong>1-619-940-5522</strong> (USA) or <strong>33-977-55-77-55</strong> (France). Our office hours are between 8:00 AM &#8211; 6:00 PM Pacific Standard Time (California, USA Time).</p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="column-bottom" style="font-size: 8px;line-height: 8px">&nbsp;</div>
+              </td>
+            </tr>
+        </tbody></table>
+      </td>
+      <td class="border" style="padding: 0;vertical-align: top;font-size: 1px;line-height: 1px;background-color: #ededed;width: 1px">&#8203;</td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="border" style="border-collapse: collapse;border-spacing: 0;font-size: 1px;line-height: 1px;background-color: #ededed;Margin-left: auto;Margin-right: auto" width="602">
+  <tbody><tr><td style="padding: 0;vertical-align: top">&#8203;</td></tr>
+</tbody></table>
+
+<div class="spacer" style="font-size: 1px;line-height: 32px;width: 100%">&nbsp;</div>
+<table class="footer centered" style="border-collapse: collapse;border-spacing: 0;Margin-left: auto;Margin-right: auto;width: 602px">
+  <tbody><tr>
+      <td class="social" style="padding: 0;vertical-align: top;padding-top: 32px;padding-bottom: 22px" align="center">
+
+      </td>
+    </tr>
+    <tr><td class="border" style="padding: 0;vertical-align: top;font-size: 1px;line-height: 1px;background-color: #ededed;width: 1px">&nbsp;</td></tr>
+    <tr>
+      <td style="padding: 0;vertical-align: top">
+        <table style="border-collapse: collapse;border-spacing: 0">
+          <tbody><tr>
+              <td class="address" style="padding: 0;vertical-align: top;width: 250px;padding-top: 32px;padding-bottom: 64px">
+                <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                  <tbody><tr>
+                      <td class="padded" style="padding: 0;vertical-align: top;padding-left: 0;padding-right: 10px;word-break: break-word;word-wrap: break-word;text-align: left;font-size: 12px;line-height: 20px;color: #000;font-family: sans-serif">
+                        <div>Questions? Call: 1-619-940-5522 (USA) or 33-977-55-77-55 (France)<br />
+                          Email: <%= support_email %><br />
+                          Website: <%= domain %></div>
+                      </td>
+                    </tr>
+                </tbody></table>
+              </td>
+              <td class="subscription" style="padding: 0;vertical-align: top;width: 350px;padding-top: 32px;padding-bottom: 64px">
+                <table class="contents" style="border-collapse: collapse;border-spacing: 0;table-layout: fixed;width: 100%">
+                  <tbody><tr>
+                      <td class="padded" style="padding: 0;vertical-align: top;padding-left: 10px;padding-right: 0;word-break: break-word;word-wrap: break-word;font-size: 12px;line-height: 20px;color: #000;font-family: sans-serif;text-align: right">
+                        <div>This account email has been sent to you as part of your <%= company_name %> Subscription. To change your email preferences at any time, please reply to this email or call: 1-619-940-5522 (USA) or 33-977-55-77-55 (France).</div>
+                        <div>
+                          <span class="block">
+
+                          </span>
+                        </div>
+                      </td>
+                    </tr>
+                </tbody></table>
+              </td>
+            </tr>
+        </tbody></table>
+      </td>
+    </tr>
+  </tbody>
+</table>

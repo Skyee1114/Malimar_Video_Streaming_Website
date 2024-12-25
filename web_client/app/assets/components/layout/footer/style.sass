@@ -1,0 +1,109 @@
+.footer__categories-container
+  column-count: 5
+  font-size: 1em
+
+.footer__categories
+  @include reset-list
+  line-height: 1.9em
+  font-size: 0.9em
+
+.footer__category
+  &:last-child
+    margin-bottom: 1.8em
+
+.footer__category__text__section
+  font-weight: bold
+  color: $accent-color
+  margin-bottom: 3px
+
+.footer__category__text
+  color: $white
+
+.footer__categories-caption
+  color: $secondary-white
+  margin-bottom: 0.4em
+
+
+.footer__section-link
+  @include reset-list
+
+.footer__link
+  display: inline-block
+  vertical-align: top
+  margin-right: -4px
+  padding-right: 10px!important
+  position: relative
+  &:not(:last-child):after
+    content: ""
+    border-right: 1px solid white
+    position: absolute
+    height: 50%
+    right: 2px
+    top: 8px
+
+.footer__link__text
+  color: $white
+
+.footer__text-secondary
+  color: $secondary-white
+
+.footer
+  background: $black
+  color: #8b8b8b
+  text-align: left
+  font-size: 1.3em
+  text-transform: uppercase
+  padding: 1.5rem
+  p
+    font-weight: lighter
+    font-size: 1em
+    margin-bottom: 0
+
+  ul.socials
+    margin: 0
+    & li
+      width: 45px
+      height: 45px
+      display: inline-block
+      background: image_url("roku-home-socials_black.jpg") no-repeat center left
+      text-indent: -10000px
+      &.facebook
+        background-position-x: 0px
+      &.twitter
+        background-position-x: -46px
+      &.gplus
+        background-position-x: -95px
+      &.linkedin
+        background-position-x: -142px
+      &.youtube
+        background-position-x: -190px
+      &.instagram
+        background-position-x: -237px
+      &.vimeo
+        background-position-x: -285px
+      & a
+        display: block
+        height: 100%
+        width: 100%
+  .phone-number
+    color: white
+    line-height: 50px
+    &:before
+      font-family: FontAwesome
+      content: "\f095"
+      display: inline-block
+      width: 30px
+      height: 30px
+  .email
+    text-transform: none
+    color: $white
+    &:before
+      font-family: FontAwesome
+      content: "\f003"
+      display: inline-block
+      width: 30px
+      height: 30px
+
+@media #{$medium-up}
+  .footer
+    padding: 3rem 5rem

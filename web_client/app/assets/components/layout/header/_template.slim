@@ -1,0 +1,9 @@
+header
+  nav.header role="navigation"
+    .layout__side.layout__side--left.header__logo.logo
+      a.logo__image href="/"
+      a.logo__arrow href="#" ng-click="toggleSidebar()"
+
+    .layout__side.layout__side--right.header__nav.clearfix
+      section.left = render 'layout/header/menu'
+      section.right ng-include="'layout/header/user_menu.html'"

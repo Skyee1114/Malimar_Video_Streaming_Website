@@ -1,0 +1,56 @@
+.device-price
+  font-weight: 600
+  &__integer
+    display: inline-block
+    font-size: 2em
+
+  &__decimal
+    display: inline-block
+    line-height: .9em
+    font-size: .9em
+
+.device
+  cursor: pointer
+  background-image: linear-gradient(to bottom, $smoke 0%, $gainsboro 100%)
+  border-radius: $extra-radius
+  overflow: hidden
+  text-align: center
+  margin-bottom: 0.65rem
+
+  &__body
+    padding: 0.7rem
+
+  &__name
+    font-size: 1.2rem
+    line-height: 2rem
+    font-weight: 600
+
+  &__spec
+    font-size: 0.8rem
+    font-weight: 600
+    line-height: 2rem
+    background: $iron
+    text-align: center
+    padding-left: 1rem
+    padding-right: 1rem
+
+  &__price
+    font-weight: 600
+    font-size: 2rem
+
+  &--selected
+    color: $white
+    background-image: linear-gradient(to bottom, $primary-color 0%, $dark-primary-color 100%)
+
+    .device__spec
+      background: $dark-primary-color
+      color: $white
+
+@media #{$medium-up}
+  .device
+    display: inline-block
+    min-width: 213px
+    margin-right: 1rem
+    &:last-child
+      margin-right: 0
+

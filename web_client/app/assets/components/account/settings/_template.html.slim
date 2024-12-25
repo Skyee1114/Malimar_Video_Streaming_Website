@@ -1,0 +1,23 @@
+.account-category
+  .account-category__title
+    i.fa.fa-user
+    | My Account
+
+  .account-category__body
+    .account-settings
+      .row
+        - if feature_active? :registration
+          .medium-12.large-4.columns
+            .account-settings__header.account-settings__header--first
+              i.fa.fa-user
+              | Account information
+            .account-settings__body.account-settings__body--first
+              = render 'account/settings/information'
+
+        - if feature_active? :subscription
+          .medium-12.large-4.columns.end
+            .account-settings__header.account-settings__header--last
+              i.fa.fa-cogs
+              | Plan Details
+            .account-settings__body.account-settings__body--last
+              = render 'account/settings/subscription'

@@ -1,0 +1,42 @@
+.header
+  border-bottom: 2px $accent-color solid
+  z-index: $fixed-elements
+  position: fixed
+  right: 0
+  left: 0
+  top: 0
+
+  &__logo
+    display: inline-block
+    vertical-align: top
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.2), transparent 15%)
+    border-bottom: 1px solid rgba(101, 94, 91, 0.3)
+    background-color: $contrast-color
+    width: $expanded-sidebar-width
+    padding-top: 0.5rem
+    text-align: center
+
+  &__nav
+    background-color: $secondary-color
+    background-image: linear-gradient(rgba(150, 150, 150, .1), rgba(0, 0, 0, .1))
+
+
+.logo
+  &__image
+    background-image: inline("logo.png")
+    background-position: top center
+    background-repeat: no-repeat
+    display: block
+    margin: 0 auto
+    height: 52px
+
+  &__arrow
+    background-image: inline("left-arrow.png")
+    background-position: center
+    background-repeat: no-repeat
+    display: block
+    height: 40px
+
+@import 'menu/style'
+@import 'user_menu/style'
+@import 'resize'

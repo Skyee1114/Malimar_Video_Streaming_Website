@@ -1,0 +1,70 @@
+{
+  "resource": "Devices",
+  "http_method": "GET",
+  "route": "/devices?user=:user_id",
+  "description": "Get a list of devices for user",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "devices",
+      "description": "List of devices"
+    },
+    {
+      "scope": "devices",
+      "name": "id",
+      "description": "Device id"
+    },
+    {
+      "scope": "devices",
+      "name": "name",
+      "description": "Device name"
+    },
+    {
+      "scope": "devices",
+      "name": "type",
+      "description": "Device type"
+    },
+    {
+      "scope": "devices",
+      "name": "serial_number",
+      "description": "Device serial number"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/devices?user=1",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuOTI1MDczMSwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I0Mi53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjQyLndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzV9.dnpi3VGkagcpBTiCnOwYClkhtuPzWdp4Nj-E_ZohoLs3AVcCSXH6JG_mODpX9nyNuCeaCcIQg9b6q_DTlwAlsw",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "user": "1"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"devices\": [\n    {\n      \"id\": 1,\n      \"name\": \"Device::Roku\",\n      \"type\": \"Device::Roku\",\n      \"serial_number\": \"4114AC001000\"\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"8cfedf5ed4e7e7cbc25cf66b32320d49\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "831508f8-e402-466a-a9d1-e4c27c59f010",
+        "Content-Length": "97"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/devices?user=1\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzUuOTI1MDczMSwidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3I0Mi53aG9AZXhhbXBsZS5jb20iLCJlbWFpbCI6ImRvY3RvcjQyLndob0BleGFtcGxlLmNvbSIsIm9yaWdpbiI6ImxvY2FsIiwicHJlbWl1bSI6ZmFsc2V9LCJleHAiOjE1OTE2NTQwNzV9.dnpi3VGkagcpBTiCnOwYClkhtuPzWdp4Nj-E_ZohoLs3AVcCSXH6JG_mODpX9nyNuCeaCcIQg9b6q_DTlwAlsw\""
+    }
+  ]
+}

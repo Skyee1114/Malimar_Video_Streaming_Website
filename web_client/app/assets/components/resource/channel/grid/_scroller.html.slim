@@ -1,0 +1,18 @@
+.grid-scroller.grid-scroller--ondemand
+  a.grid-scroller__control.grid-scroller__control--right ng-click="startAnimation(1)"
+  a.grid-scroller__control.grid-scroller__control--left ng-click="startAnimation(-1)"
+  .grid-scroller__container
+    .grid-scroller__element ng-repeat="thumbnail in ::elements"
+      a.thumbnail ng-href="{{:: thumbnail.href }}"
+
+        .thumbnail__overlay ng-class="{'thumbnail__overlay--active': options.active === thumbnail.id}"
+          .thumbnail__playing
+            i.icon__play.thumbnail__playing__icon
+            .thumbnail__playing__text NOW PLAYING
+
+        img.thumbnail__image [ng-src="{{:: thumbnail.cover_image.hd }}"
+                              alt="{{:: thumbnail.title}}"]
+
+        .thumbnail-details
+          .thumbnail-details__title ng-bind="::thumbnail.title"
+          .thumbnail-details__synopsis ng-bind="::thumbnail.synopsis"

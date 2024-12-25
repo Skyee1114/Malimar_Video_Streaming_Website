@@ -1,0 +1,21 @@
+@import 'display/style'
+
+.showcase
+  width: 100%
+
+.showcase__options
+  background-color: $secondary-color
+
+.showcase__option
+  color: $secondary-white
+  margin-left: 1px
+  margin-bottom: 1.5px
+  background-color: $secondary-color
+  box-shadow: 0 1px 3px rgba(0,0,0,.3)
+  font-weight: 600
+  text-shadow: -1px -1px 0 rgba(0,0,0,.4)
+  &:focus, &:hover
+    background-color: $contrast-color
+
+  &.disabled
+    opacity: 1

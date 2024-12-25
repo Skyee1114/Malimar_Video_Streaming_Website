@@ -1,0 +1,27 @@
+.video-player
+  .row.row--light.row--padding background-image="{{:: video.background_image }}"
+    .video-player__container
+      .small-12.large-8.columns
+        .video-player__player.flex-video.widescreen.vimeo
+          player player-options="{{:: video }}" force-jw-player="{{ forceJWPlayer }}"
+
+          = render 'video_player/no_adobe_flash'
+
+      .small-12.large-4.columns
+        .video-player__synopsis
+          h4.video-player__title ng-bind="::video.title"
+          .synopsis ng-show="::video.synopsis"
+            .synopsis__text ng-bind="::video.synopsis"
+          share share-links="twitter facebook"
+          add-to-favorites video="{{:: video }}"
+          .video-player__extra.text-center
+            h4 Something went wrong
+            p Please try playback via direct link:
+
+            a.button.no-adobe-flash__button href="{{:: video.file }}" 
+              |Link to video
+
+          .video-player__player-options
+            a.video-player__player-options-item ui-sref="^.video({ forceJWPlayer: !forceJWPlayer })" target="_blank"
+              span change player 
+              i.fa.fa-play-circle

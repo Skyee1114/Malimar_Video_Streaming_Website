@@ -1,0 +1,47 @@
+@import 'grid'
+@import 'no_adobe_flash/style'
+
+$video-player-height: 360px
+$video-player-width: 640px
+
+.video-player
+  &__container
+    max-width: $video-player-width
+    margin: auto
+
+  &__player
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7)
+    background: none
+
+  &__title
+    text-shadow: 2px 2px rgba($black, 0.5)
+
+    &:empty
+      &:after
+        content: "..."
+  &__button
+
+  &__extra
+    display: none
+
+  &__player-options
+    position: absolute
+    bottom: 20px
+    right: 20px
+
+  &__player-options-item
+    color: $monsoon
+    text-shadow: 1px 1px rgba($black, 0.7)
+    &:hover
+      color: $white
+
+
+@media #{$large-up}
+  .video-player
+    &__container
+      max-width: $video-player-width + 320px
+
+    &__synopsis
+      padding: 20px
+      height: $video-player-height
+      background: rgba($dark-oil, 0.6)

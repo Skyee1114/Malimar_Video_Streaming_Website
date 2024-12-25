@@ -1,0 +1,313 @@
+$purple: #672893
+$rokuTextColor: $black
+
+.atention
+  color: $purple
+
+.roku-landing
+  background: white
+  color: $rokuTextColor
+  text-align: center
+  & section
+    padding: 90px 0
+
+.message
+  display: block
+  color: $white
+  font-size: 1.1em
+  font-weight: bold
+  letter-spacing: 2px
+  &:after
+    font-family: FontAwesome
+    content: '\f1eb'
+    margin-left: 10px
+    height: 20px
+    width: 20px
+    display: inline-block
+
+.billboard
+  min-height: 648px
+  width: 100%
+  background: image_url("roku-home.jpg") no-repeat white
+  background-size: cover
+  text-align: center
+  color: white
+  padding: 100px 0
+  & h1
+    font-size: 6.2em
+    line-height: 100px
+    max-width: 820px
+    margin: auto
+    text-transform: uppercase
+    font-weight: bold
+    margin-bottom: 10px
+  & ul
+    height: auto
+    margin: auto
+    margin-top: 100px
+    & li
+      width: 280px
+      height: 70px
+      display: inline-block
+      margin: 5px 15px
+      & p
+        font-size: 0.8em
+        margin-top: 15px
+      & .oval-button
+        border: 2px solid white
+        border-radius: 40px
+        font-weight: bold
+        letter-spacing: 3px
+        padding: 20px
+        color: white
+        line-height: 30px
+        text-transform: uppercase
+        width: 100%
+        height: 100%
+        display: block
+        &:hover
+          background: $purple
+
+.malimar-roku
+  &__tv
+    // min-height: 500px
+  &__caption
+    text-align: left
+    padding: 0px 30px 0
+    & h2
+      color: black
+      font-size: 2.5em
+      font-weight: bold
+      text-transform: uppercase
+      margin-bottom: 50px
+    & p
+      font-size: 1.3em
+
+.compatible
+  padding-top: 0 !important
+  & h3
+    color: $rokuTextColor
+    font-weight: bold
+    margin-bottom: 50px
+  .roku-products
+    & li
+      background: image_url("roku-home-devices.png") no-repeat
+      display: inline-block
+      height: 230px
+      width: 230px
+      margin: 10px
+      text-indent: -10000px
+    & .roku-products--product1
+      background-position: -18px -15px
+    & .roku-products--product2
+      background-position: -248px -15px
+      width: 170px
+    & .roku-products--product3
+      background-position: -435px -15px
+      width: 170px
+    & .roku-products--product4
+      background-position: -615px -15px
+      width: 190px
+    & .roku-products--product5
+      width: 190px
+      background-position: -820px -5px
+  .fire-tv-products
+    & li
+      background: image_url("fire-tv-home-devices.png") no-repeat
+      display: inline-block
+      height: 230px
+      width: 170px
+      margin: 10px
+      text-indent: -10000px
+    & .fire-tv-products--product1
+      width: 180px
+      background-position: -25px -0px
+    & .fire-tv-products--product2
+      background-position: -240px -0px
+    & .fire-tv-products--product3
+      background-position: -438px -0px
+    & .fire-tv-products--product4
+      background-position: -630px -0px
+      width: 190px
+    & .fire-tv-products--product5
+      background-position: -850px -0px
+
+.purchase
+  padding-top: 0 !important
+  & h4
+    margin-bottom: 50px
+    color: #bababa
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 0.8em
+    letter-spacing: 2px
+  & ul
+    & li
+      text-indent: -10000px
+      background: image_url("roku-home-sellers.jpg") no-repeat
+      display: inline-block
+      width: 115px
+      height: 55px
+      margin: 10px
+      &.target
+        background-position: -12px -8px
+      &.best
+        background-position: -150px -8px
+        width: 70px
+      &.walmart
+        background-position: -250px -8px
+        width: 130px
+      &.frys
+        background-position: -410px -8px
+      &.sam
+        background-position: -560px -8px
+        width: 145px
+      &.costco
+        background-position: -735px -8px
+      &.bjs
+        background-position: -866px -8px
+        width: 60px
+      &.amazon
+        background-position: -945px -8px
+      &.newegg  
+        background-position: -1080px -8px
+      & a 
+        display: block
+        height: 100%
+        widht: 100%
+
+.instructions
+  background: #5B2887
+  position: relative
+  color: white
+  & h2
+    color: white
+    font-size: 3em
+    line-height: 1em
+    margin-bottom: 50px
+  ul
+    bottom: 2px
+    margin: 20px auto
+    & li 
+      background: image_url("roku-home-instructions.jpg") no-repeat center center
+      display: inline-block
+      width: 218px
+      height: 240px
+      line-height: 520px
+      font-size: 1.4em
+      &.one
+        background-position-x: -7px
+      &.two
+        width: 420px
+      &.three
+        background-position-x: -644px
+
+.malimar-network
+  background: #F0F0F0
+  & h4
+    color: #bababa
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 0.8em
+    letter-spacing: 2px
+  & h2
+    color: black
+    font-size: 2.5em
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 50px
+  & .channels-grid
+    background: image_url("roku-home-thegrid.png") no-repeat center center
+    background-size: cover
+    display: block
+    height: 831px
+    width: 100%
+
+.new-dramas
+  background-color: #0357AD
+  color: white
+  & h2
+    color: white
+    font-size: 2em
+    line-height: 1em
+    margin-bottom: 50px
+  & .carousel
+    height: 356px 
+    background: inline("roku-home-carousel.jpg") no-repeat center center
+
+.testimony
+  background: #f0f0f0
+  & h4
+    color: #bababa
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 0.8em
+    letter-spacing: 2px
+  & h2
+    color: black
+    font-size: 2.5em
+    font-weight: bold
+    text-transform: uppercase
+    margin-bottom: 50px
+  & ul
+    & li
+      display: inline-block
+      width: 400px
+      text-align: left
+      &.__testimony--1 .picture
+        // background: image_url("testimony1.jpg") 
+        background-size: cover
+      &.__testimony--2 .picture
+        //background: image_url("testimony2.jpg") 
+        background-size: cover
+      &.__testimony--3 .picture
+        //background: image_url("testimony3.jpg") 
+        background-size: cover
+      & .bubble
+        position: relative
+        width: 370px
+        min-height: 140px
+        background: #FFFFFF
+        border-radius: 5px
+        font-size: 0.8em
+        font-style: italic
+        padding: 20px
+        &:after 
+          content: ''
+          position: absolute
+          border-style: solid
+          border-width: 15px 15px 0
+          border-color: #FFFFFF transparent
+          display: block
+          width: 0
+          z-index: 1
+          bottom: -15px
+          left: 30px
+      & .picture
+        width: 70px
+        height: 70px
+        border-radius: 35px
+        overflow: hidden
+        background-position: center center
+        background-repeat: no-repeat
+        float: left
+        margin: 10px
+      & .name 
+        font-weight: bold
+        padding-top: 10px
+      & .stars
+        background: image_url("roku-home-stars.png") no-repeat center left
+        height: 20px
+        float: left
+        &--5
+          width: 100px
+        &--4
+          width: 80px
+
+@media #{$medium-only}
+  .billboard
+    font-size: 0.8rem
+
+@media #{$small-only}
+  .billboard
+    font-size: 0.6rem

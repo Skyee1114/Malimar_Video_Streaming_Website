@@ -1,0 +1,23 @@
+.sign_up-banner ng-if="is_free"
+  .roku-sign_up
+    .roku-sign_up__images
+      - if feature_active? :roku
+        a ui-sref="device.landing"
+          = image_tag 'option-roku.png'
+      a ui-sref="{{ is_user_a_guest ? 'account.pricing' : 'account.subscribe.form' }}"
+        = image_tag 'option-online.png'
+
+    .roku-sign_up__text
+      | Create your account today and start watching instantly from your computer.
+    .roku-sign_up__button
+      .roku-sign_up__button_text Online Website Access
+      .roku-sign_up__button_text.left Now Only
+      .plan-price.roku-sign_up__button_price.right
+        .plan-price__integer $11
+        .plan-price__decimal
+          | .99
+          br /
+          | /month
+      .roku-sign_up__button_plans
+        a.button.medium.expand.radius ui-sref="{{ is_user_a_guest ? 'account.pricing' : 'account.subscribe.form' }}"
+          | View Subscription Plans

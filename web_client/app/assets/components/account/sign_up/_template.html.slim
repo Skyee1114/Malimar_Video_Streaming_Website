@@ -1,0 +1,43 @@
+.sign_in
+  .row disable-all="is_busy"
+    .medium-7.small-centered.columns
+      .sign_in-box.radius
+        .row
+          .sign_in-section.sign_in-section--collapse
+            .sign_in-section__title Sign up
+            form.sign_in-form [name="SignUpForm" role="form" ng-submit="SignUpForm.$valid && submit()"]
+              .row
+                .row.collapse.sign_in-form__field--collapse_inputs.sign_in-form__field--first
+                  .small-3.medium-2.columns
+                    label.fa.fa-envelope-o.prefix for="user.email"
+                  .small-9.medium-10.columns
+                    = field "user.email", required: true, placeholder: "Email", type: "email", class: ''
+
+                .row.collapse.sign_in-form__field--collapse_inputs
+                  .small-3.medium-2.columns
+                    label.fa.fa-lock.prefix for="user.password"
+                  .small-9.medium-10.columns
+                    = field "user.password", required: true, placeholder: "Password", type: "password", class: '',  equals: "{{user.password_confirmation}}"
+
+                .row.collapse.sign_in-form__field--last
+                  .small-3.medium-2.columns
+                    label.fa.fa-lock.prefix for="user.password_confirmation"
+                  .small-9.medium-10.columns
+                    = field "user.password_confirmation", required: true, placeholder: "Confirm password", type: "password", class: '',  equals: "{{user.password}}"
+
+                .sign_in-form__actions
+                  button.button.radius.expand type="submit" Sign up
+
+        .row
+          .sign_in-section__separator
+        .row
+          .sign_in-section.sign_in-section--wide.sign_in-section--light.radius
+            ul.stack.radius.button-group
+              li
+                button.button.facebook type="button" id="login" ng-click="FBLogin()"
+                  i.fa.fa-facebook-official.fa-middle
+                  span  Sign in with Facebook
+              li 
+                br /
+              li
+                google-signin-button on-signin="GoogleLogin(response)"/

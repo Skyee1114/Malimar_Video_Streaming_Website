@@ -1,0 +1,54 @@
+p Hello
+
+p We got new payment from #{ @payment.sender_name } at #{ domain }
+
+p For check all details about the submission form please check the attached file.
+
+p
+  b Device serial number:
+  span = @payment.serial_number
+  br /
+  b Device type:
+  span = @payment.type
+  br /
+  b First name: 
+  span = @payment.first_name
+  br /
+  b Last name: 
+  span = @payment.last_name
+  br /
+  b Email: 
+  span = @payment.email
+  br /
+  b Telephone number: 
+  span = @payment.phone
+  br /
+  b Street address: 
+  span = @payment.address
+  br /
+  b City: 
+  span = @payment.city
+  br /
+  b State: 
+  span = @payment.state
+  br /
+  b Zip code: 
+  span = @payment.zip
+  br /
+  b Country: 
+  span = @payment.country
+  br /
+  b IP: 
+  span = @payment.ip
+  br /
+  b Amount: 
+  span = @payment.amount
+  br /
+  b Membership plan: 
+  span = @payment.plan_name
+  br /
+  b Transaction ID: 
+  span = @payment.transaction_id
+  br /
+  b Invoice #: 
+  span = @payment.invoice

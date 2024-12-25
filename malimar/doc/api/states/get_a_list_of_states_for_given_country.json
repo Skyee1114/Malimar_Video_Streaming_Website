@@ -1,0 +1,63 @@
+{
+  "resource": "States",
+  "http_method": "GET",
+  "route": "/states?country=:country_id",
+  "description": "Get a list of states for given country",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "country_id",
+      "description": "Country id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "states",
+      "description": "List of states in given country"
+    },
+    {
+      "scope": "states",
+      "name": "id",
+      "description": "State code"
+    },
+    {
+      "scope": "states",
+      "name": "name",
+      "description": "State name"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/states?country=US",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODkuODU4NjQ3MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMzUud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMzUud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4OX0.gnuTXA03TZ2caC4e79jgk5IiUxigjGbuC3s4Ei9UynoXnZ7luqqMHVe9nIduCVSpHND4mWJK6BlbatNw6pbLEA",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+        "country": "US"
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"states\": [\n    {\n      \"id\": \"AA\",\n      \"name\": \"Armed Forces Americas\"\n    },\n    {\n      \"id\": \"AE\",\n      \"name\": \"Armed Forces Europe\"\n    },\n    {\n      \"id\": \"AK\",\n      \"name\": \"Alaska\"\n    },\n    {\n      \"id\": \"AL\",\n      \"name\": \"Alabama\"\n    },\n    {\n      \"id\": \"AP\",\n      \"name\": \"Armed Forces Pacific\"\n    },\n    {\n      \"id\": \"AR\",\n      \"name\": \"Arkansas\"\n    },\n    {\n      \"id\": \"AS\",\n      \"name\": \"American Samoa\"\n    },\n    {\n      \"id\": \"AZ\",\n      \"name\": \"Arizona\"\n    },\n    {\n      \"id\": \"CA\",\n      \"name\": \"California\"\n    },\n    {\n      \"id\": \"CO\",\n      \"name\": \"Colorado\"\n    },\n    {\n      \"id\": \"CT\",\n      \"name\": \"Connecticut\"\n    },\n    {\n      \"id\": \"DC\",\n      \"name\": \"District of Columbia\"\n    },\n    {\n      \"id\": \"DE\",\n      \"name\": \"Delaware\"\n    },\n    {\n      \"id\": \"FL\",\n      \"name\": \"Florida\"\n    },\n    {\n      \"id\": \"GA\",\n      \"name\": \"Georgia\"\n    },\n    {\n      \"id\": \"GU\",\n      \"name\": \"Guam\"\n    },\n    {\n      \"id\": \"HI\",\n      \"name\": \"Hawaii\"\n    },\n    {\n      \"id\": \"IA\",\n      \"name\": \"Iowa\"\n    },\n    {\n      \"id\": \"ID\",\n      \"name\": \"Idaho\"\n    },\n    {\n      \"id\": \"IL\",\n      \"name\": \"Illinois\"\n    },\n    {\n      \"id\": \"IN\",\n      \"name\": \"Indiana\"\n    },\n    {\n      \"id\": \"KS\",\n      \"name\": \"Kansas\"\n    },\n    {\n      \"id\": \"KY\",\n      \"name\": \"Kentucky\"\n    },\n    {\n      \"id\": \"LA\",\n      \"name\": \"Louisiana\"\n    },\n    {\n      \"id\": \"MA\",\n      \"name\": \"Massachusetts\"\n    },\n    {\n      \"id\": \"MD\",\n      \"name\": \"Maryland\"\n    },\n    {\n      \"id\": \"ME\",\n      \"name\": \"Maine\"\n    },\n    {\n      \"id\": \"MI\",\n      \"name\": \"Michigan\"\n    },\n    {\n      \"id\": \"MN\",\n      \"name\": \"Minnesota\"\n    },\n    {\n      \"id\": \"MO\",\n      \"name\": \"Missouri\"\n    },\n    {\n      \"id\": \"MP\",\n      \"name\": \"Northern Mariana Islands\"\n    },\n    {\n      \"id\": \"MS\",\n      \"name\": \"Mississippi\"\n    },\n    {\n      \"id\": \"MT\",\n      \"name\": \"Montana\"\n    },\n    {\n      \"id\": \"NC\",\n      \"name\": \"North Carolina\"\n    },\n    {\n      \"id\": \"ND\",\n      \"name\": \"North Dakota\"\n    },\n    {\n      \"id\": \"NE\",\n      \"name\": \"Nebraska\"\n    },\n    {\n      \"id\": \"NH\",\n      \"name\": \"New Hampshire\"\n    },\n    {\n      \"id\": \"NJ\",\n      \"name\": \"New Jersey\"\n    },\n    {\n      \"id\": \"NM\",\n      \"name\": \"New Mexico\"\n    },\n    {\n      \"id\": \"NV\",\n      \"name\": \"Nevada\"\n    },\n    {\n      \"id\": \"NY\",\n      \"name\": \"New York\"\n    },\n    {\n      \"id\": \"OH\",\n      \"name\": \"Ohio\"\n    },\n    {\n      \"id\": \"OK\",\n      \"name\": \"Oklahoma\"\n    },\n    {\n      \"id\": \"OR\",\n      \"name\": \"Oregon\"\n    },\n    {\n      \"id\": \"PA\",\n      \"name\": \"Pennsylvania\"\n    },\n    {\n      \"id\": \"PR\",\n      \"name\": \"Puerto Rico\"\n    },\n    {\n      \"id\": \"RI\",\n      \"name\": \"Rhode Island\"\n    },\n    {\n      \"id\": \"SC\",\n      \"name\": \"South Carolina\"\n    },\n    {\n      \"id\": \"SD\",\n      \"name\": \"South Dakota\"\n    },\n    {\n      \"id\": \"TN\",\n      \"name\": \"Tennessee\"\n    },\n    {\n      \"id\": \"TX\",\n      \"name\": \"Texas\"\n    },\n    {\n      \"id\": \"UM\",\n      \"name\": \"United States Minor Outlying Islands\"\n    },\n    {\n      \"id\": \"UT\",\n      \"name\": \"Utah\"\n    },\n    {\n      \"id\": \"VA\",\n      \"name\": \"Virginia\"\n    },\n    {\n      \"id\": \"VI\",\n      \"name\": \"Virgin Islands, U.S.\"\n    },\n    {\n      \"id\": \"VT\",\n      \"name\": \"Vermont\"\n    },\n    {\n      \"id\": \"WA\",\n      \"name\": \"Washington\"\n    },\n    {\n      \"id\": \"WI\",\n      \"name\": \"Wisconsin\"\n    },\n    {\n      \"id\": \"WV\",\n      \"name\": \"West Virginia\"\n    },\n    {\n      \"id\": \"WY\",\n      \"name\": \"Wyoming\"\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"3e3a57efb53a1ec06bff0b3326aed87b\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "5c0c0e75-ffcd-4f5c-a8a8-e8ca60bc8263",
+        "Content-Length": "1943"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/states?country=US\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODkuODU4NjQ3MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IyMzUud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IyMzUud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4OX0.gnuTXA03TZ2caC4e79jgk5IiUxigjGbuC3s4Ei9UynoXnZ7luqqMHVe9nIduCVSpHND4mWJK6BlbatNw6pbLEA\""
+    }
+  ]
+}

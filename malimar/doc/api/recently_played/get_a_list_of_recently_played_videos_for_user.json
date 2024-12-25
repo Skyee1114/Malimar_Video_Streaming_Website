@@ -1,0 +1,91 @@
+{
+  "resource": "Recently played",
+  "http_method": "GET",
+  "route": "/recently_played",
+  "description": "Get a list of recently played videos for user",
+  "explanation": null,
+  "parameters": [
+
+  ],
+  "response_fields": [
+    {
+      "name": "recently_played",
+      "description": "List of thumbnails"
+    },
+    {
+      "scope": "recently_played",
+      "name": "id",
+      "description": "Resource id"
+    },
+    {
+      "scope": "recently_played",
+      "name": "title",
+      "description": "Resource title"
+    },
+    {
+      "scope": "recently_played",
+      "name": "href",
+      "description": "Link to resource"
+    },
+    {
+      "scope": "recently_played",
+      "name": "cover_image",
+      "description": "Cover images of the resourse"
+    },
+    {
+      "scope": "recently_played",
+      "required": false,
+      "name": "synopsis",
+      "description": "Brief description"
+    },
+    {
+      "scope": "recently_played",
+      "name": "type",
+      "description": "Type of the resource"
+    },
+    {
+      "scope": "recently_played",
+      "name": "is_recently_updated",
+      "description": "Boolean. True when resource was updated"
+    },
+    {
+      "scope": "recently_played",
+      "required": false,
+      "name": "highlight",
+      "description": "Extra information"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/recently_played",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMjc5MTE5MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxMDgud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxMDgud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3OX0.38O1_kWU3dbOo5lSn09HLvutQDv85z3L2AwkoqV7doXt1EBkJs4mVFLy7VlyNMSBhVS1wUAvgEXVNtGfep4ABQ",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"recently_played\": [\n    {\n      \"id\": \"Video_12\",\n      \"title\": \"Vel qui sed ipsam.\",\n      \"cover_image\": {\n        \"sd\": \"http://veumglover.org/melliaF\",\n        \"hd\": \"http://wiegandcasper.net/jerilyn_fisherF\",\n        \"wide\": null\n      },\n      \"href\": \"https://www.beta-malimartv.elasticbeanstalk.com/channels/Video_12?grid=Container_20\",\n      \"type\": \"channel\",\n      \"synopsis\": \"Hic odit praesentium. Rerum aliquid suscipit. Voluptatem rem error.\",\n      \"is_recently_updated\": false,\n      \"highlight\": null\n    }\n  ]\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a890d0b561c08c5f73ad232a1df59fc0\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "0e718d28-1a81-433f-a0ec-d04ea5438f7e",
+        "Content-Length": "417"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/recently_played\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2NzkuMjc5MTE5MywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxMDgud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxMDgud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA3OX0.38O1_kWU3dbOo5lSn09HLvutQDv85z3L2AwkoqV7doXt1EBkJs4mVFLy7VlyNMSBhVS1wUAvgEXVNtGfep4ABQ\""
+    }
+  ]
+}

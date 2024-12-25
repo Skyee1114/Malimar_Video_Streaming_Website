@@ -1,0 +1,68 @@
+{
+  "resource": "Grids",
+  "http_method": "GET",
+  "route": "/grids/:id",
+  "description": "Get grid information",
+  "explanation": null,
+  "parameters": [
+    {
+      "name": "id",
+      "description": "Grid id"
+    }
+  ],
+  "response_fields": [
+    {
+      "name": "grids",
+      "description": "Grid resource object"
+    },
+    {
+      "scope": "grids",
+      "name": "id",
+      "description": "Grid id"
+    },
+    {
+      "scope": "grids",
+      "name": "title",
+      "description": "Grid title"
+    },
+    {
+      "scope": "grids",
+      "required": false,
+      "name": "title_translated",
+      "description": "Grid title in another language"
+    }
+  ],
+  "requests": [
+    {
+      "request_method": "GET",
+      "request_path": "/grids/LiveTV_Free_Premium_Sponsors_CF",
+      "request_body": null,
+      "request_headers": {
+        "Api-Version": "v1",
+        "Accept": "application/vnd.api+json",
+        "Content-Type": "application/vnd.api+json",
+        "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODUuMTI1MjI3NywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxODUud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxODUud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NX0.l5tTi4PYjMKs9EqIZnScc5BlVgcP5TLpMYjicl3RSRq63Z3skIHcytbpLhV4piGKkGPFZV--HJUwRZ8RLz2SIw",
+        "Host": "example.org",
+        "Cookie": ""
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/vnd.api+json",
+      "response_status": 200,
+      "response_status_text": "OK",
+      "response_body": "{\n  \"grids\": {\n    \"id\": \"LiveTV_Free_Premium_Sponsors_CF\",\n    \"title\": \"Live TV Free | Premium Sponsors\",\n    \"title_translated\": \"พรีเมี่ยมสปอนเซอร์ | ฟรี\"\n  }\n}",
+      "response_headers": {
+        "X-Frame-Options": "SAMEORIGIN",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Content-Type-Options": "nosniff",
+        "Content-Type": "application/json; charset=utf-8",
+        "ETag": "W/\"a46a7a05216a36be5f7728bbeaa20446\"",
+        "Cache-Control": "max-age=0, private, must-revalidate",
+        "X-Request-Id": "6494ea6a-84a4-4cf2-9b47-f652867b2791",
+        "Content-Length": "180"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"www.beta-malimartv.elasticbeanstalk.com/grids/LiveTV_Free_Premium_Sponsors_CF\" -X GET \\\n\t-H \"Api-Version: v1\" \\\n\t-H \"Accept: application/vnd.api+json\" \\\n\t-H \"Content-Type: application/vnd.api+json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJpc3MiOiJ3d3cuYmV0YS1tYWxpbWFydHYuZWxhc3RpY2JlYW5zdGFsay5jb20iLCJpYXQiOjE1OTE1Njc2ODUuMTI1MjI3NywidXNlciI6eyJpZCI6MSwibG9naW4iOiJkb2N0b3IxODUud2hvQGV4YW1wbGUuY29tIiwiZW1haWwiOiJkb2N0b3IxODUud2hvQGV4YW1wbGUuY29tIiwib3JpZ2luIjoibG9jYWwiLCJwcmVtaXVtIjpmYWxzZX0sImV4cCI6MTU5MTY1NDA4NX0.l5tTi4PYjMKs9EqIZnScc5BlVgcP5TLpMYjicl3RSRq63Z3skIHcytbpLhV4piGKkGPFZV--HJUwRZ8RLz2SIw\""
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+.account-category
+  .account-category__title
+    i.fa.fa-user
+    | Account information
+
+  .account-category__body
+    .edit-account
+      = render "form/errors"
+      form.form [name="EditAccountForm" role="form" ng-submit="EditAccountForm.$valid && submit()"]
+        .row
+          .small-12.large-7.columns
+            .row
+              .small-12.columns = field 'user.email', required: true, label: 'Contact email', type: 'email'
+
+            .row
+              .small-12.large-6.columns = field "user.password",               required: false,  label: "New password",          type: "password",  equals: "{{user.password_confirmation}}"
+              .small-12.large-6.columns = field "user.password_confirmation",  required: false,  label: "Confirm new password",  type: "password",  equals: "{{user.password}}"
+
+            .row
+              .small-12.columns
+                ul.button-group.radius disable-all="is_busy"
+                  li
+                    button.success type="submit" Change
+                  li
+                    a.button ui-sref='^.settings' Cancel

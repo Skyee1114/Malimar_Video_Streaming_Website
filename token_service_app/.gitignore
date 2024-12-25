@@ -1,0 +1,55 @@
+# Ignore bundler config.
+/.bundle
+/bin
+
+# Ignore version managers
+.ruby-version
+.ruby-gemset
+
+# Ignore all logfiles and tempfiles.
+/log/*.log
+/tmp
+
+# Ignore bundled gems
+/vendor/ruby
+/vendor/bundle
+
+# Ignore vendored assets managed by bower
+# /vendor/assets/components
+
+# Ignore vim tags file
+/tags
+/vendor/gems/**/*tags
+
+# Ignore vagrant
+/.vagrant
+
+# Ignore noise
+/public/javascripts
+/coverage/
+/report/
+/*rubocop*.yml
+
+# Ignore local gems
+Gemfile.local
+Gemfile.local.lock
+
+# Ignore RubyMine files
+/.idea
+
+# Ignore VCR cassettes
+/spec/vcr_cassettes
+
+# Ignore elasticbeanstalk
+/.elasticbeanstalk
+
+/db/*.sqlite3
+
+/.env*
+!.env.example
+
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

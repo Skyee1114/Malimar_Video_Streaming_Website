@@ -1,0 +1,19 @@
+angular.module('tv-dashboard').factory 'LegalDocument', [
+  '$modal'
+  ($modal) ->
+    'use strict'
+    {
+      openModal: (document) ->
+        tos_template    = <%= "'#{asset_url('legal/tos_modal.html')}'" %>
+        policy_template = <%= "'#{asset_url('legal/policy_modal.html')}'" %>
+
+        template = tos_template
+        if document == 'policy'
+          template = policy_template
+
+        $modal.open(
+          templateUrl: template
+          controller: 'ModalCtrl'
+        )
+    }
+]

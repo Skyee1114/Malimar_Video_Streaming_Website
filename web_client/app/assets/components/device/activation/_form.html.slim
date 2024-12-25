@@ -1,0 +1,61 @@
+form.form [name="DeviceActivationForm" role="form" ng-submit="DeviceActivationForm.$valid && submit()"]
+  .row
+    .row
+      .small-12.columns
+        p Submit your device serial number to activate your Premium access. After pressing "Activate TV", please power cycle your device. Your device will be activated in 15 minutes.
+        p.form-instruction--important
+          | Important Minimum Requirements for #{ company_name } TV Network App.
+        p #{ company_name } TV Network App will work on Roku 1, 2, 3 and Roku 4 models and all newer models. For older Roku models please contact 1-619-940-5522 (USA) or 33-977-55-77-55 (France) for details. Internet broadband connection speed of 3 Megabits per second is required.
+
+    .row
+      .small-12.columns
+        = render "form/errors"
+        = render "form/field_error", field: 'device_activation_request.base'
+
+    .row
+      .small-12.columns
+        choose-plan ng-model='plan' plans='plans' choose-plan-title='Choose a TV Plan'
+
+    .row
+      .small-12.columns
+        choose-device ng-model='device' devices='devices' required='required'
+
+    .row
+      .small-12.columns
+        plan-total ng-model='plan' plan-total-title='Your TV Plan'
+        .seals
+          authorize-net-seal
+          digicert-seal
+    .row
+      .small-12.large-6.columns = field 'device_activation_request.email',  required: true,  label: 'Email',         type: 'email'
+      .small-12.large-6.columns = field 'device_activation_request.phone',  required: true,  label: 'Phone number',  type: 'tel', minlength: '8'
+
+    hr.hr--form
+
+    .row
+      .small-12.large-6.columns = field 'device_activation_request.first_name',  required: true,  label: 'First name'
+      .small-12.large-6.columns = field 'device_activation_request.last_name',   required: true,  label: 'Last name'
+    .row
+      .small-12.columns = field 'device_activation_request.address',  required: true,  label: 'Street address'
+    .row
+      .small-12.large-8.columns = field 'device_activation_request.country',  required: true,  label: 'Country',  field: 'select-country'
+      .small-12.large-4.columns = field 'device_activation_request.city',     required: true,  label: 'City'
+    .row
+      .small-12.medium-8.columns = field 'device_activation_request.state',  required: false,  label: 'State',  field: 'select-state', :'select-state-country' => 'device_activation_request.country'
+      .small-12.medium-4.columns = field 'device_activation_request.zip',    required: false,  label: '{{ zip_code_name }}'
+
+    hr.hr--form
+
+    .row
+      .small-12.columns
+        = field 'device_activation_request.referral',  required: true,  label: 'How did you hear about us?', field: 'select-object', source: 'referrals'
+      .small-12.columns ng-show='device_activation_request.referral == "Friend"'
+        = field 'device_activation_request.friend_name',  required: false,  label: "What is your friend's name?"
+
+    .row
+      .small-12.columns
+        = field 'device_activation_request.service',  required: true,  label: 'Service type', field: 'select-named-object-id', source: 'services'
+
+    .row
+      .small-12.columns disable-all="is_busy"
+        button.submit.radius type="submit" Activate TV Now

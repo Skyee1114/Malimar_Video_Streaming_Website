@@ -1,0 +1,18 @@
+.user-menu [ng-switch on="is_user_a_guest" ng-cloak]
+  - if feature_active? :subscription
+    .user-menu__action_buttons.user-menu__action_buttons--large_content
+      a ui-sref="{{ is_user_a_guest ? 'account.pricing' : 'account.subscribe.form' }}"
+        = image_tag 'make-a-payment.png'
+
+  - if feature_active? :registration
+    .user-menu__options ng-switch-when="true"
+      ul.button-group.stack-for-small.radius
+        li
+          a.button.small ui-sref="account.sign_up" Sign Up
+        li
+          a.button.success.small ui-sref="session.sign_in" Sign In
+
+    .user-menu__options ng-switch-when="false"
+      .user-menu__name ng-bind="::current_user.login" dropdown-toggle="#dropdown-session-options"
+      ul.menu-list.user-menu__dropdown id="dropdown-session-options" class="f-dropdown"
+        = render 'layout/header/user_menu/actions'

@@ -1,0 +1,18 @@
+<% if feature_active? :subscription %>
+angular.module('tv-dashboard').config ['$stateProvider', ($stateProvider) ->
+  $stateProvider
+    .state "account.subscribe", {
+      url: "/subscribe"
+      templateUrl: 'account/subscribe.html'
+      abstract: true
+    }
+    .state "account.subscribe.form", {
+      url: "/{token}"
+      templateUrl: 'account/subscribe/form.html'
+      controller: 'SubscribeCtrl'
+      params:
+        token:
+          squash: true
+    }
+]
+<% end %>
